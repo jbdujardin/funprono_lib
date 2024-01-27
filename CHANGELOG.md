@@ -1,3 +1,7 @@
+## 4.0.7
+
+- **FEAT**: Change http version.
+
 ## 3.2.0
 
 - **FEAT**: Change Funbet to FunProno.

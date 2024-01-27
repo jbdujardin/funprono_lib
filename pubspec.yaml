@@ -1,6 +1,6 @@
 name: funprono_lib
 description: A package for Back and front for FunProno application.
-version: 4.0.6
+version: 4.0.7
 homepage: https://app.funprono.com
 documentation: https://github.com/jbdujardin/funprono_lib
 repository: https://github.com/jbdujardin/funprono_lib
@@ -11,9 +11,9 @@ environment:
   sdk: ">=2.17.0 <4.0.0"
 
 dependencies:
-  collection: any
+  collection: ^1.18.0
   freezed_annotation: ^2.4.1
-  http: ^1.0.0
+  http: ^1.2.0
   json_annotation: ^4.8.1
 dev_dependencies:
   build_runner: ^2.4.8
