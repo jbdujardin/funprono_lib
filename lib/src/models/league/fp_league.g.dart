@@ -6,7 +6,8 @@ part of 'fp_league.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FpLeague _$$_FpLeagueFromJson(Map<String, dynamic> json) => _$_FpLeague(
+_$FpLeagueImpl _$$FpLeagueImplFromJson(Map<String, dynamic> json) =>
+    _$FpLeagueImpl(
       currentSeason: json['currentSeason'] as int?,
       id: json['id'] as int?,
       countryFlag: json['countryFlag'] as String?,
@@ -37,7 +38,7 @@ _$_FpLeague _$$_FpLeagueFromJson(Map<String, dynamic> json) => _$_FpLeague(
       databaseId: json[r'$databaseId'] as String?,
     );
 
-Map<String, dynamic> _$$_FpLeagueToJson(_$_FpLeague instance) =>
+Map<String, dynamic> _$$FpLeagueImplToJson(_$FpLeagueImpl instance) =>
     <String, dynamic>{
       'currentSeason': instance.currentSeason,
       'id': instance.id,

@@ -6,7 +6,7 @@ part of 'fp_bet.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FpBet _$$_FpBetFromJson(Map<String, dynamic> json) => _$_FpBet(
+_$FpBetImpl _$$FpBetImplFromJson(Map<String, dynamic> json) => _$FpBetImpl(
       userId: json['userId'] as String?,
       fixtureId: json['fixtureId'] as String?,
       homeBet: json['homeBet'] as int?,
@@ -30,7 +30,8 @@ _$_FpBet _$$_FpBetFromJson(Map<String, dynamic> json) => _$_FpBet(
       databaseId: json[r'$databaseId'] as String?,
     );
 
-Map<String, dynamic> _$$_FpBetToJson(_$_FpBet instance) => <String, dynamic>{
+Map<String, dynamic> _$$FpBetImplToJson(_$FpBetImpl instance) =>
+    <String, dynamic>{
       'userId': instance.userId,
       'fixtureId': instance.fixtureId,
       'homeBet': instance.homeBet,

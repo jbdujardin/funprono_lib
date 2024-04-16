@@ -12,7 +12,7 @@ part of 'fp_invitation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FpInvitation _$FpInvitationFromJson(Map<String, dynamic> json) {
   return _FpInvitation.fromJson(json);
@@ -139,11 +139,11 @@ class _$FpInvitationCopyWithImpl<$Res, $Val extends FpInvitation>
 }
 
 /// @nodoc
-abstract class _$$_FpInvitationCopyWith<$Res>
+abstract class _$$FpInvitationImplCopyWith<$Res>
     implements $FpInvitationCopyWith<$Res> {
-  factory _$$_FpInvitationCopyWith(
-          _$_FpInvitation value, $Res Function(_$_FpInvitation) then) =
-      __$$_FpInvitationCopyWithImpl<$Res>;
+  factory _$$FpInvitationImplCopyWith(
+          _$FpInvitationImpl value, $Res Function(_$FpInvitationImpl) then) =
+      __$$FpInvitationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -161,11 +161,11 @@ abstract class _$$_FpInvitationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FpInvitationCopyWithImpl<$Res>
-    extends _$FpInvitationCopyWithImpl<$Res, _$_FpInvitation>
-    implements _$$_FpInvitationCopyWith<$Res> {
-  __$$_FpInvitationCopyWithImpl(
-      _$_FpInvitation _value, $Res Function(_$_FpInvitation) _then)
+class __$$FpInvitationImplCopyWithImpl<$Res>
+    extends _$FpInvitationCopyWithImpl<$Res, _$FpInvitationImpl>
+    implements _$$FpInvitationImplCopyWith<$Res> {
+  __$$FpInvitationImplCopyWithImpl(
+      _$FpInvitationImpl _value, $Res Function(_$FpInvitationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -183,7 +183,7 @@ class __$$_FpInvitationCopyWithImpl<$Res>
     Object? collectionId = freezed,
     Object? databaseId = freezed,
   }) {
-    return _then(_$_FpInvitation(
+    return _then(_$FpInvitationImpl(
       teamId: freezed == teamId
           ? _value.teamId
           : teamId // ignore: cast_nullable_to_non_nullable
@@ -234,8 +234,8 @@ class __$$_FpInvitationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FpInvitation implements _FpInvitation {
-  _$_FpInvitation(
+class _$FpInvitationImpl implements _FpInvitation {
+  _$FpInvitationImpl(
       {this.teamId,
       this.guestId,
       this.code,
@@ -249,8 +249,8 @@ class _$_FpInvitation implements _FpInvitation {
       @JsonKey(name: '\$databaseId') this.databaseId})
       : _permissions = permissions;
 
-  factory _$_FpInvitation.fromJson(Map<String, dynamic> json) =>
-      _$$_FpInvitationFromJson(json);
+  factory _$FpInvitationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FpInvitationImplFromJson(json);
 
   @override
   final String? teamId;
@@ -295,10 +295,10 @@ class _$_FpInvitation implements _FpInvitation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FpInvitation &&
+            other is _$FpInvitationImpl &&
             (identical(other.teamId, teamId) || other.teamId == teamId) &&
             (identical(other.guestId, guestId) || other.guestId == guestId) &&
             (identical(other.code, code) || other.code == code) &&
@@ -337,12 +337,12 @@ class _$_FpInvitation implements _FpInvitation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FpInvitationCopyWith<_$_FpInvitation> get copyWith =>
-      __$$_FpInvitationCopyWithImpl<_$_FpInvitation>(this, _$identity);
+  _$$FpInvitationImplCopyWith<_$FpInvitationImpl> get copyWith =>
+      __$$FpInvitationImplCopyWithImpl<_$FpInvitationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FpInvitationToJson(
+    return _$$FpInvitationImplToJson(
       this,
     );
   }
@@ -361,10 +361,10 @@ abstract class _FpInvitation implements FpInvitation {
           @JsonKey(name: '\$permissions') final List<String>? permissions,
           @JsonKey(name: '\$collectionId') final String? collectionId,
           @JsonKey(name: '\$databaseId') final String? databaseId}) =
-      _$_FpInvitation;
+      _$FpInvitationImpl;
 
   factory _FpInvitation.fromJson(Map<String, dynamic> json) =
-      _$_FpInvitation.fromJson;
+      _$FpInvitationImpl.fromJson;
 
   @override
   String? get teamId;
@@ -396,6 +396,6 @@ abstract class _FpInvitation implements FpInvitation {
   String? get databaseId;
   @override
   @JsonKey(ignore: true)
-  _$$_FpInvitationCopyWith<_$_FpInvitation> get copyWith =>
+  _$$FpInvitationImplCopyWith<_$FpInvitationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -16,7 +16,9 @@ class LeagueSeason {
         start: json['start'] as String?,
         end: json['end'] as String?,
         current: json['current'] as bool?,
-        coverage: json['coverage'] == null ? null : LeagueCoverage.fromJson(json['coverage'] as Map<String, dynamic>),
+        coverage: json['coverage'] == null
+            ? null
+            : LeagueCoverage.fromJson(json['coverage'] as Map<String, dynamic>),
       );
 
   Map<String, dynamic> toJson() => {

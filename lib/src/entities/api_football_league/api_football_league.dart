@@ -13,10 +13,17 @@ class ApiFootballLeague {
 
   ApiFootballLeague({this.league, this.country, this.seasons});
 
-  factory ApiFootballLeague.fromJson(Map<String, dynamic> json) => ApiFootballLeague(
-        league: json['league'] == null ? null : LeagueLeague.fromJson(json['league'] as Map<String, dynamic>),
-        country: json['country'] == null ? null : LeagueCountry.fromJson(json['country'] as Map<String, dynamic>),
-        seasons: (json['seasons'] as List<dynamic>?)?.map((e) => LeagueSeason.fromJson(e as Map<String, dynamic>)).toList(),
+  factory ApiFootballLeague.fromJson(Map<String, dynamic> json) =>
+      ApiFootballLeague(
+        league: json['league'] == null
+            ? null
+            : LeagueLeague.fromJson(json['league'] as Map<String, dynamic>),
+        country: json['country'] == null
+            ? null
+            : LeagueCountry.fromJson(json['country'] as Map<String, dynamic>),
+        seasons: (json['seasons'] as List<dynamic>?)
+            ?.map((e) => LeagueSeason.fromJson(e as Map<String, dynamic>))
+            .toList(),
       );
 
   Map<String, dynamic> toJson() => {

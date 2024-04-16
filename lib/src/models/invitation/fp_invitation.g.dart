@@ -6,8 +6,8 @@ part of 'fp_invitation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FpInvitation _$$_FpInvitationFromJson(Map<String, dynamic> json) =>
-    _$_FpInvitation(
+_$FpInvitationImpl _$$FpInvitationImplFromJson(Map<String, dynamic> json) =>
+    _$FpInvitationImpl(
       teamId: json['teamId'] as String?,
       guestId: json['guestId'] as String?,
       code: json['code'] as String?,
@@ -27,7 +27,7 @@ _$_FpInvitation _$$_FpInvitationFromJson(Map<String, dynamic> json) =>
       databaseId: json[r'$databaseId'] as String?,
     );
 
-Map<String, dynamic> _$$_FpInvitationToJson(_$_FpInvitation instance) =>
+Map<String, dynamic> _$$FpInvitationImplToJson(_$FpInvitationImpl instance) =>
     <String, dynamic>{
       'teamId': instance.teamId,
       'guestId': instance.guestId,

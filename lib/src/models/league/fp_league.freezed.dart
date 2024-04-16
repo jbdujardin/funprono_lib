@@ -12,7 +12,7 @@ part of 'fp_league.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FpLeague _$FpLeagueFromJson(Map<String, dynamic> json) {
   return _FpLeague.fromJson(json);
@@ -180,10 +180,11 @@ class _$FpLeagueCopyWithImpl<$Res, $Val extends FpLeague>
 }
 
 /// @nodoc
-abstract class _$$_FpLeagueCopyWith<$Res> implements $FpLeagueCopyWith<$Res> {
-  factory _$$_FpLeagueCopyWith(
-          _$_FpLeague value, $Res Function(_$_FpLeague) then) =
-      __$$_FpLeagueCopyWithImpl<$Res>;
+abstract class _$$FpLeagueImplCopyWith<$Res>
+    implements $FpLeagueCopyWith<$Res> {
+  factory _$$FpLeagueImplCopyWith(
+          _$FpLeagueImpl value, $Res Function(_$FpLeagueImpl) then) =
+      __$$FpLeagueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -207,11 +208,11 @@ abstract class _$$_FpLeagueCopyWith<$Res> implements $FpLeagueCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_FpLeagueCopyWithImpl<$Res>
-    extends _$FpLeagueCopyWithImpl<$Res, _$_FpLeague>
-    implements _$$_FpLeagueCopyWith<$Res> {
-  __$$_FpLeagueCopyWithImpl(
-      _$_FpLeague _value, $Res Function(_$_FpLeague) _then)
+class __$$FpLeagueImplCopyWithImpl<$Res>
+    extends _$FpLeagueCopyWithImpl<$Res, _$FpLeagueImpl>
+    implements _$$FpLeagueImplCopyWith<$Res> {
+  __$$FpLeagueImplCopyWithImpl(
+      _$FpLeagueImpl _value, $Res Function(_$FpLeagueImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -235,7 +236,7 @@ class __$$_FpLeagueCopyWithImpl<$Res>
     Object? collectionId = freezed,
     Object? databaseId = freezed,
   }) {
-    return _then(_$_FpLeague(
+    return _then(_$FpLeagueImpl(
       currentSeason: freezed == currentSeason
           ? _value.currentSeason
           : currentSeason // ignore: cast_nullable_to_non_nullable
@@ -310,8 +311,8 @@ class __$$_FpLeagueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FpLeague implements _FpLeague {
-  _$_FpLeague(
+class _$FpLeagueImpl implements _FpLeague {
+  _$FpLeagueImpl(
       {this.currentSeason,
       this.id,
       this.countryFlag,
@@ -332,8 +333,8 @@ class _$_FpLeague implements _FpLeague {
       : _rounds = rounds,
         _permissions = permissions;
 
-  factory _$_FpLeague.fromJson(Map<String, dynamic> json) =>
-      _$$_FpLeagueFromJson(json);
+  factory _$FpLeagueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FpLeagueImplFromJson(json);
 
   @override
   final int? currentSeason;
@@ -398,10 +399,10 @@ class _$_FpLeague implements _FpLeague {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FpLeague &&
+            other is _$FpLeagueImpl &&
             (identical(other.currentSeason, currentSeason) ||
                 other.currentSeason == currentSeason) &&
             (identical(other.id, id) || other.id == id) &&
@@ -457,12 +458,12 @@ class _$_FpLeague implements _FpLeague {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FpLeagueCopyWith<_$_FpLeague> get copyWith =>
-      __$$_FpLeagueCopyWithImpl<_$_FpLeague>(this, _$identity);
+  _$$FpLeagueImplCopyWith<_$FpLeagueImpl> get copyWith =>
+      __$$FpLeagueImplCopyWithImpl<_$FpLeagueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FpLeagueToJson(
+    return _$$FpLeagueImplToJson(
       this,
     );
   }
@@ -470,25 +471,27 @@ class _$_FpLeague implements _FpLeague {
 
 abstract class _FpLeague implements FpLeague {
   factory _FpLeague(
-      {final int? currentSeason,
-      final int? id,
-      final String? countryFlag,
-      final String? name,
-      final String? type,
-      final String? countryCode,
-      final DateTime? currentSeasonEnd,
-      final DateTime? currentSeasonStart,
-      final String? logo,
-      final String? countryName,
-      final List<String>? rounds,
-      @JsonKey(name: '\$id') final String? dbId,
-      @JsonKey(name: '\$createdAt') final DateTime? createdAt,
-      @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
-      @JsonKey(name: '\$permissions') final List<String>? permissions,
-      @JsonKey(name: '\$collectionId') final String? collectionId,
-      @JsonKey(name: '\$databaseId') final String? databaseId}) = _$_FpLeague;
+          {final int? currentSeason,
+          final int? id,
+          final String? countryFlag,
+          final String? name,
+          final String? type,
+          final String? countryCode,
+          final DateTime? currentSeasonEnd,
+          final DateTime? currentSeasonStart,
+          final String? logo,
+          final String? countryName,
+          final List<String>? rounds,
+          @JsonKey(name: '\$id') final String? dbId,
+          @JsonKey(name: '\$createdAt') final DateTime? createdAt,
+          @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
+          @JsonKey(name: '\$permissions') final List<String>? permissions,
+          @JsonKey(name: '\$collectionId') final String? collectionId,
+          @JsonKey(name: '\$databaseId') final String? databaseId}) =
+      _$FpLeagueImpl;
 
-  factory _FpLeague.fromJson(Map<String, dynamic> json) = _$_FpLeague.fromJson;
+  factory _FpLeague.fromJson(Map<String, dynamic> json) =
+      _$FpLeagueImpl.fromJson;
 
   @override
   int? get currentSeason;
@@ -532,6 +535,6 @@ abstract class _FpLeague implements FpLeague {
   String? get databaseId;
   @override
   @JsonKey(ignore: true)
-  _$$_FpLeagueCopyWith<_$_FpLeague> get copyWith =>
+  _$$FpLeagueImplCopyWith<_$FpLeagueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,8 +6,8 @@ part of 'fp_standing.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FpStanding _$$_FpStandingFromJson(Map<String, dynamic> json) =>
-    _$_FpStanding(
+_$FpStandingImpl _$$FpStandingImplFromJson(Map<String, dynamic> json) =>
+    _$FpStandingImpl(
       rank: json['rank'] as int?,
       teamId: json['teamId'] as int?,
       teamName: json['teamName'] as String?,
@@ -39,7 +39,7 @@ _$_FpStanding _$$_FpStandingFromJson(Map<String, dynamic> json) =>
       databaseId: json[r'$databaseId'] as String?,
     );
 
-Map<String, dynamic> _$$_FpStandingToJson(_$_FpStanding instance) =>
+Map<String, dynamic> _$$FpStandingImplToJson(_$FpStandingImpl instance) =>
     <String, dynamic>{
       'rank': instance.rank,
       'teamId': instance.teamId,

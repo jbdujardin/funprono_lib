@@ -12,7 +12,7 @@ part of 'fp_bet.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FpBet _$FpBetFromJson(Map<String, dynamic> json) {
   return _FpBet.fromJson(json);
@@ -165,9 +165,10 @@ class _$FpBetCopyWithImpl<$Res, $Val extends FpBet>
 }
 
 /// @nodoc
-abstract class _$$_FpBetCopyWith<$Res> implements $FpBetCopyWith<$Res> {
-  factory _$$_FpBetCopyWith(_$_FpBet value, $Res Function(_$_FpBet) then) =
-      __$$_FpBetCopyWithImpl<$Res>;
+abstract class _$$FpBetImplCopyWith<$Res> implements $FpBetCopyWith<$Res> {
+  factory _$$FpBetImplCopyWith(
+          _$FpBetImpl value, $Res Function(_$FpBetImpl) then) =
+      __$$FpBetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -190,9 +191,11 @@ abstract class _$$_FpBetCopyWith<$Res> implements $FpBetCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_FpBetCopyWithImpl<$Res> extends _$FpBetCopyWithImpl<$Res, _$_FpBet>
-    implements _$$_FpBetCopyWith<$Res> {
-  __$$_FpBetCopyWithImpl(_$_FpBet _value, $Res Function(_$_FpBet) _then)
+class __$$FpBetImplCopyWithImpl<$Res>
+    extends _$FpBetCopyWithImpl<$Res, _$FpBetImpl>
+    implements _$$FpBetImplCopyWith<$Res> {
+  __$$FpBetImplCopyWithImpl(
+      _$FpBetImpl _value, $Res Function(_$FpBetImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -212,7 +215,7 @@ class __$$_FpBetCopyWithImpl<$Res> extends _$FpBetCopyWithImpl<$Res, _$_FpBet>
     Object? collectionId = freezed,
     Object? databaseId = freezed,
   }) {
-    return _then(_$_FpBet(
+    return _then(_$FpBetImpl(
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -271,8 +274,8 @@ class __$$_FpBetCopyWithImpl<$Res> extends _$FpBetCopyWithImpl<$Res, _$_FpBet>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FpBet implements _FpBet {
-  _$_FpBet(
+class _$FpBetImpl implements _FpBet {
+  _$FpBetImpl(
       {this.userId,
       this.fixtureId,
       this.homeBet,
@@ -288,8 +291,8 @@ class _$_FpBet implements _FpBet {
       @JsonKey(name: '\$databaseId') this.databaseId})
       : _permissions = permissions;
 
-  factory _$_FpBet.fromJson(Map<String, dynamic> json) =>
-      _$$_FpBetFromJson(json);
+  factory _$FpBetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FpBetImplFromJson(json);
 
   @override
   final String? userId;
@@ -338,10 +341,10 @@ class _$_FpBet implements _FpBet {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FpBet &&
+            other is _$FpBetImpl &&
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.fixtureId, fixtureId) ||
                 other.fixtureId == fixtureId) &&
@@ -386,12 +389,12 @@ class _$_FpBet implements _FpBet {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FpBetCopyWith<_$_FpBet> get copyWith =>
-      __$$_FpBetCopyWithImpl<_$_FpBet>(this, _$identity);
+  _$$FpBetImplCopyWith<_$FpBetImpl> get copyWith =>
+      __$$FpBetImplCopyWithImpl<_$FpBetImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FpBetToJson(
+    return _$$FpBetImplToJson(
       this,
     );
   }
@@ -411,9 +414,9 @@ abstract class _FpBet implements FpBet {
       @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
       @JsonKey(name: '\$permissions') final List<String>? permissions,
       @JsonKey(name: '\$collectionId') final String? collectionId,
-      @JsonKey(name: '\$databaseId') final String? databaseId}) = _$_FpBet;
+      @JsonKey(name: '\$databaseId') final String? databaseId}) = _$FpBetImpl;
 
-  factory _FpBet.fromJson(Map<String, dynamic> json) = _$_FpBet.fromJson;
+  factory _FpBet.fromJson(Map<String, dynamic> json) = _$FpBetImpl.fromJson;
 
   @override
   String? get userId;
@@ -449,6 +452,6 @@ abstract class _FpBet implements FpBet {
   String? get databaseId;
   @override
   @JsonKey(ignore: true)
-  _$$_FpBetCopyWith<_$_FpBet> get copyWith =>
+  _$$FpBetImplCopyWith<_$FpBetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

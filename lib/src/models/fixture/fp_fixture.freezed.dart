@@ -12,7 +12,7 @@ part of 'fp_fixture.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FpFixture _$FpFixtureFromJson(Map<String, dynamic> json) {
   return _FpFixture.fromJson(json);
@@ -267,10 +267,11 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
 }
 
 /// @nodoc
-abstract class _$$_FpFixtureCopyWith<$Res> implements $FpFixtureCopyWith<$Res> {
-  factory _$$_FpFixtureCopyWith(
-          _$_FpFixture value, $Res Function(_$_FpFixture) then) =
-      __$$_FpFixtureCopyWithImpl<$Res>;
+abstract class _$$FpFixtureImplCopyWith<$Res>
+    implements $FpFixtureCopyWith<$Res> {
+  factory _$$FpFixtureImplCopyWith(
+          _$FpFixtureImpl value, $Res Function(_$FpFixtureImpl) then) =
+      __$$FpFixtureImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -306,11 +307,11 @@ abstract class _$$_FpFixtureCopyWith<$Res> implements $FpFixtureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_FpFixtureCopyWithImpl<$Res>
-    extends _$FpFixtureCopyWithImpl<$Res, _$_FpFixture>
-    implements _$$_FpFixtureCopyWith<$Res> {
-  __$$_FpFixtureCopyWithImpl(
-      _$_FpFixture _value, $Res Function(_$_FpFixture) _then)
+class __$$FpFixtureImplCopyWithImpl<$Res>
+    extends _$FpFixtureCopyWithImpl<$Res, _$FpFixtureImpl>
+    implements _$$FpFixtureImplCopyWith<$Res> {
+  __$$FpFixtureImplCopyWithImpl(
+      _$FpFixtureImpl _value, $Res Function(_$FpFixtureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -346,7 +347,7 @@ class __$$_FpFixtureCopyWithImpl<$Res>
     Object? collectionId = freezed,
     Object? databaseId = freezed,
   }) {
-    return _then(_$_FpFixture(
+    return _then(_$FpFixtureImpl(
       predictions: freezed == predictions
           ? _value.predictions
           : predictions // ignore: cast_nullable_to_non_nullable
@@ -469,8 +470,8 @@ class __$$_FpFixtureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FpFixture implements _FpFixture {
-  _$_FpFixture(
+class _$FpFixtureImpl implements _FpFixture {
+  _$FpFixtureImpl(
       {@ApiFootballPredictionConverter() this.predictions,
       @ApiFootballFixtureConverter() this.json,
       this.homeGoals,
@@ -502,8 +503,8 @@ class _$_FpFixture implements _FpFixture {
       @JsonKey(name: '\$databaseId') this.databaseId})
       : _permissions = permissions;
 
-  factory _$_FpFixture.fromJson(Map<String, dynamic> json) =>
-      _$$_FpFixtureFromJson(json);
+  factory _$FpFixtureImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FpFixtureImplFromJson(json);
 
   @override
   @ApiFootballPredictionConverter()
@@ -587,10 +588,10 @@ class _$_FpFixture implements _FpFixture {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FpFixture &&
+            other is _$FpFixtureImpl &&
             (identical(other.predictions, predictions) ||
                 other.predictions == predictions) &&
             (identical(other.json, json) || other.json == json) &&
@@ -679,12 +680,12 @@ class _$_FpFixture implements _FpFixture {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FpFixtureCopyWith<_$_FpFixture> get copyWith =>
-      __$$_FpFixtureCopyWithImpl<_$_FpFixture>(this, _$identity);
+  _$$FpFixtureImplCopyWith<_$FpFixtureImpl> get copyWith =>
+      __$$FpFixtureImplCopyWithImpl<_$FpFixtureImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FpFixtureToJson(
+    return _$$FpFixtureImplToJson(
       this,
     );
   }
@@ -692,39 +693,40 @@ class _$_FpFixture implements _FpFixture {
 
 abstract class _FpFixture implements FpFixture {
   factory _FpFixture(
-      {@ApiFootballPredictionConverter()
-      final ApiFootballPrediction? predictions,
-      @ApiFootballFixtureConverter() final ApiFootballFixture? json,
-      final int? homeGoals,
-      final String? homeLogo,
-      @JsonEnum() final FixtureStatus? status,
-      final int? id,
-      final String? awayName,
-      final DateTime? date,
-      final int? awayGoals,
-      final int? homePoints,
-      final int? season,
-      final int? awayId,
-      final String? round,
-      final int? homeId,
-      final int? timestamp,
-      final int? awayPoints,
-      final String? awayLogo,
-      final int? leagueId,
-      final String? homeName,
-      final int? elapsed,
-      final int? drawPoints,
-      final bool? fixtureIsFinished,
-      final bool? fixtureWillStarted,
-      @JsonKey(name: '\$id') final String? dbId,
-      @JsonKey(name: '\$createdAt') final DateTime? createdAt,
-      @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
-      @JsonKey(name: '\$permissions') final List<String>? permissions,
-      @JsonKey(name: '\$collectionId') final String? collectionId,
-      @JsonKey(name: '\$databaseId') final String? databaseId}) = _$_FpFixture;
+          {@ApiFootballPredictionConverter()
+          final ApiFootballPrediction? predictions,
+          @ApiFootballFixtureConverter() final ApiFootballFixture? json,
+          final int? homeGoals,
+          final String? homeLogo,
+          @JsonEnum() final FixtureStatus? status,
+          final int? id,
+          final String? awayName,
+          final DateTime? date,
+          final int? awayGoals,
+          final int? homePoints,
+          final int? season,
+          final int? awayId,
+          final String? round,
+          final int? homeId,
+          final int? timestamp,
+          final int? awayPoints,
+          final String? awayLogo,
+          final int? leagueId,
+          final String? homeName,
+          final int? elapsed,
+          final int? drawPoints,
+          final bool? fixtureIsFinished,
+          final bool? fixtureWillStarted,
+          @JsonKey(name: '\$id') final String? dbId,
+          @JsonKey(name: '\$createdAt') final DateTime? createdAt,
+          @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
+          @JsonKey(name: '\$permissions') final List<String>? permissions,
+          @JsonKey(name: '\$collectionId') final String? collectionId,
+          @JsonKey(name: '\$databaseId') final String? databaseId}) =
+      _$FpFixtureImpl;
 
   factory _FpFixture.fromJson(Map<String, dynamic> json) =
-      _$_FpFixture.fromJson;
+      _$FpFixtureImpl.fromJson;
 
   @override
   @ApiFootballPredictionConverter()
@@ -795,6 +797,6 @@ abstract class _FpFixture implements FpFixture {
   String? get databaseId;
   @override
   @JsonKey(ignore: true)
-  _$$_FpFixtureCopyWith<_$_FpFixture> get copyWith =>
+  _$$FpFixtureImplCopyWith<_$FpFixtureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

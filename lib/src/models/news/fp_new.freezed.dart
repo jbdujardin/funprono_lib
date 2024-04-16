@@ -12,7 +12,7 @@ part of 'fp_new.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FpNew _$FpNewFromJson(Map<String, dynamic> json) {
   return _FpNew.fromJson(json);
@@ -238,9 +238,10 @@ class _$FpNewCopyWithImpl<$Res, $Val extends FpNew>
 }
 
 /// @nodoc
-abstract class _$$_FpNewCopyWith<$Res> implements $FpNewCopyWith<$Res> {
-  factory _$$_FpNewCopyWith(_$_FpNew value, $Res Function(_$_FpNew) then) =
-      __$$_FpNewCopyWithImpl<$Res>;
+abstract class _$$FpNewImplCopyWith<$Res> implements $FpNewCopyWith<$Res> {
+  factory _$$FpNewImplCopyWith(
+          _$FpNewImpl value, $Res Function(_$FpNewImpl) then) =
+      __$$FpNewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -270,9 +271,11 @@ abstract class _$$_FpNewCopyWith<$Res> implements $FpNewCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_FpNewCopyWithImpl<$Res> extends _$FpNewCopyWithImpl<$Res, _$_FpNew>
-    implements _$$_FpNewCopyWith<$Res> {
-  __$$_FpNewCopyWithImpl(_$_FpNew _value, $Res Function(_$_FpNew) _then)
+class __$$FpNewImplCopyWithImpl<$Res>
+    extends _$FpNewCopyWithImpl<$Res, _$FpNewImpl>
+    implements _$$FpNewImplCopyWith<$Res> {
+  __$$FpNewImplCopyWithImpl(
+      _$FpNewImpl _value, $Res Function(_$FpNewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -302,7 +305,7 @@ class __$$_FpNewCopyWithImpl<$Res> extends _$FpNewCopyWithImpl<$Res, _$_FpNew>
     Object? collectionId = freezed,
     Object? databaseId = freezed,
   }) {
-    return _then(_$_FpNew(
+    return _then(_$FpNewImpl(
       titleFr: freezed == titleFr
           ? _value.titleFr
           : titleFr // ignore: cast_nullable_to_non_nullable
@@ -401,8 +404,8 @@ class __$$_FpNewCopyWithImpl<$Res> extends _$FpNewCopyWithImpl<$Res, _$_FpNew>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FpNew implements _FpNew {
-  _$_FpNew(
+class _$FpNewImpl implements _FpNew {
+  _$FpNewImpl(
       {@JsonKey(name: "title-fr") this.titleFr,
       @JsonKey(name: "content-fr") this.contentFr,
       @JsonKey(name: "title-en") this.titleEn,
@@ -428,8 +431,8 @@ class _$_FpNew implements _FpNew {
       @JsonKey(name: '\$databaseId') this.databaseId})
       : _permissions = permissions;
 
-  factory _$_FpNew.fromJson(Map<String, dynamic> json) =>
-      _$$_FpNewFromJson(json);
+  factory _$FpNewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FpNewImplFromJson(json);
 
   @override
   @JsonKey(name: "title-fr")
@@ -515,10 +518,10 @@ class _$_FpNew implements _FpNew {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FpNew &&
+            other is _$FpNewImpl &&
             (identical(other.titleFr, titleFr) || other.titleFr == titleFr) &&
             (identical(other.contentFr, contentFr) ||
                 other.contentFr == contentFr) &&
@@ -587,12 +590,12 @@ class _$_FpNew implements _FpNew {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FpNewCopyWith<_$_FpNew> get copyWith =>
-      __$$_FpNewCopyWithImpl<_$_FpNew>(this, _$identity);
+  _$$FpNewImplCopyWith<_$FpNewImpl> get copyWith =>
+      __$$FpNewImplCopyWithImpl<_$FpNewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FpNewToJson(
+    return _$$FpNewImplToJson(
       this,
     );
   }
@@ -622,9 +625,9 @@ abstract class _FpNew implements FpNew {
       @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
       @JsonKey(name: '\$permissions') final List<String>? permissions,
       @JsonKey(name: '\$collectionId') final String? collectionId,
-      @JsonKey(name: '\$databaseId') final String? databaseId}) = _$_FpNew;
+      @JsonKey(name: '\$databaseId') final String? databaseId}) = _$FpNewImpl;
 
-  factory _FpNew.fromJson(Map<String, dynamic> json) = _$_FpNew.fromJson;
+  factory _FpNew.fromJson(Map<String, dynamic> json) = _$FpNewImpl.fromJson;
 
   @override
   @JsonKey(name: "title-fr")
@@ -697,6 +700,6 @@ abstract class _FpNew implements FpNew {
   String? get databaseId;
   @override
   @JsonKey(ignore: true)
-  _$$_FpNewCopyWith<_$_FpNew> get copyWith =>
+  _$$FpNewImplCopyWith<_$FpNewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

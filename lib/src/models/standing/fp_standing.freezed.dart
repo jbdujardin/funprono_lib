@@ -12,7 +12,7 @@ part of 'fp_standing.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FpStanding _$FpStandingFromJson(Map<String, dynamic> json) {
   return _FpStanding.fromJson(json);
@@ -209,11 +209,11 @@ class _$FpStandingCopyWithImpl<$Res, $Val extends FpStanding>
 }
 
 /// @nodoc
-abstract class _$$_FpStandingCopyWith<$Res>
+abstract class _$$FpStandingImplCopyWith<$Res>
     implements $FpStandingCopyWith<$Res> {
-  factory _$$_FpStandingCopyWith(
-          _$_FpStanding value, $Res Function(_$_FpStanding) then) =
-      __$$_FpStandingCopyWithImpl<$Res>;
+  factory _$$FpStandingImplCopyWith(
+          _$FpStandingImpl value, $Res Function(_$FpStandingImpl) then) =
+      __$$FpStandingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -241,11 +241,11 @@ abstract class _$$_FpStandingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FpStandingCopyWithImpl<$Res>
-    extends _$FpStandingCopyWithImpl<$Res, _$_FpStanding>
-    implements _$$_FpStandingCopyWith<$Res> {
-  __$$_FpStandingCopyWithImpl(
-      _$_FpStanding _value, $Res Function(_$_FpStanding) _then)
+class __$$FpStandingImplCopyWithImpl<$Res>
+    extends _$FpStandingCopyWithImpl<$Res, _$FpStandingImpl>
+    implements _$$FpStandingImplCopyWith<$Res> {
+  __$$FpStandingImplCopyWithImpl(
+      _$FpStandingImpl _value, $Res Function(_$FpStandingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -273,7 +273,7 @@ class __$$_FpStandingCopyWithImpl<$Res>
     Object? collectionId = freezed,
     Object? databaseId = freezed,
   }) {
-    return _then(_$_FpStanding(
+    return _then(_$FpStandingImpl(
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
@@ -364,8 +364,8 @@ class __$$_FpStandingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FpStanding implements _FpStanding {
-  _$_FpStanding(
+class _$FpStandingImpl implements _FpStanding {
+  _$FpStandingImpl(
       {this.rank,
       this.teamId,
       this.teamName,
@@ -389,8 +389,8 @@ class _$_FpStanding implements _FpStanding {
       @JsonKey(name: '\$databaseId') this.databaseId})
       : _permissions = permissions;
 
-  factory _$_FpStanding.fromJson(Map<String, dynamic> json) =>
-      _$$_FpStandingFromJson(json);
+  factory _$FpStandingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FpStandingImplFromJson(json);
 
   @override
   final int? rank;
@@ -455,10 +455,10 @@ class _$_FpStanding implements _FpStanding {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FpStanding &&
+            other is _$FpStandingImpl &&
             (identical(other.rank, rank) || other.rank == rank) &&
             (identical(other.teamId, teamId) || other.teamId == teamId) &&
             (identical(other.teamName, teamName) ||
@@ -524,12 +524,12 @@ class _$_FpStanding implements _FpStanding {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FpStandingCopyWith<_$_FpStanding> get copyWith =>
-      __$$_FpStandingCopyWithImpl<_$_FpStanding>(this, _$identity);
+  _$$FpStandingImplCopyWith<_$FpStandingImpl> get copyWith =>
+      __$$FpStandingImplCopyWithImpl<_$FpStandingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FpStandingToJson(
+    return _$$FpStandingImplToJson(
       this,
     );
   }
@@ -537,30 +537,31 @@ class _$_FpStanding implements _FpStanding {
 
 abstract class _FpStanding implements FpStanding {
   factory _FpStanding(
-      {final int? rank,
-      final int? teamId,
-      final String? teamName,
-      final String? teamLogo,
-      final int? points,
-      final int? goalsDiff,
-      final String? description,
-      final String? group,
-      final int? allPlayed,
-      final int? allWin,
-      final int? allDraw,
-      final int? allLose,
-      final int? allGoalsFor,
-      final int? allGoalsAgainst,
-      final DateTime? update,
-      @JsonKey(name: '\$id') final String? dbId,
-      @JsonKey(name: '\$createdAt') final DateTime? createdAt,
-      @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
-      @JsonKey(name: '\$permissions') final List<String>? permissions,
-      @JsonKey(name: '\$collectionId') final String? collectionId,
-      @JsonKey(name: '\$databaseId') final String? databaseId}) = _$_FpStanding;
+          {final int? rank,
+          final int? teamId,
+          final String? teamName,
+          final String? teamLogo,
+          final int? points,
+          final int? goalsDiff,
+          final String? description,
+          final String? group,
+          final int? allPlayed,
+          final int? allWin,
+          final int? allDraw,
+          final int? allLose,
+          final int? allGoalsFor,
+          final int? allGoalsAgainst,
+          final DateTime? update,
+          @JsonKey(name: '\$id') final String? dbId,
+          @JsonKey(name: '\$createdAt') final DateTime? createdAt,
+          @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
+          @JsonKey(name: '\$permissions') final List<String>? permissions,
+          @JsonKey(name: '\$collectionId') final String? collectionId,
+          @JsonKey(name: '\$databaseId') final String? databaseId}) =
+      _$FpStandingImpl;
 
   factory _FpStanding.fromJson(Map<String, dynamic> json) =
-      _$_FpStanding.fromJson;
+      _$FpStandingImpl.fromJson;
 
   @override
   int? get rank;
@@ -612,6 +613,6 @@ abstract class _FpStanding implements FpStanding {
   String? get databaseId;
   @override
   @JsonKey(ignore: true)
-  _$$_FpStandingCopyWith<_$_FpStanding> get copyWith =>
+  _$$FpStandingImplCopyWith<_$FpStandingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,7 +6,8 @@ part of 'fp_fixture.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FpFixture _$$_FpFixtureFromJson(Map<String, dynamic> json) => _$_FpFixture(
+_$FpFixtureImpl _$$FpFixtureImplFromJson(Map<String, dynamic> json) =>
+    _$FpFixtureImpl(
       predictions: const ApiFootballPredictionConverter()
           .fromJson(json['predictions'] as String?),
       json:
@@ -47,7 +48,7 @@ _$_FpFixture _$$_FpFixtureFromJson(Map<String, dynamic> json) => _$_FpFixture(
       databaseId: json[r'$databaseId'] as String?,
     );
 
-Map<String, dynamic> _$$_FpFixtureToJson(_$_FpFixture instance) =>
+Map<String, dynamic> _$$FpFixtureImplToJson(_$FpFixtureImpl instance) =>
     <String, dynamic>{
       'predictions':
           const ApiFootballPredictionConverter().toJson(instance.predictions),

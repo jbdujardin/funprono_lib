@@ -6,7 +6,7 @@ part of 'fp_new.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FpNew _$$_FpNewFromJson(Map<String, dynamic> json) => _$_FpNew(
+_$FpNewImpl _$$FpNewImplFromJson(Map<String, dynamic> json) => _$FpNewImpl(
       titleFr: json['title-fr'] as String?,
       contentFr: json['content-fr'] as String?,
       titleEn: json['title-en'] as String?,
@@ -38,7 +38,8 @@ _$_FpNew _$$_FpNewFromJson(Map<String, dynamic> json) => _$_FpNew(
       databaseId: json[r'$databaseId'] as String?,
     );
 
-Map<String, dynamic> _$$_FpNewToJson(_$_FpNew instance) => <String, dynamic>{
+Map<String, dynamic> _$$FpNewImplToJson(_$FpNewImpl instance) =>
+    <String, dynamic>{
       'title-fr': instance.titleFr,
       'content-fr': instance.contentFr,
       'title-en': instance.titleEn,
