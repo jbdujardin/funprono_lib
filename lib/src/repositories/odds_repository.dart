@@ -4,31 +4,45 @@ class OddsRepository {
   OddsRepository(this._api);
   final ApiFootballAPI _api;
 
-  Future<List<ApiFootballOdd>> getOdds({required int leagueId, required int season}) async {
+  Future<List<ApiFootballOdd>> getOdds({
+    required String leagueId,
+    required String season,
+  }) async {
     List<ApiFootballOdd> returnList = [];
     int page = 1;
-    final responseJson = await _getOddsForPage(leagueId, season, page);
+    final responseJson =
+        await _getOddsForPage(leagueId, season, page.toString());
     final int total = responseJson['paging']['total'];
-    returnList.addAll((responseJson['response'] as List).map((json) => ApiFootballOdd.fromJson(json)).toList());
+    returnList.addAll((responseJson['response'] as List)
+        .map((json) => ApiFootballOdd.fromJson(json))
+        .toList());
     while (total != page) {
       page++;
-      final responseJson = await _getOddsForPage(leagueId, season, page);
-      returnList.addAll((responseJson['response'] as List).map((json) => ApiFootballOdd.fromJson(json)).toList());
+      final responseJson =
+          await _getOddsForPage(leagueId, season, page.toString());
+      returnList.addAll((responseJson['response'] as List)
+          .map((json) => ApiFootballOdd.fromJson(json))
+          .toList());
     }
     return returnList;
   }
 
-  Future<dynamic> _getOddsForPage(int leagueId, int season, int page) async {
+  Future<dynamic> _getOddsForPage(
+    String leagueId,
+    String season,
+    String page,
+  ) async {
     return await _api.getData(
-        path: 'odds',
-        params: {
-          'league': leagueId.toString(),
-          'season': season.toString(),
-          'bet': '1',
-          'page': page.toString(),
-        },
-        builder: (data) {
-          return data;
-        });
+      path: 'odds',
+      params: {
+        'league': leagueId,
+        'season': season,
+        'bet': '1',
+        'page': page,
+      },
+      builder: (data) {
+        return data;
+      },
+    );
   }
 }

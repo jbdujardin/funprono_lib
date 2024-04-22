@@ -25,6 +25,7 @@ class FpLeague with _$FpLeague {
     DateTime? seasonEnd,
     List<String>? rounds,
     DateTime? roundsUpdatedAt,
+    DateTime? pointsUpdatedAt,
     @JsonKey(name: '\$id') String? id,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,
     @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
