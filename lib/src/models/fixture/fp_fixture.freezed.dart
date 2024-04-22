@@ -20,34 +20,33 @@ FpFixture _$FpFixtureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FpFixture {
-  @ApiFootballPredictionConverter()
-  ApiFootballPrediction? get predictions => throw _privateConstructorUsedError;
-  @ApiFootballFixtureConverter()
-  ApiFootballFixture? get json => throw _privateConstructorUsedError;
-  int? get homeGoals => throw _privateConstructorUsedError;
-  String? get homeLogo => throw _privateConstructorUsedError;
+  int? get leagueId => throw _privateConstructorUsedError;
   @JsonEnum()
   FixtureStatus? get status => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
-  String? get awayName => throw _privateConstructorUsedError;
   DateTime? get date => throw _privateConstructorUsedError;
-  int? get awayGoals => throw _privateConstructorUsedError;
-  int? get homePoints => throw _privateConstructorUsedError;
-  int? get season => throw _privateConstructorUsedError;
-  int? get awayId => throw _privateConstructorUsedError;
-  String? get round => throw _privateConstructorUsedError;
-  int? get homeId => throw _privateConstructorUsedError;
   int? get timestamp => throw _privateConstructorUsedError;
-  int? get awayPoints => throw _privateConstructorUsedError;
-  String? get awayLogo => throw _privateConstructorUsedError;
-  int? get leagueId => throw _privateConstructorUsedError;
-  String? get homeName => throw _privateConstructorUsedError;
+  String? get round => throw _privateConstructorUsedError;
   int? get elapsed => throw _privateConstructorUsedError;
+  int? get homeId => throw _privateConstructorUsedError;
+  String? get homeName => throw _privateConstructorUsedError;
+  String? get homeLogo => throw _privateConstructorUsedError;
+  int? get homeGoals => throw _privateConstructorUsedError;
+  int? get homePoints => throw _privateConstructorUsedError;
+  int? get awayId => throw _privateConstructorUsedError;
+  String? get awayName => throw _privateConstructorUsedError;
+  String? get awayLogo => throw _privateConstructorUsedError;
+  int? get awayGoals => throw _privateConstructorUsedError;
+  int? get awayPoints => throw _privateConstructorUsedError;
   int? get drawPoints => throw _privateConstructorUsedError;
-  bool? get fixtureIsFinished => throw _privateConstructorUsedError;
-  bool? get fixtureWillStarted => throw _privateConstructorUsedError;
+  String? get referee => throw _privateConstructorUsedError;
+  int? get venueId => throw _privateConstructorUsedError;
+  String? get venueName => throw _privateConstructorUsedError;
+  bool? get homeWinner => throw _privateConstructorUsedError;
+  bool? get awayWinner => throw _privateConstructorUsedError;
+  @ApiFootballFixtureConverter()
+  ApiFootballFixture? get json => throw _privateConstructorUsedError;
   @JsonKey(name: '\$id')
-  String? get dbId => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '\$createdAt')
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: '\$updatedAt')
@@ -71,30 +70,30 @@ abstract class $FpFixtureCopyWith<$Res> {
       _$FpFixtureCopyWithImpl<$Res, FpFixture>;
   @useResult
   $Res call(
-      {@ApiFootballPredictionConverter() ApiFootballPrediction? predictions,
-      @ApiFootballFixtureConverter() ApiFootballFixture? json,
-      int? homeGoals,
-      String? homeLogo,
+      {int? leagueId,
       @JsonEnum() FixtureStatus? status,
-      int? id,
-      String? awayName,
       DateTime? date,
-      int? awayGoals,
-      int? homePoints,
-      int? season,
-      int? awayId,
-      String? round,
-      int? homeId,
       int? timestamp,
-      int? awayPoints,
-      String? awayLogo,
-      int? leagueId,
-      String? homeName,
+      String? round,
       int? elapsed,
+      int? homeId,
+      String? homeName,
+      String? homeLogo,
+      int? homeGoals,
+      int? homePoints,
+      int? awayId,
+      String? awayName,
+      String? awayLogo,
+      int? awayGoals,
+      int? awayPoints,
       int? drawPoints,
-      bool? fixtureIsFinished,
-      bool? fixtureWillStarted,
-      @JsonKey(name: '\$id') String? dbId,
+      String? referee,
+      int? venueId,
+      String? venueName,
+      bool? homeWinner,
+      bool? awayWinner,
+      @ApiFootballFixtureConverter() ApiFootballFixture? json,
+      @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
       @JsonKey(name: '\$permissions') List<String>? permissions,
@@ -115,30 +114,30 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? predictions = freezed,
-    Object? json = freezed,
-    Object? homeGoals = freezed,
-    Object? homeLogo = freezed,
-    Object? status = freezed,
-    Object? id = freezed,
-    Object? awayName = freezed,
-    Object? date = freezed,
-    Object? awayGoals = freezed,
-    Object? homePoints = freezed,
-    Object? season = freezed,
-    Object? awayId = freezed,
-    Object? round = freezed,
-    Object? homeId = freezed,
-    Object? timestamp = freezed,
-    Object? awayPoints = freezed,
-    Object? awayLogo = freezed,
     Object? leagueId = freezed,
-    Object? homeName = freezed,
+    Object? status = freezed,
+    Object? date = freezed,
+    Object? timestamp = freezed,
+    Object? round = freezed,
     Object? elapsed = freezed,
+    Object? homeId = freezed,
+    Object? homeName = freezed,
+    Object? homeLogo = freezed,
+    Object? homeGoals = freezed,
+    Object? homePoints = freezed,
+    Object? awayId = freezed,
+    Object? awayName = freezed,
+    Object? awayLogo = freezed,
+    Object? awayGoals = freezed,
+    Object? awayPoints = freezed,
     Object? drawPoints = freezed,
-    Object? fixtureIsFinished = freezed,
-    Object? fixtureWillStarted = freezed,
-    Object? dbId = freezed,
+    Object? referee = freezed,
+    Object? venueId = freezed,
+    Object? venueName = freezed,
+    Object? homeWinner = freezed,
+    Object? awayWinner = freezed,
+    Object? json = freezed,
+    Object? id = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? permissions = freezed,
@@ -146,101 +145,101 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
     Object? databaseId = freezed,
   }) {
     return _then(_value.copyWith(
-      predictions: freezed == predictions
-          ? _value.predictions
-          : predictions // ignore: cast_nullable_to_non_nullable
-              as ApiFootballPrediction?,
-      json: freezed == json
-          ? _value.json
-          : json // ignore: cast_nullable_to_non_nullable
-              as ApiFootballFixture?,
-      homeGoals: freezed == homeGoals
-          ? _value.homeGoals
-          : homeGoals // ignore: cast_nullable_to_non_nullable
+      leagueId: freezed == leagueId
+          ? _value.leagueId
+          : leagueId // ignore: cast_nullable_to_non_nullable
               as int?,
-      homeLogo: freezed == homeLogo
-          ? _value.homeLogo
-          : homeLogo // ignore: cast_nullable_to_non_nullable
-              as String?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as FixtureStatus?,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayName: freezed == awayName
-          ? _value.awayName
-          : awayName // ignore: cast_nullable_to_non_nullable
-              as String?,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      awayGoals: freezed == awayGoals
-          ? _value.awayGoals
-          : awayGoals // ignore: cast_nullable_to_non_nullable
-              as int?,
-      homePoints: freezed == homePoints
-          ? _value.homePoints
-          : homePoints // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
-          ? _value.season
-          : season // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayId: freezed == awayId
-          ? _value.awayId
-          : awayId // ignore: cast_nullable_to_non_nullable
+      timestamp: freezed == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
               as int?,
       round: freezed == round
           ? _value.round
           : round // ignore: cast_nullable_to_non_nullable
               as String?,
+      elapsed: freezed == elapsed
+          ? _value.elapsed
+          : elapsed // ignore: cast_nullable_to_non_nullable
+              as int?,
       homeId: freezed == homeId
           ? _value.homeId
           : homeId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      timestamp: freezed == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayPoints: freezed == awayPoints
-          ? _value.awayPoints
-          : awayPoints // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayLogo: freezed == awayLogo
-          ? _value.awayLogo
-          : awayLogo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      leagueId: freezed == leagueId
-          ? _value.leagueId
-          : leagueId // ignore: cast_nullable_to_non_nullable
               as int?,
       homeName: freezed == homeName
           ? _value.homeName
           : homeName // ignore: cast_nullable_to_non_nullable
               as String?,
-      elapsed: freezed == elapsed
-          ? _value.elapsed
-          : elapsed // ignore: cast_nullable_to_non_nullable
+      homeLogo: freezed == homeLogo
+          ? _value.homeLogo
+          : homeLogo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homeGoals: freezed == homeGoals
+          ? _value.homeGoals
+          : homeGoals // ignore: cast_nullable_to_non_nullable
+              as int?,
+      homePoints: freezed == homePoints
+          ? _value.homePoints
+          : homePoints // ignore: cast_nullable_to_non_nullable
+              as int?,
+      awayId: freezed == awayId
+          ? _value.awayId
+          : awayId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      awayName: freezed == awayName
+          ? _value.awayName
+          : awayName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      awayLogo: freezed == awayLogo
+          ? _value.awayLogo
+          : awayLogo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      awayGoals: freezed == awayGoals
+          ? _value.awayGoals
+          : awayGoals // ignore: cast_nullable_to_non_nullable
+              as int?,
+      awayPoints: freezed == awayPoints
+          ? _value.awayPoints
+          : awayPoints // ignore: cast_nullable_to_non_nullable
               as int?,
       drawPoints: freezed == drawPoints
           ? _value.drawPoints
           : drawPoints // ignore: cast_nullable_to_non_nullable
               as int?,
-      fixtureIsFinished: freezed == fixtureIsFinished
-          ? _value.fixtureIsFinished
-          : fixtureIsFinished // ignore: cast_nullable_to_non_nullable
+      referee: freezed == referee
+          ? _value.referee
+          : referee // ignore: cast_nullable_to_non_nullable
+              as String?,
+      venueId: freezed == venueId
+          ? _value.venueId
+          : venueId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      venueName: freezed == venueName
+          ? _value.venueName
+          : venueName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homeWinner: freezed == homeWinner
+          ? _value.homeWinner
+          : homeWinner // ignore: cast_nullable_to_non_nullable
               as bool?,
-      fixtureWillStarted: freezed == fixtureWillStarted
-          ? _value.fixtureWillStarted
-          : fixtureWillStarted // ignore: cast_nullable_to_non_nullable
+      awayWinner: freezed == awayWinner
+          ? _value.awayWinner
+          : awayWinner // ignore: cast_nullable_to_non_nullable
               as bool?,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
+      json: freezed == json
+          ? _value.json
+          : json // ignore: cast_nullable_to_non_nullable
+              as ApiFootballFixture?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -275,30 +274,30 @@ abstract class _$$FpFixtureImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@ApiFootballPredictionConverter() ApiFootballPrediction? predictions,
-      @ApiFootballFixtureConverter() ApiFootballFixture? json,
-      int? homeGoals,
-      String? homeLogo,
+      {int? leagueId,
       @JsonEnum() FixtureStatus? status,
-      int? id,
-      String? awayName,
       DateTime? date,
-      int? awayGoals,
-      int? homePoints,
-      int? season,
-      int? awayId,
-      String? round,
-      int? homeId,
       int? timestamp,
-      int? awayPoints,
-      String? awayLogo,
-      int? leagueId,
-      String? homeName,
+      String? round,
       int? elapsed,
+      int? homeId,
+      String? homeName,
+      String? homeLogo,
+      int? homeGoals,
+      int? homePoints,
+      int? awayId,
+      String? awayName,
+      String? awayLogo,
+      int? awayGoals,
+      int? awayPoints,
       int? drawPoints,
-      bool? fixtureIsFinished,
-      bool? fixtureWillStarted,
-      @JsonKey(name: '\$id') String? dbId,
+      String? referee,
+      int? venueId,
+      String? venueName,
+      bool? homeWinner,
+      bool? awayWinner,
+      @ApiFootballFixtureConverter() ApiFootballFixture? json,
+      @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
       @JsonKey(name: '\$permissions') List<String>? permissions,
@@ -317,30 +316,30 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? predictions = freezed,
-    Object? json = freezed,
-    Object? homeGoals = freezed,
-    Object? homeLogo = freezed,
-    Object? status = freezed,
-    Object? id = freezed,
-    Object? awayName = freezed,
-    Object? date = freezed,
-    Object? awayGoals = freezed,
-    Object? homePoints = freezed,
-    Object? season = freezed,
-    Object? awayId = freezed,
-    Object? round = freezed,
-    Object? homeId = freezed,
-    Object? timestamp = freezed,
-    Object? awayPoints = freezed,
-    Object? awayLogo = freezed,
     Object? leagueId = freezed,
-    Object? homeName = freezed,
+    Object? status = freezed,
+    Object? date = freezed,
+    Object? timestamp = freezed,
+    Object? round = freezed,
     Object? elapsed = freezed,
+    Object? homeId = freezed,
+    Object? homeName = freezed,
+    Object? homeLogo = freezed,
+    Object? homeGoals = freezed,
+    Object? homePoints = freezed,
+    Object? awayId = freezed,
+    Object? awayName = freezed,
+    Object? awayLogo = freezed,
+    Object? awayGoals = freezed,
+    Object? awayPoints = freezed,
     Object? drawPoints = freezed,
-    Object? fixtureIsFinished = freezed,
-    Object? fixtureWillStarted = freezed,
-    Object? dbId = freezed,
+    Object? referee = freezed,
+    Object? venueId = freezed,
+    Object? venueName = freezed,
+    Object? homeWinner = freezed,
+    Object? awayWinner = freezed,
+    Object? json = freezed,
+    Object? id = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? permissions = freezed,
@@ -348,101 +347,101 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
     Object? databaseId = freezed,
   }) {
     return _then(_$FpFixtureImpl(
-      predictions: freezed == predictions
-          ? _value.predictions
-          : predictions // ignore: cast_nullable_to_non_nullable
-              as ApiFootballPrediction?,
-      json: freezed == json
-          ? _value.json
-          : json // ignore: cast_nullable_to_non_nullable
-              as ApiFootballFixture?,
-      homeGoals: freezed == homeGoals
-          ? _value.homeGoals
-          : homeGoals // ignore: cast_nullable_to_non_nullable
+      leagueId: freezed == leagueId
+          ? _value.leagueId
+          : leagueId // ignore: cast_nullable_to_non_nullable
               as int?,
-      homeLogo: freezed == homeLogo
-          ? _value.homeLogo
-          : homeLogo // ignore: cast_nullable_to_non_nullable
-              as String?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as FixtureStatus?,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayName: freezed == awayName
-          ? _value.awayName
-          : awayName // ignore: cast_nullable_to_non_nullable
-              as String?,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      awayGoals: freezed == awayGoals
-          ? _value.awayGoals
-          : awayGoals // ignore: cast_nullable_to_non_nullable
-              as int?,
-      homePoints: freezed == homePoints
-          ? _value.homePoints
-          : homePoints // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
-          ? _value.season
-          : season // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayId: freezed == awayId
-          ? _value.awayId
-          : awayId // ignore: cast_nullable_to_non_nullable
+      timestamp: freezed == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
               as int?,
       round: freezed == round
           ? _value.round
           : round // ignore: cast_nullable_to_non_nullable
               as String?,
+      elapsed: freezed == elapsed
+          ? _value.elapsed
+          : elapsed // ignore: cast_nullable_to_non_nullable
+              as int?,
       homeId: freezed == homeId
           ? _value.homeId
           : homeId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      timestamp: freezed == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayPoints: freezed == awayPoints
-          ? _value.awayPoints
-          : awayPoints // ignore: cast_nullable_to_non_nullable
-              as int?,
-      awayLogo: freezed == awayLogo
-          ? _value.awayLogo
-          : awayLogo // ignore: cast_nullable_to_non_nullable
-              as String?,
-      leagueId: freezed == leagueId
-          ? _value.leagueId
-          : leagueId // ignore: cast_nullable_to_non_nullable
               as int?,
       homeName: freezed == homeName
           ? _value.homeName
           : homeName // ignore: cast_nullable_to_non_nullable
               as String?,
-      elapsed: freezed == elapsed
-          ? _value.elapsed
-          : elapsed // ignore: cast_nullable_to_non_nullable
+      homeLogo: freezed == homeLogo
+          ? _value.homeLogo
+          : homeLogo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homeGoals: freezed == homeGoals
+          ? _value.homeGoals
+          : homeGoals // ignore: cast_nullable_to_non_nullable
+              as int?,
+      homePoints: freezed == homePoints
+          ? _value.homePoints
+          : homePoints // ignore: cast_nullable_to_non_nullable
+              as int?,
+      awayId: freezed == awayId
+          ? _value.awayId
+          : awayId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      awayName: freezed == awayName
+          ? _value.awayName
+          : awayName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      awayLogo: freezed == awayLogo
+          ? _value.awayLogo
+          : awayLogo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      awayGoals: freezed == awayGoals
+          ? _value.awayGoals
+          : awayGoals // ignore: cast_nullable_to_non_nullable
+              as int?,
+      awayPoints: freezed == awayPoints
+          ? _value.awayPoints
+          : awayPoints // ignore: cast_nullable_to_non_nullable
               as int?,
       drawPoints: freezed == drawPoints
           ? _value.drawPoints
           : drawPoints // ignore: cast_nullable_to_non_nullable
               as int?,
-      fixtureIsFinished: freezed == fixtureIsFinished
-          ? _value.fixtureIsFinished
-          : fixtureIsFinished // ignore: cast_nullable_to_non_nullable
+      referee: freezed == referee
+          ? _value.referee
+          : referee // ignore: cast_nullable_to_non_nullable
+              as String?,
+      venueId: freezed == venueId
+          ? _value.venueId
+          : venueId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      venueName: freezed == venueName
+          ? _value.venueName
+          : venueName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homeWinner: freezed == homeWinner
+          ? _value.homeWinner
+          : homeWinner // ignore: cast_nullable_to_non_nullable
               as bool?,
-      fixtureWillStarted: freezed == fixtureWillStarted
-          ? _value.fixtureWillStarted
-          : fixtureWillStarted // ignore: cast_nullable_to_non_nullable
+      awayWinner: freezed == awayWinner
+          ? _value.awayWinner
+          : awayWinner // ignore: cast_nullable_to_non_nullable
               as bool?,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
+      json: freezed == json
+          ? _value.json
+          : json // ignore: cast_nullable_to_non_nullable
+              as ApiFootballFixture?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -472,30 +471,30 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FpFixtureImpl implements _FpFixture {
   _$FpFixtureImpl(
-      {@ApiFootballPredictionConverter() this.predictions,
-      @ApiFootballFixtureConverter() this.json,
-      this.homeGoals,
-      this.homeLogo,
+      {this.leagueId,
       @JsonEnum() this.status,
-      this.id,
-      this.awayName,
       this.date,
-      this.awayGoals,
-      this.homePoints,
-      this.season,
-      this.awayId,
-      this.round,
-      this.homeId,
       this.timestamp,
-      this.awayPoints,
-      this.awayLogo,
-      this.leagueId,
-      this.homeName,
+      this.round,
       this.elapsed,
+      this.homeId,
+      this.homeName,
+      this.homeLogo,
+      this.homeGoals,
+      this.homePoints,
+      this.awayId,
+      this.awayName,
+      this.awayLogo,
+      this.awayGoals,
+      this.awayPoints,
       this.drawPoints,
-      this.fixtureIsFinished,
-      this.fixtureWillStarted,
-      @JsonKey(name: '\$id') this.dbId,
+      this.referee,
+      this.venueId,
+      this.venueName,
+      this.homeWinner,
+      this.awayWinner,
+      @ApiFootballFixtureConverter() this.json,
+      @JsonKey(name: '\$id') this.id,
       @JsonKey(name: '\$createdAt') this.createdAt,
       @JsonKey(name: '\$updatedAt') this.updatedAt,
       @JsonKey(name: '\$permissions') final List<String>? permissions,
@@ -507,57 +506,56 @@ class _$FpFixtureImpl implements _FpFixture {
       _$$FpFixtureImplFromJson(json);
 
   @override
-  @ApiFootballPredictionConverter()
-  final ApiFootballPrediction? predictions;
-  @override
-  @ApiFootballFixtureConverter()
-  final ApiFootballFixture? json;
-  @override
-  final int? homeGoals;
-  @override
-  final String? homeLogo;
+  final int? leagueId;
   @override
   @JsonEnum()
   final FixtureStatus? status;
   @override
-  final int? id;
-  @override
-  final String? awayName;
-  @override
   final DateTime? date;
-  @override
-  final int? awayGoals;
-  @override
-  final int? homePoints;
-  @override
-  final int? season;
-  @override
-  final int? awayId;
-  @override
-  final String? round;
-  @override
-  final int? homeId;
   @override
   final int? timestamp;
   @override
-  final int? awayPoints;
-  @override
-  final String? awayLogo;
-  @override
-  final int? leagueId;
-  @override
-  final String? homeName;
+  final String? round;
   @override
   final int? elapsed;
   @override
+  final int? homeId;
+  @override
+  final String? homeName;
+  @override
+  final String? homeLogo;
+  @override
+  final int? homeGoals;
+  @override
+  final int? homePoints;
+  @override
+  final int? awayId;
+  @override
+  final String? awayName;
+  @override
+  final String? awayLogo;
+  @override
+  final int? awayGoals;
+  @override
+  final int? awayPoints;
+  @override
   final int? drawPoints;
   @override
-  final bool? fixtureIsFinished;
+  final String? referee;
   @override
-  final bool? fixtureWillStarted;
+  final int? venueId;
+  @override
+  final String? venueName;
+  @override
+  final bool? homeWinner;
+  @override
+  final bool? awayWinner;
+  @override
+  @ApiFootballFixtureConverter()
+  final ApiFootballFixture? json;
   @override
   @JsonKey(name: '\$id')
-  final String? dbId;
+  final String? id;
   @override
   @JsonKey(name: '\$createdAt')
   final DateTime? createdAt;
@@ -584,7 +582,7 @@ class _$FpFixtureImpl implements _FpFixture {
 
   @override
   String toString() {
-    return 'FpFixture(predictions: $predictions, json: $json, homeGoals: $homeGoals, homeLogo: $homeLogo, status: $status, id: $id, awayName: $awayName, date: $date, awayGoals: $awayGoals, homePoints: $homePoints, season: $season, awayId: $awayId, round: $round, homeId: $homeId, timestamp: $timestamp, awayPoints: $awayPoints, awayLogo: $awayLogo, leagueId: $leagueId, homeName: $homeName, elapsed: $elapsed, drawPoints: $drawPoints, fixtureIsFinished: $fixtureIsFinished, fixtureWillStarted: $fixtureWillStarted, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+    return 'FpFixture(leagueId: $leagueId, status: $status, date: $date, timestamp: $timestamp, round: $round, elapsed: $elapsed, homeId: $homeId, homeName: $homeName, homeLogo: $homeLogo, homeGoals: $homeGoals, homePoints: $homePoints, awayId: $awayId, awayName: $awayName, awayLogo: $awayLogo, awayGoals: $awayGoals, awayPoints: $awayPoints, drawPoints: $drawPoints, referee: $referee, venueId: $venueId, venueName: $venueName, homeWinner: $homeWinner, awayWinner: $awayWinner, json: $json, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
   }
 
   @override
@@ -592,44 +590,44 @@ class _$FpFixtureImpl implements _FpFixture {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FpFixtureImpl &&
-            (identical(other.predictions, predictions) ||
-                other.predictions == predictions) &&
-            (identical(other.json, json) || other.json == json) &&
-            (identical(other.homeGoals, homeGoals) ||
-                other.homeGoals == homeGoals) &&
-            (identical(other.homeLogo, homeLogo) ||
-                other.homeLogo == homeLogo) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.awayName, awayName) ||
-                other.awayName == awayName) &&
-            (identical(other.date, date) || other.date == date) &&
-            (identical(other.awayGoals, awayGoals) ||
-                other.awayGoals == awayGoals) &&
-            (identical(other.homePoints, homePoints) ||
-                other.homePoints == homePoints) &&
-            (identical(other.season, season) || other.season == season) &&
-            (identical(other.awayId, awayId) || other.awayId == awayId) &&
-            (identical(other.round, round) || other.round == round) &&
-            (identical(other.homeId, homeId) || other.homeId == homeId) &&
-            (identical(other.timestamp, timestamp) ||
-                other.timestamp == timestamp) &&
-            (identical(other.awayPoints, awayPoints) ||
-                other.awayPoints == awayPoints) &&
-            (identical(other.awayLogo, awayLogo) ||
-                other.awayLogo == awayLogo) &&
             (identical(other.leagueId, leagueId) ||
                 other.leagueId == leagueId) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp) &&
+            (identical(other.round, round) || other.round == round) &&
+            (identical(other.elapsed, elapsed) || other.elapsed == elapsed) &&
+            (identical(other.homeId, homeId) || other.homeId == homeId) &&
             (identical(other.homeName, homeName) ||
                 other.homeName == homeName) &&
-            (identical(other.elapsed, elapsed) || other.elapsed == elapsed) &&
+            (identical(other.homeLogo, homeLogo) ||
+                other.homeLogo == homeLogo) &&
+            (identical(other.homeGoals, homeGoals) ||
+                other.homeGoals == homeGoals) &&
+            (identical(other.homePoints, homePoints) ||
+                other.homePoints == homePoints) &&
+            (identical(other.awayId, awayId) || other.awayId == awayId) &&
+            (identical(other.awayName, awayName) ||
+                other.awayName == awayName) &&
+            (identical(other.awayLogo, awayLogo) ||
+                other.awayLogo == awayLogo) &&
+            (identical(other.awayGoals, awayGoals) ||
+                other.awayGoals == awayGoals) &&
+            (identical(other.awayPoints, awayPoints) ||
+                other.awayPoints == awayPoints) &&
             (identical(other.drawPoints, drawPoints) ||
                 other.drawPoints == drawPoints) &&
-            (identical(other.fixtureIsFinished, fixtureIsFinished) ||
-                other.fixtureIsFinished == fixtureIsFinished) &&
-            (identical(other.fixtureWillStarted, fixtureWillStarted) ||
-                other.fixtureWillStarted == fixtureWillStarted) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
+            (identical(other.referee, referee) || other.referee == referee) &&
+            (identical(other.venueId, venueId) || other.venueId == venueId) &&
+            (identical(other.venueName, venueName) ||
+                other.venueName == venueName) &&
+            (identical(other.homeWinner, homeWinner) ||
+                other.homeWinner == homeWinner) &&
+            (identical(other.awayWinner, awayWinner) ||
+                other.awayWinner == awayWinner) &&
+            (identical(other.json, json) || other.json == json) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
@@ -646,30 +644,30 @@ class _$FpFixtureImpl implements _FpFixture {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        predictions,
-        json,
-        homeGoals,
-        homeLogo,
-        status,
-        id,
-        awayName,
-        date,
-        awayGoals,
-        homePoints,
-        season,
-        awayId,
-        round,
-        homeId,
-        timestamp,
-        awayPoints,
-        awayLogo,
         leagueId,
-        homeName,
+        status,
+        date,
+        timestamp,
+        round,
         elapsed,
+        homeId,
+        homeName,
+        homeLogo,
+        homeGoals,
+        homePoints,
+        awayId,
+        awayName,
+        awayLogo,
+        awayGoals,
+        awayPoints,
         drawPoints,
-        fixtureIsFinished,
-        fixtureWillStarted,
-        dbId,
+        referee,
+        venueId,
+        venueName,
+        homeWinner,
+        awayWinner,
+        json,
+        id,
         createdAt,
         updatedAt,
         const DeepCollectionEquality().hash(_permissions),
@@ -693,31 +691,30 @@ class _$FpFixtureImpl implements _FpFixture {
 
 abstract class _FpFixture implements FpFixture {
   factory _FpFixture(
-          {@ApiFootballPredictionConverter()
-          final ApiFootballPrediction? predictions,
-          @ApiFootballFixtureConverter() final ApiFootballFixture? json,
-          final int? homeGoals,
-          final String? homeLogo,
+          {final int? leagueId,
           @JsonEnum() final FixtureStatus? status,
-          final int? id,
-          final String? awayName,
           final DateTime? date,
-          final int? awayGoals,
-          final int? homePoints,
-          final int? season,
-          final int? awayId,
-          final String? round,
-          final int? homeId,
           final int? timestamp,
-          final int? awayPoints,
-          final String? awayLogo,
-          final int? leagueId,
-          final String? homeName,
+          final String? round,
           final int? elapsed,
+          final int? homeId,
+          final String? homeName,
+          final String? homeLogo,
+          final int? homeGoals,
+          final int? homePoints,
+          final int? awayId,
+          final String? awayName,
+          final String? awayLogo,
+          final int? awayGoals,
+          final int? awayPoints,
           final int? drawPoints,
-          final bool? fixtureIsFinished,
-          final bool? fixtureWillStarted,
-          @JsonKey(name: '\$id') final String? dbId,
+          final String? referee,
+          final int? venueId,
+          final String? venueName,
+          final bool? homeWinner,
+          final bool? awayWinner,
+          @ApiFootballFixtureConverter() final ApiFootballFixture? json,
+          @JsonKey(name: '\$id') final String? id,
           @JsonKey(name: '\$createdAt') final DateTime? createdAt,
           @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
           @JsonKey(name: '\$permissions') final List<String>? permissions,
@@ -729,57 +726,56 @@ abstract class _FpFixture implements FpFixture {
       _$FpFixtureImpl.fromJson;
 
   @override
-  @ApiFootballPredictionConverter()
-  ApiFootballPrediction? get predictions;
-  @override
-  @ApiFootballFixtureConverter()
-  ApiFootballFixture? get json;
-  @override
-  int? get homeGoals;
-  @override
-  String? get homeLogo;
+  int? get leagueId;
   @override
   @JsonEnum()
   FixtureStatus? get status;
   @override
-  int? get id;
-  @override
-  String? get awayName;
-  @override
   DateTime? get date;
-  @override
-  int? get awayGoals;
-  @override
-  int? get homePoints;
-  @override
-  int? get season;
-  @override
-  int? get awayId;
-  @override
-  String? get round;
-  @override
-  int? get homeId;
   @override
   int? get timestamp;
   @override
-  int? get awayPoints;
-  @override
-  String? get awayLogo;
-  @override
-  int? get leagueId;
-  @override
-  String? get homeName;
+  String? get round;
   @override
   int? get elapsed;
   @override
+  int? get homeId;
+  @override
+  String? get homeName;
+  @override
+  String? get homeLogo;
+  @override
+  int? get homeGoals;
+  @override
+  int? get homePoints;
+  @override
+  int? get awayId;
+  @override
+  String? get awayName;
+  @override
+  String? get awayLogo;
+  @override
+  int? get awayGoals;
+  @override
+  int? get awayPoints;
+  @override
   int? get drawPoints;
   @override
-  bool? get fixtureIsFinished;
+  String? get referee;
   @override
-  bool? get fixtureWillStarted;
+  int? get venueId;
+  @override
+  String? get venueName;
+  @override
+  bool? get homeWinner;
+  @override
+  bool? get awayWinner;
+  @override
+  @ApiFootballFixtureConverter()
+  ApiFootballFixture? get json;
   @override
   @JsonKey(name: '\$id')
-  String? get dbId;
+  String? get id;
   @override
   @JsonKey(name: '\$createdAt')
   DateTime? get createdAt;

@@ -20,29 +20,28 @@ FpLeague _$FpLeagueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FpLeague {
-  int? get currentSeason => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
-  String? get countryFlag => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
-  String? get type => throw _privateConstructorUsedError;
-  String? get countryCode => throw _privateConstructorUsedError;
-  DateTime? get currentSeasonEnd => throw _privateConstructorUsedError;
-  DateTime? get currentSeasonStart => throw _privateConstructorUsedError;
+  LeagueType? get type => throw _privateConstructorUsedError;
   String? get logo => throw _privateConstructorUsedError;
+  String? get countryCode => throw _privateConstructorUsedError;
   String? get countryName => throw _privateConstructorUsedError;
+  String? get countryFlag => throw _privateConstructorUsedError;
+  DateTime? get seasonStart => throw _privateConstructorUsedError;
+  DateTime? get seasonEnd => throw _privateConstructorUsedError;
   List<String>? get rounds => throw _privateConstructorUsedError;
+  DateTime? get roundsUpdatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: '\$id')
-  String? get dbId => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '\$createdAt')
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: '\$updatedAt')
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: '\$permissions')
   List<String>? get permissions => throw _privateConstructorUsedError;
-  @JsonKey(name: '\$collectionId')
-  String? get collectionId => throw _privateConstructorUsedError;
   @JsonKey(name: '\$databaseId')
   String? get databaseId => throw _privateConstructorUsedError;
+  @JsonKey(name: '\$collectionId')
+  String? get collectionId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,23 +55,22 @@ abstract class $FpLeagueCopyWith<$Res> {
       _$FpLeagueCopyWithImpl<$Res, FpLeague>;
   @useResult
   $Res call(
-      {int? currentSeason,
-      int? id,
-      String? countryFlag,
-      String? name,
-      String? type,
-      String? countryCode,
-      DateTime? currentSeasonEnd,
-      DateTime? currentSeasonStart,
+      {String? name,
+      LeagueType? type,
       String? logo,
+      String? countryCode,
       String? countryName,
+      String? countryFlag,
+      DateTime? seasonStart,
+      DateTime? seasonEnd,
       List<String>? rounds,
-      @JsonKey(name: '\$id') String? dbId,
+      DateTime? roundsUpdatedAt,
+      @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
       @JsonKey(name: '\$permissions') List<String>? permissions,
-      @JsonKey(name: '\$collectionId') String? collectionId,
-      @JsonKey(name: '\$databaseId') String? databaseId});
+      @JsonKey(name: '\$databaseId') String? databaseId,
+      @JsonKey(name: '\$collectionId') String? collectionId});
 }
 
 /// @nodoc
@@ -88,37 +86,24 @@ class _$FpLeagueCopyWithImpl<$Res, $Val extends FpLeague>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentSeason = freezed,
-    Object? id = freezed,
-    Object? countryFlag = freezed,
     Object? name = freezed,
     Object? type = freezed,
-    Object? countryCode = freezed,
-    Object? currentSeasonEnd = freezed,
-    Object? currentSeasonStart = freezed,
     Object? logo = freezed,
+    Object? countryCode = freezed,
     Object? countryName = freezed,
+    Object? countryFlag = freezed,
+    Object? seasonStart = freezed,
+    Object? seasonEnd = freezed,
     Object? rounds = freezed,
-    Object? dbId = freezed,
+    Object? roundsUpdatedAt = freezed,
+    Object? id = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? permissions = freezed,
-    Object? collectionId = freezed,
     Object? databaseId = freezed,
+    Object? collectionId = freezed,
   }) {
     return _then(_value.copyWith(
-      currentSeason: freezed == currentSeason
-          ? _value.currentSeason
-          : currentSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      countryFlag: freezed == countryFlag
-          ? _value.countryFlag
-          : countryFlag // ignore: cast_nullable_to_non_nullable
-              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -126,34 +111,42 @@ class _$FpLeagueCopyWithImpl<$Res, $Val extends FpLeague>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
+              as LeagueType?,
+      logo: freezed == logo
+          ? _value.logo
+          : logo // ignore: cast_nullable_to_non_nullable
               as String?,
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      currentSeasonEnd: freezed == currentSeasonEnd
-          ? _value.currentSeasonEnd
-          : currentSeasonEnd // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      currentSeasonStart: freezed == currentSeasonStart
-          ? _value.currentSeasonStart
-          : currentSeasonStart // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      logo: freezed == logo
-          ? _value.logo
-          : logo // ignore: cast_nullable_to_non_nullable
-              as String?,
       countryName: freezed == countryName
           ? _value.countryName
           : countryName // ignore: cast_nullable_to_non_nullable
               as String?,
+      countryFlag: freezed == countryFlag
+          ? _value.countryFlag
+          : countryFlag // ignore: cast_nullable_to_non_nullable
+              as String?,
+      seasonStart: freezed == seasonStart
+          ? _value.seasonStart
+          : seasonStart // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      seasonEnd: freezed == seasonEnd
+          ? _value.seasonEnd
+          : seasonEnd // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       rounds: freezed == rounds
           ? _value.rounds
           : rounds // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
+      roundsUpdatedAt: freezed == roundsUpdatedAt
+          ? _value.roundsUpdatedAt
+          : roundsUpdatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -167,13 +160,13 @@ class _$FpLeagueCopyWithImpl<$Res, $Val extends FpLeague>
           ? _value.permissions
           : permissions // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      collectionId: freezed == collectionId
-          ? _value.collectionId
-          : collectionId // ignore: cast_nullable_to_non_nullable
-              as String?,
       databaseId: freezed == databaseId
           ? _value.databaseId
           : databaseId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      collectionId: freezed == collectionId
+          ? _value.collectionId
+          : collectionId // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -188,23 +181,22 @@ abstract class _$$FpLeagueImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? currentSeason,
-      int? id,
-      String? countryFlag,
-      String? name,
-      String? type,
-      String? countryCode,
-      DateTime? currentSeasonEnd,
-      DateTime? currentSeasonStart,
+      {String? name,
+      LeagueType? type,
       String? logo,
+      String? countryCode,
       String? countryName,
+      String? countryFlag,
+      DateTime? seasonStart,
+      DateTime? seasonEnd,
       List<String>? rounds,
-      @JsonKey(name: '\$id') String? dbId,
+      DateTime? roundsUpdatedAt,
+      @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
       @JsonKey(name: '\$permissions') List<String>? permissions,
-      @JsonKey(name: '\$collectionId') String? collectionId,
-      @JsonKey(name: '\$databaseId') String? databaseId});
+      @JsonKey(name: '\$databaseId') String? databaseId,
+      @JsonKey(name: '\$collectionId') String? collectionId});
 }
 
 /// @nodoc
@@ -218,37 +210,24 @@ class __$$FpLeagueImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currentSeason = freezed,
-    Object? id = freezed,
-    Object? countryFlag = freezed,
     Object? name = freezed,
     Object? type = freezed,
-    Object? countryCode = freezed,
-    Object? currentSeasonEnd = freezed,
-    Object? currentSeasonStart = freezed,
     Object? logo = freezed,
+    Object? countryCode = freezed,
     Object? countryName = freezed,
+    Object? countryFlag = freezed,
+    Object? seasonStart = freezed,
+    Object? seasonEnd = freezed,
     Object? rounds = freezed,
-    Object? dbId = freezed,
+    Object? roundsUpdatedAt = freezed,
+    Object? id = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? permissions = freezed,
-    Object? collectionId = freezed,
     Object? databaseId = freezed,
+    Object? collectionId = freezed,
   }) {
     return _then(_$FpLeagueImpl(
-      currentSeason: freezed == currentSeason
-          ? _value.currentSeason
-          : currentSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      countryFlag: freezed == countryFlag
-          ? _value.countryFlag
-          : countryFlag // ignore: cast_nullable_to_non_nullable
-              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -256,34 +235,42 @@ class __$$FpLeagueImplCopyWithImpl<$Res>
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
+              as LeagueType?,
+      logo: freezed == logo
+          ? _value.logo
+          : logo // ignore: cast_nullable_to_non_nullable
               as String?,
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      currentSeasonEnd: freezed == currentSeasonEnd
-          ? _value.currentSeasonEnd
-          : currentSeasonEnd // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      currentSeasonStart: freezed == currentSeasonStart
-          ? _value.currentSeasonStart
-          : currentSeasonStart // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      logo: freezed == logo
-          ? _value.logo
-          : logo // ignore: cast_nullable_to_non_nullable
-              as String?,
       countryName: freezed == countryName
           ? _value.countryName
           : countryName // ignore: cast_nullable_to_non_nullable
               as String?,
+      countryFlag: freezed == countryFlag
+          ? _value.countryFlag
+          : countryFlag // ignore: cast_nullable_to_non_nullable
+              as String?,
+      seasonStart: freezed == seasonStart
+          ? _value.seasonStart
+          : seasonStart // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      seasonEnd: freezed == seasonEnd
+          ? _value.seasonEnd
+          : seasonEnd // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       rounds: freezed == rounds
           ? _value._rounds
           : rounds // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
+      roundsUpdatedAt: freezed == roundsUpdatedAt
+          ? _value.roundsUpdatedAt
+          : roundsUpdatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -297,13 +284,13 @@ class __$$FpLeagueImplCopyWithImpl<$Res>
           ? _value._permissions
           : permissions // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      collectionId: freezed == collectionId
-          ? _value.collectionId
-          : collectionId // ignore: cast_nullable_to_non_nullable
-              as String?,
       databaseId: freezed == databaseId
           ? _value.databaseId
           : databaseId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      collectionId: freezed == collectionId
+          ? _value.collectionId
+          : collectionId // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -313,23 +300,22 @@ class __$$FpLeagueImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FpLeagueImpl implements _FpLeague {
   _$FpLeagueImpl(
-      {this.currentSeason,
-      this.id,
-      this.countryFlag,
-      this.name,
+      {this.name,
       this.type,
-      this.countryCode,
-      this.currentSeasonEnd,
-      this.currentSeasonStart,
       this.logo,
+      this.countryCode,
       this.countryName,
+      this.countryFlag,
+      this.seasonStart,
+      this.seasonEnd,
       final List<String>? rounds,
-      @JsonKey(name: '\$id') this.dbId,
+      this.roundsUpdatedAt,
+      @JsonKey(name: '\$id') this.id,
       @JsonKey(name: '\$createdAt') this.createdAt,
       @JsonKey(name: '\$updatedAt') this.updatedAt,
       @JsonKey(name: '\$permissions') final List<String>? permissions,
-      @JsonKey(name: '\$collectionId') this.collectionId,
-      @JsonKey(name: '\$databaseId') this.databaseId})
+      @JsonKey(name: '\$databaseId') this.databaseId,
+      @JsonKey(name: '\$collectionId') this.collectionId})
       : _rounds = rounds,
         _permissions = permissions;
 
@@ -337,25 +323,21 @@ class _$FpLeagueImpl implements _FpLeague {
       _$$FpLeagueImplFromJson(json);
 
   @override
-  final int? currentSeason;
-  @override
-  final int? id;
-  @override
-  final String? countryFlag;
-  @override
   final String? name;
   @override
-  final String? type;
-  @override
-  final String? countryCode;
-  @override
-  final DateTime? currentSeasonEnd;
-  @override
-  final DateTime? currentSeasonStart;
+  final LeagueType? type;
   @override
   final String? logo;
   @override
+  final String? countryCode;
+  @override
   final String? countryName;
+  @override
+  final String? countryFlag;
+  @override
+  final DateTime? seasonStart;
+  @override
+  final DateTime? seasonEnd;
   final List<String>? _rounds;
   @override
   List<String>? get rounds {
@@ -367,8 +349,10 @@ class _$FpLeagueImpl implements _FpLeague {
   }
 
   @override
+  final DateTime? roundsUpdatedAt;
+  @override
   @JsonKey(name: '\$id')
-  final String? dbId;
+  final String? id;
   @override
   @JsonKey(name: '\$createdAt')
   final DateTime? createdAt;
@@ -387,15 +371,15 @@ class _$FpLeagueImpl implements _FpLeague {
   }
 
   @override
-  @JsonKey(name: '\$collectionId')
-  final String? collectionId;
-  @override
   @JsonKey(name: '\$databaseId')
   final String? databaseId;
+  @override
+  @JsonKey(name: '\$collectionId')
+  final String? collectionId;
 
   @override
   String toString() {
-    return 'FpLeague(currentSeason: $currentSeason, id: $id, countryFlag: $countryFlag, name: $name, type: $type, countryCode: $countryCode, currentSeasonEnd: $currentSeasonEnd, currentSeasonStart: $currentSeasonStart, logo: $logo, countryName: $countryName, rounds: $rounds, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+    return 'FpLeague(name: $name, type: $type, logo: $logo, countryCode: $countryCode, countryName: $countryName, countryFlag: $countryFlag, seasonStart: $seasonStart, seasonEnd: $seasonEnd, rounds: $rounds, roundsUpdatedAt: $roundsUpdatedAt, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
   }
 
   @override
@@ -403,57 +387,55 @@ class _$FpLeagueImpl implements _FpLeague {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FpLeagueImpl &&
-            (identical(other.currentSeason, currentSeason) ||
-                other.currentSeason == currentSeason) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.countryFlag, countryFlag) ||
-                other.countryFlag == countryFlag) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.logo, logo) || other.logo == logo) &&
             (identical(other.countryCode, countryCode) ||
                 other.countryCode == countryCode) &&
-            (identical(other.currentSeasonEnd, currentSeasonEnd) ||
-                other.currentSeasonEnd == currentSeasonEnd) &&
-            (identical(other.currentSeasonStart, currentSeasonStart) ||
-                other.currentSeasonStart == currentSeasonStart) &&
-            (identical(other.logo, logo) || other.logo == logo) &&
             (identical(other.countryName, countryName) ||
                 other.countryName == countryName) &&
+            (identical(other.countryFlag, countryFlag) ||
+                other.countryFlag == countryFlag) &&
+            (identical(other.seasonStart, seasonStart) ||
+                other.seasonStart == seasonStart) &&
+            (identical(other.seasonEnd, seasonEnd) ||
+                other.seasonEnd == seasonEnd) &&
             const DeepCollectionEquality().equals(other._rounds, _rounds) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
+            (identical(other.roundsUpdatedAt, roundsUpdatedAt) ||
+                other.roundsUpdatedAt == roundsUpdatedAt) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
             const DeepCollectionEquality()
                 .equals(other._permissions, _permissions) &&
-            (identical(other.collectionId, collectionId) ||
-                other.collectionId == collectionId) &&
             (identical(other.databaseId, databaseId) ||
-                other.databaseId == databaseId));
+                other.databaseId == databaseId) &&
+            (identical(other.collectionId, collectionId) ||
+                other.collectionId == collectionId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      currentSeason,
-      id,
-      countryFlag,
       name,
       type,
-      countryCode,
-      currentSeasonEnd,
-      currentSeasonStart,
       logo,
+      countryCode,
       countryName,
+      countryFlag,
+      seasonStart,
+      seasonEnd,
       const DeepCollectionEquality().hash(_rounds),
-      dbId,
+      roundsUpdatedAt,
+      id,
       createdAt,
       updatedAt,
       const DeepCollectionEquality().hash(_permissions),
-      collectionId,
-      databaseId);
+      databaseId,
+      collectionId);
 
   @JsonKey(ignore: true)
   @override
@@ -471,53 +453,50 @@ class _$FpLeagueImpl implements _FpLeague {
 
 abstract class _FpLeague implements FpLeague {
   factory _FpLeague(
-          {final int? currentSeason,
-          final int? id,
-          final String? countryFlag,
-          final String? name,
-          final String? type,
-          final String? countryCode,
-          final DateTime? currentSeasonEnd,
-          final DateTime? currentSeasonStart,
+          {final String? name,
+          final LeagueType? type,
           final String? logo,
+          final String? countryCode,
           final String? countryName,
+          final String? countryFlag,
+          final DateTime? seasonStart,
+          final DateTime? seasonEnd,
           final List<String>? rounds,
-          @JsonKey(name: '\$id') final String? dbId,
+          final DateTime? roundsUpdatedAt,
+          @JsonKey(name: '\$id') final String? id,
           @JsonKey(name: '\$createdAt') final DateTime? createdAt,
           @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
           @JsonKey(name: '\$permissions') final List<String>? permissions,
-          @JsonKey(name: '\$collectionId') final String? collectionId,
-          @JsonKey(name: '\$databaseId') final String? databaseId}) =
+          @JsonKey(name: '\$databaseId') final String? databaseId,
+          @JsonKey(name: '\$collectionId') final String? collectionId}) =
       _$FpLeagueImpl;
 
   factory _FpLeague.fromJson(Map<String, dynamic> json) =
       _$FpLeagueImpl.fromJson;
 
   @override
-  int? get currentSeason;
-  @override
-  int? get id;
-  @override
-  String? get countryFlag;
-  @override
   String? get name;
   @override
-  String? get type;
-  @override
-  String? get countryCode;
-  @override
-  DateTime? get currentSeasonEnd;
-  @override
-  DateTime? get currentSeasonStart;
+  LeagueType? get type;
   @override
   String? get logo;
   @override
+  String? get countryCode;
+  @override
   String? get countryName;
+  @override
+  String? get countryFlag;
+  @override
+  DateTime? get seasonStart;
+  @override
+  DateTime? get seasonEnd;
   @override
   List<String>? get rounds;
   @override
+  DateTime? get roundsUpdatedAt;
+  @override
   @JsonKey(name: '\$id')
-  String? get dbId;
+  String? get id;
   @override
   @JsonKey(name: '\$createdAt')
   DateTime? get createdAt;
@@ -528,11 +507,11 @@ abstract class _FpLeague implements FpLeague {
   @JsonKey(name: '\$permissions')
   List<String>? get permissions;
   @override
-  @JsonKey(name: '\$collectionId')
-  String? get collectionId;
-  @override
   @JsonKey(name: '\$databaseId')
   String? get databaseId;
+  @override
+  @JsonKey(name: '\$collectionId')
+  String? get collectionId;
   @override
   @JsonKey(ignore: true)
   _$$FpLeagueImplCopyWith<_$FpLeagueImpl> get copyWith =>

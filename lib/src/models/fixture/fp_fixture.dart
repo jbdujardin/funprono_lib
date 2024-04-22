@@ -5,7 +5,6 @@ import 'dart:convert';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../entities/api_football_fixture/api_football_fixture.dart';
-import '../../entities/api_football_prediction/api_football_prediction.dart';
 
 part 'fp_fixture.freezed.dart';
 part 'fp_fixture.g.dart';
@@ -101,30 +100,30 @@ extension FixtureStatusExtensions on FixtureStatus {
 @freezed
 class FpFixture with _$FpFixture {
   factory FpFixture({
-    @ApiFootballPredictionConverter() ApiFootballPrediction? predictions,
-    @ApiFootballFixtureConverter() ApiFootballFixture? json,
-    int? homeGoals,
-    String? homeLogo,
-    @JsonEnum() FixtureStatus? status,
-    int? id,
-    String? awayName,
-    DateTime? date,
-    int? awayGoals,
-    int? homePoints,
-    int? season,
-    int? awayId,
-    String? round,
-    int? homeId,
-    int? timestamp,
-    int? awayPoints,
-    String? awayLogo,
     int? leagueId,
-    String? homeName,
+    @JsonEnum() FixtureStatus? status,
+    DateTime? date,
+    int? timestamp,
+    String? round,
     int? elapsed,
+    int? homeId,
+    String? homeName,
+    String? homeLogo,
+    int? homeGoals,
+    int? homePoints,
+    int? awayId,
+    String? awayName,
+    String? awayLogo,
+    int? awayGoals,
+    int? awayPoints,
     int? drawPoints,
-    bool? fixtureIsFinished,
-    bool? fixtureWillStarted,
-    @JsonKey(name: '\$id') String? dbId,
+    String? referee,
+    int? venueId,
+    String? venueName,
+    bool? homeWinner,
+    bool? awayWinner,
+    @ApiFootballFixtureConverter() ApiFootballFixture? json,
+    @JsonKey(name: '\$id') String? id,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,
     @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
     @JsonKey(name: '\$permissions') List<String>? permissions,
@@ -133,19 +132,6 @@ class FpFixture with _$FpFixture {
   }) = _FpFixture;
 
   factory FpFixture.fromJson(Map<String, dynamic> json) => _$FpFixtureFromJson(json);
-}
-
-class ApiFootballPredictionConverter implements JsonConverter<ApiFootballPrediction?, String?> {
-  const ApiFootballPredictionConverter();
-  @override
-  ApiFootballPrediction? fromJson(String? string) {
-    return string == null ? null : ApiFootballPrediction.fromJson(jsonDecode(string));
-  }
-
-  @override
-  String? toJson(ApiFootballPrediction? prediction) {
-    return prediction == null ? null : jsonEncode(prediction.toJson());
-  }
 }
 
 class ApiFootballFixtureConverter implements JsonConverter<ApiFootballFixture?, String?> {

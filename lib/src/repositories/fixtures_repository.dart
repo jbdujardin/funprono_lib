@@ -1,14 +1,19 @@
 import 'package:funprono_lib/api_football.dart';
 import 'package:collection/collection.dart';
+import 'package:funprono_lib/funprono_models.dart';
 
 class FixturesRepository {
   FixturesRepository(this._api);
   final ApiFootballAPI _api;
 
-  Future<List<ApiFootballFixture>> getFixtures({required int leagueId, required int season, String? status}) {
+  Future<List<ApiFootballFixture>> getFixtures({
+    required String leagueId,
+    required String season,
+    String? status,
+  }) {
     Map<String, String> parameters = {
-      'league': leagueId.toString(),
-      'season': season.toString(),
+      'league': leagueId,
+      'season': season,
     };
     if (status != null) {
       parameters['status'] = status;
@@ -19,15 +24,17 @@ class FixturesRepository {
       builder: (data) {
         final List<ApiFootballFixture> allFixtures = (data['response'] as List).map((json) => ApiFootballFixture.fromJson(json)).toList();
         return allFixtures
-            .whereNot((fixture) => ((fixture.league?.round ?? "").contains("Qualifying") ||
-                (fixture.league?.round ?? "").contains("Preliminary") ||
-                (fixture.league?.round ?? "").contains("Play-offs")))
+            .whereNot(
+              (fixture) => ((fixture.league?.round ?? "").contains("Qualifying") ||
+                  (fixture.league?.round ?? "").contains("Preliminary") ||
+                  (fixture.league?.round ?? "").contains("Play-offs")),
+            )
             .toList();
       },
     );
   }
 
-  Future<List<String>> getRounds({required int leagueId, required String leagueType, required int season}) => _api.getData(
+  Future<List<String>> getRounds({required int leagueId, required LeagueType leagueType, required int season}) => _api.getData(
         path: 'fixtures/rounds',
         params: {
           'league': leagueId.toString(),
@@ -36,7 +43,7 @@ class FixturesRepository {
         builder: (data) {
           final List<String> allRounds = List<String>.from(data['response']);
           final allRoundsFiltered = allRounds.whereNot((round) => round.contains('Qualifying') || round.contains('Preliminary') || round.contains('Play-offs')).toList();
-          if (leagueType == "League") {
+          if (leagueType == LeagueType.cup) {
             return allRoundsFiltered;
           } else {
             final List<String> roundsList = [];
