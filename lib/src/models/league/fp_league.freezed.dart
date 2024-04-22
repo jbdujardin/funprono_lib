@@ -31,6 +31,7 @@ mixin _$FpLeague {
   List<String>? get rounds => throw _privateConstructorUsedError;
   DateTime? get roundsUpdatedAt => throw _privateConstructorUsedError;
   DateTime? get pointsUpdatedAt => throw _privateConstructorUsedError;
+  DateTime? get fixturesUpdatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: '\$id')
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '\$createdAt')
@@ -67,6 +68,7 @@ abstract class $FpLeagueCopyWith<$Res> {
       List<String>? rounds,
       DateTime? roundsUpdatedAt,
       DateTime? pointsUpdatedAt,
+      DateTime? fixturesUpdatedAt,
       @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
@@ -99,6 +101,7 @@ class _$FpLeagueCopyWithImpl<$Res, $Val extends FpLeague>
     Object? rounds = freezed,
     Object? roundsUpdatedAt = freezed,
     Object? pointsUpdatedAt = freezed,
+    Object? fixturesUpdatedAt = freezed,
     Object? id = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
@@ -151,6 +154,10 @@ class _$FpLeagueCopyWithImpl<$Res, $Val extends FpLeague>
           ? _value.pointsUpdatedAt
           : pointsUpdatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      fixturesUpdatedAt: freezed == fixturesUpdatedAt
+          ? _value.fixturesUpdatedAt
+          : fixturesUpdatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -199,6 +206,7 @@ abstract class _$$FpLeagueImplCopyWith<$Res>
       List<String>? rounds,
       DateTime? roundsUpdatedAt,
       DateTime? pointsUpdatedAt,
+      DateTime? fixturesUpdatedAt,
       @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
@@ -229,6 +237,7 @@ class __$$FpLeagueImplCopyWithImpl<$Res>
     Object? rounds = freezed,
     Object? roundsUpdatedAt = freezed,
     Object? pointsUpdatedAt = freezed,
+    Object? fixturesUpdatedAt = freezed,
     Object? id = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
@@ -281,6 +290,10 @@ class __$$FpLeagueImplCopyWithImpl<$Res>
           ? _value.pointsUpdatedAt
           : pointsUpdatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      fixturesUpdatedAt: freezed == fixturesUpdatedAt
+          ? _value.fixturesUpdatedAt
+          : fixturesUpdatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -324,6 +337,7 @@ class _$FpLeagueImpl implements _FpLeague {
       final List<String>? rounds,
       this.roundsUpdatedAt,
       this.pointsUpdatedAt,
+      this.fixturesUpdatedAt,
       @JsonKey(name: '\$id') this.id,
       @JsonKey(name: '\$createdAt') this.createdAt,
       @JsonKey(name: '\$updatedAt') this.updatedAt,
@@ -367,6 +381,8 @@ class _$FpLeagueImpl implements _FpLeague {
   @override
   final DateTime? pointsUpdatedAt;
   @override
+  final DateTime? fixturesUpdatedAt;
+  @override
   @JsonKey(name: '\$id')
   final String? id;
   @override
@@ -395,7 +411,7 @@ class _$FpLeagueImpl implements _FpLeague {
 
   @override
   String toString() {
-    return 'FpLeague(name: $name, type: $type, logo: $logo, countryCode: $countryCode, countryName: $countryName, countryFlag: $countryFlag, seasonStart: $seasonStart, seasonEnd: $seasonEnd, rounds: $rounds, roundsUpdatedAt: $roundsUpdatedAt, pointsUpdatedAt: $pointsUpdatedAt, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
+    return 'FpLeague(name: $name, type: $type, logo: $logo, countryCode: $countryCode, countryName: $countryName, countryFlag: $countryFlag, seasonStart: $seasonStart, seasonEnd: $seasonEnd, rounds: $rounds, roundsUpdatedAt: $roundsUpdatedAt, pointsUpdatedAt: $pointsUpdatedAt, fixturesUpdatedAt: $fixturesUpdatedAt, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
   }
 
   @override
@@ -421,6 +437,8 @@ class _$FpLeagueImpl implements _FpLeague {
                 other.roundsUpdatedAt == roundsUpdatedAt) &&
             (identical(other.pointsUpdatedAt, pointsUpdatedAt) ||
                 other.pointsUpdatedAt == pointsUpdatedAt) &&
+            (identical(other.fixturesUpdatedAt, fixturesUpdatedAt) ||
+                other.fixturesUpdatedAt == fixturesUpdatedAt) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
@@ -449,6 +467,7 @@ class _$FpLeagueImpl implements _FpLeague {
       const DeepCollectionEquality().hash(_rounds),
       roundsUpdatedAt,
       pointsUpdatedAt,
+      fixturesUpdatedAt,
       id,
       createdAt,
       updatedAt,
@@ -483,6 +502,7 @@ abstract class _FpLeague implements FpLeague {
           final List<String>? rounds,
           final DateTime? roundsUpdatedAt,
           final DateTime? pointsUpdatedAt,
+          final DateTime? fixturesUpdatedAt,
           @JsonKey(name: '\$id') final String? id,
           @JsonKey(name: '\$createdAt') final DateTime? createdAt,
           @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
@@ -516,6 +536,8 @@ abstract class _FpLeague implements FpLeague {
   DateTime? get roundsUpdatedAt;
   @override
   DateTime? get pointsUpdatedAt;
+  @override
+  DateTime? get fixturesUpdatedAt;
   @override
   @JsonKey(name: '\$id')
   String? get id;
