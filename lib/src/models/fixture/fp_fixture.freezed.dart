@@ -43,6 +43,14 @@ mixin _$FpFixture {
   String? get venueName => throw _privateConstructorUsedError;
   bool? get homeWinner => throw _privateConstructorUsedError;
   bool? get awayWinner => throw _privateConstructorUsedError;
+  int? get scoreHalftimeHome => throw _privateConstructorUsedError;
+  int? get scoreHalftimeAway => throw _privateConstructorUsedError;
+  int? get scoreFulltimeHome => throw _privateConstructorUsedError;
+  int? get scoreFulltimeAway => throw _privateConstructorUsedError;
+  int? get scoreExtratimeHome => throw _privateConstructorUsedError;
+  int? get scoreExtratimeAway => throw _privateConstructorUsedError;
+  int? get scorePenaltyHome => throw _privateConstructorUsedError;
+  int? get scorePenaltyAway => throw _privateConstructorUsedError;
   @ApiFootballFixtureConverter()
   ApiFootballFixture? get json => throw _privateConstructorUsedError;
   @JsonKey(name: '\$id')
@@ -92,6 +100,14 @@ abstract class $FpFixtureCopyWith<$Res> {
       String? venueName,
       bool? homeWinner,
       bool? awayWinner,
+      int? scoreHalftimeHome,
+      int? scoreHalftimeAway,
+      int? scoreFulltimeHome,
+      int? scoreFulltimeAway,
+      int? scoreExtratimeHome,
+      int? scoreExtratimeAway,
+      int? scorePenaltyHome,
+      int? scorePenaltyAway,
       @ApiFootballFixtureConverter() ApiFootballFixture? json,
       @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
@@ -136,6 +152,14 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
     Object? venueName = freezed,
     Object? homeWinner = freezed,
     Object? awayWinner = freezed,
+    Object? scoreHalftimeHome = freezed,
+    Object? scoreHalftimeAway = freezed,
+    Object? scoreFulltimeHome = freezed,
+    Object? scoreFulltimeAway = freezed,
+    Object? scoreExtratimeHome = freezed,
+    Object? scoreExtratimeAway = freezed,
+    Object? scorePenaltyHome = freezed,
+    Object? scorePenaltyAway = freezed,
     Object? json = freezed,
     Object? id = freezed,
     Object? createdAt = freezed,
@@ -233,6 +257,38 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
           ? _value.awayWinner
           : awayWinner // ignore: cast_nullable_to_non_nullable
               as bool?,
+      scoreHalftimeHome: freezed == scoreHalftimeHome
+          ? _value.scoreHalftimeHome
+          : scoreHalftimeHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreHalftimeAway: freezed == scoreHalftimeAway
+          ? _value.scoreHalftimeAway
+          : scoreHalftimeAway // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreFulltimeHome: freezed == scoreFulltimeHome
+          ? _value.scoreFulltimeHome
+          : scoreFulltimeHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreFulltimeAway: freezed == scoreFulltimeAway
+          ? _value.scoreFulltimeAway
+          : scoreFulltimeAway // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreExtratimeHome: freezed == scoreExtratimeHome
+          ? _value.scoreExtratimeHome
+          : scoreExtratimeHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreExtratimeAway: freezed == scoreExtratimeAway
+          ? _value.scoreExtratimeAway
+          : scoreExtratimeAway // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scorePenaltyHome: freezed == scorePenaltyHome
+          ? _value.scorePenaltyHome
+          : scorePenaltyHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scorePenaltyAway: freezed == scorePenaltyAway
+          ? _value.scorePenaltyAway
+          : scorePenaltyAway // ignore: cast_nullable_to_non_nullable
+              as int?,
       json: freezed == json
           ? _value.json
           : json // ignore: cast_nullable_to_non_nullable
@@ -296,6 +352,14 @@ abstract class _$$FpFixtureImplCopyWith<$Res>
       String? venueName,
       bool? homeWinner,
       bool? awayWinner,
+      int? scoreHalftimeHome,
+      int? scoreHalftimeAway,
+      int? scoreFulltimeHome,
+      int? scoreFulltimeAway,
+      int? scoreExtratimeHome,
+      int? scoreExtratimeAway,
+      int? scorePenaltyHome,
+      int? scorePenaltyAway,
       @ApiFootballFixtureConverter() ApiFootballFixture? json,
       @JsonKey(name: '\$id') String? id,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
@@ -338,6 +402,14 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
     Object? venueName = freezed,
     Object? homeWinner = freezed,
     Object? awayWinner = freezed,
+    Object? scoreHalftimeHome = freezed,
+    Object? scoreHalftimeAway = freezed,
+    Object? scoreFulltimeHome = freezed,
+    Object? scoreFulltimeAway = freezed,
+    Object? scoreExtratimeHome = freezed,
+    Object? scoreExtratimeAway = freezed,
+    Object? scorePenaltyHome = freezed,
+    Object? scorePenaltyAway = freezed,
     Object? json = freezed,
     Object? id = freezed,
     Object? createdAt = freezed,
@@ -435,6 +507,38 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
           ? _value.awayWinner
           : awayWinner // ignore: cast_nullable_to_non_nullable
               as bool?,
+      scoreHalftimeHome: freezed == scoreHalftimeHome
+          ? _value.scoreHalftimeHome
+          : scoreHalftimeHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreHalftimeAway: freezed == scoreHalftimeAway
+          ? _value.scoreHalftimeAway
+          : scoreHalftimeAway // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreFulltimeHome: freezed == scoreFulltimeHome
+          ? _value.scoreFulltimeHome
+          : scoreFulltimeHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreFulltimeAway: freezed == scoreFulltimeAway
+          ? _value.scoreFulltimeAway
+          : scoreFulltimeAway // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreExtratimeHome: freezed == scoreExtratimeHome
+          ? _value.scoreExtratimeHome
+          : scoreExtratimeHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scoreExtratimeAway: freezed == scoreExtratimeAway
+          ? _value.scoreExtratimeAway
+          : scoreExtratimeAway // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scorePenaltyHome: freezed == scorePenaltyHome
+          ? _value.scorePenaltyHome
+          : scorePenaltyHome // ignore: cast_nullable_to_non_nullable
+              as int?,
+      scorePenaltyAway: freezed == scorePenaltyAway
+          ? _value.scorePenaltyAway
+          : scorePenaltyAway // ignore: cast_nullable_to_non_nullable
+              as int?,
       json: freezed == json
           ? _value.json
           : json // ignore: cast_nullable_to_non_nullable
@@ -493,6 +597,14 @@ class _$FpFixtureImpl implements _FpFixture {
       this.venueName,
       this.homeWinner,
       this.awayWinner,
+      this.scoreHalftimeHome,
+      this.scoreHalftimeAway,
+      this.scoreFulltimeHome,
+      this.scoreFulltimeAway,
+      this.scoreExtratimeHome,
+      this.scoreExtratimeAway,
+      this.scorePenaltyHome,
+      this.scorePenaltyAway,
       @ApiFootballFixtureConverter() this.json,
       @JsonKey(name: '\$id') this.id,
       @JsonKey(name: '\$createdAt') this.createdAt,
@@ -551,6 +663,22 @@ class _$FpFixtureImpl implements _FpFixture {
   @override
   final bool? awayWinner;
   @override
+  final int? scoreHalftimeHome;
+  @override
+  final int? scoreHalftimeAway;
+  @override
+  final int? scoreFulltimeHome;
+  @override
+  final int? scoreFulltimeAway;
+  @override
+  final int? scoreExtratimeHome;
+  @override
+  final int? scoreExtratimeAway;
+  @override
+  final int? scorePenaltyHome;
+  @override
+  final int? scorePenaltyAway;
+  @override
   @ApiFootballFixtureConverter()
   final ApiFootballFixture? json;
   @override
@@ -582,7 +710,7 @@ class _$FpFixtureImpl implements _FpFixture {
 
   @override
   String toString() {
-    return 'FpFixture(leagueId: $leagueId, status: $status, date: $date, timestamp: $timestamp, round: $round, elapsed: $elapsed, homeId: $homeId, homeName: $homeName, homeLogo: $homeLogo, homeGoals: $homeGoals, homePoints: $homePoints, awayId: $awayId, awayName: $awayName, awayLogo: $awayLogo, awayGoals: $awayGoals, awayPoints: $awayPoints, drawPoints: $drawPoints, referee: $referee, venueId: $venueId, venueName: $venueName, homeWinner: $homeWinner, awayWinner: $awayWinner, json: $json, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+    return 'FpFixture(leagueId: $leagueId, status: $status, date: $date, timestamp: $timestamp, round: $round, elapsed: $elapsed, homeId: $homeId, homeName: $homeName, homeLogo: $homeLogo, homeGoals: $homeGoals, homePoints: $homePoints, awayId: $awayId, awayName: $awayName, awayLogo: $awayLogo, awayGoals: $awayGoals, awayPoints: $awayPoints, drawPoints: $drawPoints, referee: $referee, venueId: $venueId, venueName: $venueName, homeWinner: $homeWinner, awayWinner: $awayWinner, scoreHalftimeHome: $scoreHalftimeHome, scoreHalftimeAway: $scoreHalftimeAway, scoreFulltimeHome: $scoreFulltimeHome, scoreFulltimeAway: $scoreFulltimeAway, scoreExtratimeHome: $scoreExtratimeHome, scoreExtratimeAway: $scoreExtratimeAway, scorePenaltyHome: $scorePenaltyHome, scorePenaltyAway: $scorePenaltyAway, json: $json, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
   }
 
   @override
@@ -626,6 +754,22 @@ class _$FpFixtureImpl implements _FpFixture {
                 other.homeWinner == homeWinner) &&
             (identical(other.awayWinner, awayWinner) ||
                 other.awayWinner == awayWinner) &&
+            (identical(other.scoreHalftimeHome, scoreHalftimeHome) ||
+                other.scoreHalftimeHome == scoreHalftimeHome) &&
+            (identical(other.scoreHalftimeAway, scoreHalftimeAway) ||
+                other.scoreHalftimeAway == scoreHalftimeAway) &&
+            (identical(other.scoreFulltimeHome, scoreFulltimeHome) ||
+                other.scoreFulltimeHome == scoreFulltimeHome) &&
+            (identical(other.scoreFulltimeAway, scoreFulltimeAway) ||
+                other.scoreFulltimeAway == scoreFulltimeAway) &&
+            (identical(other.scoreExtratimeHome, scoreExtratimeHome) ||
+                other.scoreExtratimeHome == scoreExtratimeHome) &&
+            (identical(other.scoreExtratimeAway, scoreExtratimeAway) ||
+                other.scoreExtratimeAway == scoreExtratimeAway) &&
+            (identical(other.scorePenaltyHome, scorePenaltyHome) ||
+                other.scorePenaltyHome == scorePenaltyHome) &&
+            (identical(other.scorePenaltyAway, scorePenaltyAway) ||
+                other.scorePenaltyAway == scorePenaltyAway) &&
             (identical(other.json, json) || other.json == json) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.createdAt, createdAt) ||
@@ -666,6 +810,14 @@ class _$FpFixtureImpl implements _FpFixture {
         venueName,
         homeWinner,
         awayWinner,
+        scoreHalftimeHome,
+        scoreHalftimeAway,
+        scoreFulltimeHome,
+        scoreFulltimeAway,
+        scoreExtratimeHome,
+        scoreExtratimeAway,
+        scorePenaltyHome,
+        scorePenaltyAway,
         json,
         id,
         createdAt,
@@ -713,6 +865,14 @@ abstract class _FpFixture implements FpFixture {
           final String? venueName,
           final bool? homeWinner,
           final bool? awayWinner,
+          final int? scoreHalftimeHome,
+          final int? scoreHalftimeAway,
+          final int? scoreFulltimeHome,
+          final int? scoreFulltimeAway,
+          final int? scoreExtratimeHome,
+          final int? scoreExtratimeAway,
+          final int? scorePenaltyHome,
+          final int? scorePenaltyAway,
           @ApiFootballFixtureConverter() final ApiFootballFixture? json,
           @JsonKey(name: '\$id') final String? id,
           @JsonKey(name: '\$createdAt') final DateTime? createdAt,
@@ -770,6 +930,22 @@ abstract class _FpFixture implements FpFixture {
   bool? get homeWinner;
   @override
   bool? get awayWinner;
+  @override
+  int? get scoreHalftimeHome;
+  @override
+  int? get scoreHalftimeAway;
+  @override
+  int? get scoreFulltimeHome;
+  @override
+  int? get scoreFulltimeAway;
+  @override
+  int? get scoreExtratimeHome;
+  @override
+  int? get scoreExtratimeAway;
+  @override
+  int? get scorePenaltyHome;
+  @override
+  int? get scorePenaltyAway;
   @override
   @ApiFootballFixtureConverter()
   ApiFootballFixture? get json;

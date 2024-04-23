@@ -8,7 +8,7 @@ void main() async {
   final fixturesRepository = FixturesRepository(apiFootballApi);
 
   try {
-    final rounds = await fixturesRepository.getRounds(leagueId: 61, leagueType: LeagueType.league, season: 2022);
+    final rounds = await fixturesRepository.getRounds(leagueId: "61", leagueType: LeagueType.league, season: "2022");
     print(rounds);
   } catch (e) {
     print(e);
