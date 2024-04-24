@@ -22,6 +22,7 @@ _$FpStandingImpl _$$FpStandingImplFromJson(Map<String, dynamic> json) =>
       allLose: json['allLose'] as int?,
       allGoalsFor: json['allGoalsFor'] as int?,
       allGoalsAgainst: json['allGoalsAgainst'] as int?,
+      form: json['form'] as String?,
       update: json['update'] == null
           ? null
           : DateTime.parse(json['update'] as String),
@@ -55,6 +56,7 @@ Map<String, dynamic> _$$FpStandingImplToJson(_$FpStandingImpl instance) =>
       'allLose': instance.allLose,
       'allGoalsFor': instance.allGoalsFor,
       'allGoalsAgainst': instance.allGoalsAgainst,
+      'form': instance.form,
       'update': instance.update?.toIso8601String(),
       r'$id': instance.dbId,
       r'$createdAt': instance.createdAt?.toIso8601String(),

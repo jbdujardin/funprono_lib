@@ -22,6 +22,7 @@ class FpStanding with _$FpStanding {
     int? allLose,
     int? allGoalsFor,
     int? allGoalsAgainst,
+    String? form,
     DateTime? update,
     @JsonKey(name: '\$id') String? dbId,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,

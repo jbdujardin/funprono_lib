@@ -34,6 +34,7 @@ mixin _$FpStanding {
   int? get allLose => throw _privateConstructorUsedError;
   int? get allGoalsFor => throw _privateConstructorUsedError;
   int? get allGoalsAgainst => throw _privateConstructorUsedError;
+  String? get form => throw _privateConstructorUsedError;
   DateTime? get update => throw _privateConstructorUsedError;
   @JsonKey(name: '\$id')
   String? get dbId => throw _privateConstructorUsedError;
@@ -75,6 +76,7 @@ abstract class $FpStandingCopyWith<$Res> {
       int? allLose,
       int? allGoalsFor,
       int? allGoalsAgainst,
+      String? form,
       DateTime? update,
       @JsonKey(name: '\$id') String? dbId,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
@@ -111,6 +113,7 @@ class _$FpStandingCopyWithImpl<$Res, $Val extends FpStanding>
     Object? allLose = freezed,
     Object? allGoalsFor = freezed,
     Object? allGoalsAgainst = freezed,
+    Object? form = freezed,
     Object? update = freezed,
     Object? dbId = freezed,
     Object? createdAt = freezed,
@@ -176,6 +179,10 @@ class _$FpStandingCopyWithImpl<$Res, $Val extends FpStanding>
           ? _value.allGoalsAgainst
           : allGoalsAgainst // ignore: cast_nullable_to_non_nullable
               as int?,
+      form: freezed == form
+          ? _value.form
+          : form // ignore: cast_nullable_to_non_nullable
+              as String?,
       update: freezed == update
           ? _value.update
           : update // ignore: cast_nullable_to_non_nullable
@@ -231,6 +238,7 @@ abstract class _$$FpStandingImplCopyWith<$Res>
       int? allLose,
       int? allGoalsFor,
       int? allGoalsAgainst,
+      String? form,
       DateTime? update,
       @JsonKey(name: '\$id') String? dbId,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
@@ -265,6 +273,7 @@ class __$$FpStandingImplCopyWithImpl<$Res>
     Object? allLose = freezed,
     Object? allGoalsFor = freezed,
     Object? allGoalsAgainst = freezed,
+    Object? form = freezed,
     Object? update = freezed,
     Object? dbId = freezed,
     Object? createdAt = freezed,
@@ -330,6 +339,10 @@ class __$$FpStandingImplCopyWithImpl<$Res>
           ? _value.allGoalsAgainst
           : allGoalsAgainst // ignore: cast_nullable_to_non_nullable
               as int?,
+      form: freezed == form
+          ? _value.form
+          : form // ignore: cast_nullable_to_non_nullable
+              as String?,
       update: freezed == update
           ? _value.update
           : update // ignore: cast_nullable_to_non_nullable
@@ -380,6 +393,7 @@ class _$FpStandingImpl implements _FpStanding {
       this.allLose,
       this.allGoalsFor,
       this.allGoalsAgainst,
+      this.form,
       this.update,
       @JsonKey(name: '\$id') this.dbId,
       @JsonKey(name: '\$createdAt') this.createdAt,
@@ -421,6 +435,8 @@ class _$FpStandingImpl implements _FpStanding {
   @override
   final int? allGoalsAgainst;
   @override
+  final String? form;
+  @override
   final DateTime? update;
   @override
   @JsonKey(name: '\$id')
@@ -451,7 +467,7 @@ class _$FpStandingImpl implements _FpStanding {
 
   @override
   String toString() {
-    return 'FpStanding(rank: $rank, teamId: $teamId, teamName: $teamName, teamLogo: $teamLogo, points: $points, goalsDiff: $goalsDiff, description: $description, group: $group, allPlayed: $allPlayed, allWin: $allWin, allDraw: $allDraw, allLose: $allLose, allGoalsFor: $allGoalsFor, allGoalsAgainst: $allGoalsAgainst, update: $update, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+    return 'FpStanding(rank: $rank, teamId: $teamId, teamName: $teamName, teamLogo: $teamLogo, points: $points, goalsDiff: $goalsDiff, description: $description, group: $group, allPlayed: $allPlayed, allWin: $allWin, allDraw: $allDraw, allLose: $allLose, allGoalsFor: $allGoalsFor, allGoalsAgainst: $allGoalsAgainst, form: $form, update: $update, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
   }
 
   @override
@@ -480,6 +496,7 @@ class _$FpStandingImpl implements _FpStanding {
                 other.allGoalsFor == allGoalsFor) &&
             (identical(other.allGoalsAgainst, allGoalsAgainst) ||
                 other.allGoalsAgainst == allGoalsAgainst) &&
+            (identical(other.form, form) || other.form == form) &&
             (identical(other.update, update) || other.update == update) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.createdAt, createdAt) ||
@@ -512,6 +529,7 @@ class _$FpStandingImpl implements _FpStanding {
         allLose,
         allGoalsFor,
         allGoalsAgainst,
+        form,
         update,
         dbId,
         createdAt,
@@ -551,6 +569,7 @@ abstract class _FpStanding implements FpStanding {
           final int? allLose,
           final int? allGoalsFor,
           final int? allGoalsAgainst,
+          final String? form,
           final DateTime? update,
           @JsonKey(name: '\$id') final String? dbId,
           @JsonKey(name: '\$createdAt') final DateTime? createdAt,
@@ -591,6 +610,8 @@ abstract class _FpStanding implements FpStanding {
   int? get allGoalsFor;
   @override
   int? get allGoalsAgainst;
+  @override
+  String? get form;
   @override
   DateTime? get update;
   @override
