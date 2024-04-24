@@ -41,6 +41,9 @@ _$FpFixtureImpl _$$FpFixtureImplFromJson(Map<String, dynamic> json) =>
       scorePenaltyAway: json['scorePenaltyAway'] as int?,
       json:
           const ApiFootballFixtureConverter().fromJson(json['json'] as String?),
+      jsonUpdatedAt: json['jsonUpdatedAt'] == null
+          ? null
+          : DateTime.parse(json['jsonUpdatedAt'] as String),
       id: json[r'$id'] as String?,
       createdAt: json[r'$createdAt'] == null
           ? null
@@ -88,6 +91,7 @@ Map<String, dynamic> _$$FpFixtureImplToJson(_$FpFixtureImpl instance) =>
       'scorePenaltyHome': instance.scorePenaltyHome,
       'scorePenaltyAway': instance.scorePenaltyAway,
       'json': const ApiFootballFixtureConverter().toJson(instance.json),
+      'jsonUpdatedAt': instance.jsonUpdatedAt?.toIso8601String(),
       r'$id': instance.id,
       r'$createdAt': instance.createdAt?.toIso8601String(),
       r'$updatedAt': instance.updatedAt?.toIso8601String(),

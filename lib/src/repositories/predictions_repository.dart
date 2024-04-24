@@ -4,18 +4,15 @@ class PredictionsRepository {
   PredictionsRepository(this._api);
   final ApiFootballAPI _api;
 
-  Future<Map<String, dynamic>?> getPrediction({required String fixtureId}) => _api.getDataWithRemainingRequests(
+  Future<ApiFootballPrediction?> getPrediction({required String fixtureId}) =>
+      _api.getData(
         path: 'predictions',
         params: {
           "fixture": fixtureId,
         },
-        builder: (data, remainingRequests, date) {
+        builder: (data) {
           return data['results'] > 0
-              ? {
-                  "predictions": ApiFootballPrediction.fromJson(data['response'][0]),
-                  "remainingRequests": remainingRequests,
-                  "date": date,
-                }
+              ? ApiFootballPrediction.fromJson(data['response'][0])
               : null;
         },
       );

@@ -131,6 +131,7 @@ class FpFixture with _$FpFixture {
     int? scorePenaltyHome,
     int? scorePenaltyAway,
     @ApiFootballFixtureConverter() ApiFootballFixture? json,
+    DateTime? jsonUpdatedAt,
     @JsonKey(name: '\$id') String? id,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,
     @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
