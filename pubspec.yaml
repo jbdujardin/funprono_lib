@@ -1,6 +1,6 @@
 name: funprono_lib
 description: A package for Back and front for FunProno application.
-version: 5.0.8
+version: 5.0.9
 homepage: https://app.funprono.com
 documentation: https://github.com/jbdujardin/funprono_lib
 repository: https://github.com/jbdujardin/funprono_lib
@@ -12,7 +12,7 @@ environment:
 
 dependencies:
   dart_appwrite: ^11.0.3
-  collection: ^1.19.0
+  collection: ^1.18.0
   freezed_annotation: ^2.4.4
   http: ^1.0.0
   json_annotation: ^4.9.0
