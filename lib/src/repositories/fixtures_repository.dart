@@ -22,15 +22,12 @@ class FixturesRepository {
       path: 'fixtures',
       params: parameters,
       builder: (data) {
-        final List<ApiFootballFixture> allFixtures = (data['response'] as List)
-            .map((json) => ApiFootballFixture.fromJson(json))
-            .toList();
+        final List<ApiFootballFixture> allFixtures = (data['response'] as List).map((json) => ApiFootballFixture.fromJson(json)).toList();
         return allFixtures
             .whereNot(
-              (fixture) =>
-                  ((fixture.league?.round ?? "").contains("Qualifying") ||
-                      (fixture.league?.round ?? "").contains("Preliminary") ||
-                      (fixture.league?.round ?? "").contains("Play-offs")),
+              (fixture) => ((fixture.league?.round ?? "").contains("Qualifying") ||
+                  (fixture.league?.round ?? "").contains("Preliminary") ||
+                  (fixture.league?.round ?? "").contains("Play-offs")),
             )
             .toList();
       },
@@ -50,13 +47,8 @@ class FixturesRepository {
         },
         builder: (data) {
           final List<String> allRounds = List<String>.from(data['response']);
-          final allRoundsFiltered = allRounds
-              .whereNot((round) =>
-                  round.contains('Qualifying') ||
-                  round.contains('Preliminary') ||
-                  round.contains('Play-offs'))
-              .toList();
-          if (leagueType == LeagueType.cup) {
+          final allRoundsFiltered = allRounds.whereNot((round) => round.contains('Qualifying') || round.contains('Preliminary') || round.contains('Play-offs')).toList();
+          if (leagueType == LeagueType.league) {
             return allRoundsFiltered;
           } else {
             final List<String> roundsList = [];
@@ -74,22 +66,17 @@ class FixturesRepository {
         },
       );
 
-  Future<ApiFootballFixture> getFixture({required String fixtureId}) =>
-      _api.getData(
+  Future<ApiFootballFixture> getFixture({required String fixtureId}) => _api.getData(
         path: 'fixtures',
         params: {
           "id": fixtureId,
         },
         builder: (data) {
-          return (data['response'] as List)
-              .map((json) => ApiFootballFixture.fromJson(json))
-              .toList()
-              .first;
+          return (data['response'] as List).map((json) => ApiFootballFixture.fromJson(json)).toList().first;
         },
       );
 
-  Future<List<ApiFootballFixture>> getFixturesDetails(
-      {required List<String> fixturesIds}) async {
+  Future<List<ApiFootballFixture>> getFixturesDetails({required List<String> fixturesIds}) async {
     if (fixturesIds.length <= 20) {
       return _api.getData(
         path: 'fixtures',
@@ -97,14 +84,11 @@ class FixturesRepository {
           "ids": fixturesIds.join('-'),
         },
         builder: (data) {
-          return (data['response'] as List)
-              .map((json) => ApiFootballFixture.fromJson(json))
-              .toList();
+          return (data['response'] as List).map((json) => ApiFootballFixture.fromJson(json)).toList();
         },
       );
     } else {
-      final List<List<String>> fixturesIdArrays =
-          fixturesIds.slices(20).toList();
+      final List<List<String>> fixturesIdArrays = fixturesIds.slices(20).toList();
       final List<ApiFootballFixture> fixtures = [];
       for (final List<String> fixturesIdArray in fixturesIdArrays) {
         final newFixtures = await _api.getData(
@@ -113,9 +97,7 @@ class FixturesRepository {
             "ids": fixturesIdArray.join('-'),
           },
           builder: (data) {
-            return (data['response'] as List)
-                .map((json) => ApiFootballFixture.fromJson(json))
-                .toList();
+            return (data['response'] as List).map((json) => ApiFootballFixture.fromJson(json)).toList();
           },
         );
         fixtures.addAll(newFixtures);
