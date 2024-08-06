@@ -67,8 +67,12 @@ mixin _$FpNew {
   @JsonKey(name: '\$databaseId')
   String? get databaseId => throw _privateConstructorUsedError;
 
+  /// Serializes this FpNew to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FpNew
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FpNewCopyWith<FpNew> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -113,6 +117,8 @@ class _$FpNewCopyWithImpl<$Res, $Val extends FpNew>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FpNew
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -278,6 +284,8 @@ class __$$FpNewImplCopyWithImpl<$Res>
       _$FpNewImpl _value, $Res Function(_$FpNewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FpNew
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -558,7 +566,7 @@ class _$FpNewImpl implements _FpNew {
                 other.databaseId == databaseId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -587,7 +595,9 @@ class _$FpNewImpl implements _FpNew {
         databaseId
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FpNew
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FpNewImplCopyWith<_$FpNewImpl> get copyWith =>
@@ -698,8 +708,11 @@ abstract class _FpNew implements FpNew {
   @override
   @JsonKey(name: '\$databaseId')
   String? get databaseId;
+
+  /// Create a copy of FpNew
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FpNewImplCopyWith<_$FpNewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

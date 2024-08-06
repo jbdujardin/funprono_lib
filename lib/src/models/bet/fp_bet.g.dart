@@ -9,9 +9,9 @@ part of 'fp_bet.dart';
 _$FpBetImpl _$$FpBetImplFromJson(Map<String, dynamic> json) => _$FpBetImpl(
       userId: json['userId'] as String?,
       fixtureId: json['fixtureId'] as String?,
-      homeBet: json['homeBet'] as int?,
-      awayBet: json['awayBet'] as int?,
-      fixtureSeason: json['fixtureSeason'] as int?,
+      homeBet: (json['homeBet'] as num?)?.toInt(),
+      awayBet: (json['awayBet'] as num?)?.toInt(),
+      fixtureSeason: (json['fixtureSeason'] as num?)?.toInt(),
       fixtureRound: json['fixtureRound'] as String?,
       fixture: json['fixture'] == null
           ? null

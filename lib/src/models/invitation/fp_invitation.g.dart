@@ -12,7 +12,7 @@ _$FpInvitationImpl _$$FpInvitationImplFromJson(Map<String, dynamic> json) =>
       guestId: json['guestId'] as String?,
       code: json['code'] as String?,
       shortURL: json['shortURL'] as String?,
-      nbUse: json['nbUse'] as int?,
+      nbUse: (json['nbUse'] as num?)?.toInt(),
       dbId: json[r'$id'] as String?,
       createdAt: json[r'$createdAt'] == null
           ? null

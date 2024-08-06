@@ -38,8 +38,12 @@ mixin _$FpInvitation {
   @JsonKey(name: '\$databaseId')
   String? get databaseId => throw _privateConstructorUsedError;
 
+  /// Serializes this FpInvitation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FpInvitation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FpInvitationCopyWith<FpInvitation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$FpInvitationCopyWithImpl<$Res, $Val extends FpInvitation>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FpInvitation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -168,6 +174,8 @@ class __$$FpInvitationImplCopyWithImpl<$Res>
       _$FpInvitationImpl _value, $Res Function(_$FpInvitationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FpInvitation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -318,7 +326,7 @@ class _$FpInvitationImpl implements _FpInvitation {
                 other.databaseId == databaseId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -334,7 +342,9 @@ class _$FpInvitationImpl implements _FpInvitation {
       collectionId,
       databaseId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FpInvitation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FpInvitationImplCopyWith<_$FpInvitationImpl> get copyWith =>
@@ -394,8 +404,11 @@ abstract class _FpInvitation implements FpInvitation {
   @override
   @JsonKey(name: '\$databaseId')
   String? get databaseId;
+
+  /// Create a copy of FpInvitation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FpInvitationImplCopyWith<_$FpInvitationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

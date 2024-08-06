@@ -49,8 +49,12 @@ mixin _$FpStanding {
   @JsonKey(name: '\$databaseId')
   String? get databaseId => throw _privateConstructorUsedError;
 
+  /// Serializes this FpStanding to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FpStanding
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FpStandingCopyWith<FpStanding> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -96,6 +100,8 @@ class _$FpStandingCopyWithImpl<$Res, $Val extends FpStanding>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FpStanding
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -256,6 +262,8 @@ class __$$FpStandingImplCopyWithImpl<$Res>
       _$FpStandingImpl _value, $Res Function(_$FpStandingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FpStanding
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -511,7 +519,7 @@ class _$FpStandingImpl implements _FpStanding {
                 other.databaseId == databaseId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -539,7 +547,9 @@ class _$FpStandingImpl implements _FpStanding {
         databaseId
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FpStanding
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FpStandingImplCopyWith<_$FpStandingImpl> get copyWith =>
@@ -632,8 +642,11 @@ abstract class _FpStanding implements FpStanding {
   @override
   @JsonKey(name: '\$databaseId')
   String? get databaseId;
+
+  /// Create a copy of FpStanding
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FpStandingImplCopyWith<_$FpStandingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

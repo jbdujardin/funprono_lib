@@ -40,8 +40,12 @@ mixin _$FpBet {
   @JsonKey(name: '\$databaseId')
   String? get databaseId => throw _privateConstructorUsedError;
 
+  /// Serializes this FpBet to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FpBet
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FpBetCopyWith<FpBet> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -78,6 +82,8 @@ class _$FpBetCopyWithImpl<$Res, $Val extends FpBet>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FpBet
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,6 +157,8 @@ class _$FpBetCopyWithImpl<$Res, $Val extends FpBet>
     ) as $Val);
   }
 
+  /// Create a copy of FpBet
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FpFixtureCopyWith<$Res>? get fixture {
@@ -198,6 +206,8 @@ class __$$FpBetImplCopyWithImpl<$Res>
       _$FpBetImpl _value, $Res Function(_$FpBetImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FpBet
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -368,7 +378,7 @@ class _$FpBetImpl implements _FpBet {
                 other.databaseId == databaseId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -386,7 +396,9 @@ class _$FpBetImpl implements _FpBet {
       collectionId,
       databaseId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FpBet
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FpBetImplCopyWith<_$FpBetImpl> get copyWith =>
@@ -450,8 +462,11 @@ abstract class _FpBet implements FpBet {
   @override
   @JsonKey(name: '\$databaseId')
   String? get databaseId;
+
+  /// Create a copy of FpBet
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FpBetImplCopyWith<_$FpBetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -31,6 +31,7 @@ _$FpLeagueImpl _$$FpLeagueImplFromJson(Map<String, dynamic> json) =>
       fixturesUpdatedAt: json['fixturesUpdatedAt'] == null
           ? null
           : DateTime.parse(json['fixturesUpdatedAt'] as String),
+      currentSeason: json['currentSeason'] as String?,
       id: json[r'$id'] as String?,
       createdAt: json[r'$createdAt'] == null
           ? null
@@ -59,6 +60,7 @@ Map<String, dynamic> _$$FpLeagueImplToJson(_$FpLeagueImpl instance) =>
       'roundsUpdatedAt': instance.roundsUpdatedAt?.toIso8601String(),
       'pointsUpdatedAt': instance.pointsUpdatedAt?.toIso8601String(),
       'fixturesUpdatedAt': instance.fixturesUpdatedAt?.toIso8601String(),
+      'currentSeason': instance.currentSeason,
       r'$id': instance.id,
       r'$createdAt': instance.createdAt?.toIso8601String(),
       r'$updatedAt': instance.updatedAt?.toIso8601String(),

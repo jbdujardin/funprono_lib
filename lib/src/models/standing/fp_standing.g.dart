@@ -8,20 +8,20 @@ part of 'fp_standing.dart';
 
 _$FpStandingImpl _$$FpStandingImplFromJson(Map<String, dynamic> json) =>
     _$FpStandingImpl(
-      rank: json['rank'] as int?,
-      teamId: json['teamId'] as int?,
+      rank: (json['rank'] as num?)?.toInt(),
+      teamId: (json['teamId'] as num?)?.toInt(),
       teamName: json['teamName'] as String?,
       teamLogo: json['teamLogo'] as String?,
-      points: json['points'] as int?,
-      goalsDiff: json['goalsDiff'] as int?,
+      points: (json['points'] as num?)?.toInt(),
+      goalsDiff: (json['goalsDiff'] as num?)?.toInt(),
       description: json['description'] as String?,
       group: json['group'] as String?,
-      allPlayed: json['allPlayed'] as int?,
-      allWin: json['allWin'] as int?,
-      allDraw: json['allDraw'] as int?,
-      allLose: json['allLose'] as int?,
-      allGoalsFor: json['allGoalsFor'] as int?,
-      allGoalsAgainst: json['allGoalsAgainst'] as int?,
+      allPlayed: (json['allPlayed'] as num?)?.toInt(),
+      allWin: (json['allWin'] as num?)?.toInt(),
+      allDraw: (json['allDraw'] as num?)?.toInt(),
+      allLose: (json['allLose'] as num?)?.toInt(),
+      allGoalsFor: (json['allGoalsFor'] as num?)?.toInt(),
+      allGoalsAgainst: (json['allGoalsAgainst'] as num?)?.toInt(),
       form: json['form'] as String?,
       update: json['update'] == null
           ? null

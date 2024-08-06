@@ -67,8 +67,12 @@ mixin _$FpFixture {
   @JsonKey(name: '\$databaseId')
   String? get databaseId => throw _privateConstructorUsedError;
 
+  /// Serializes this FpFixture to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FpFixture
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FpFixtureCopyWith<FpFixture> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -129,6 +133,8 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FpFixture
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -385,6 +391,8 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
       _$FpFixtureImpl _value, $Res Function(_$FpFixtureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FpFixture
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -802,7 +810,7 @@ class _$FpFixtureImpl implements _FpFixture {
                 other.databaseId == databaseId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -846,7 +854,9 @@ class _$FpFixtureImpl implements _FpFixture {
         databaseId
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FpFixture
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FpFixtureImplCopyWith<_$FpFixtureImpl> get copyWith =>
@@ -989,8 +999,11 @@ abstract class _FpFixture implements FpFixture {
   @override
   @JsonKey(name: '\$databaseId')
   String? get databaseId;
+
+  /// Create a copy of FpFixture
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FpFixtureImplCopyWith<_$FpFixtureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

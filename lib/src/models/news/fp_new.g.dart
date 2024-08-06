@@ -18,7 +18,7 @@ _$FpNewImpl _$$FpNewImplFromJson(Map<String, dynamic> json) => _$FpNewImpl(
       titleIt: json['title-it'] as String?,
       contentIt: json['content-it'] as String?,
       version: json['version'] as String?,
-      buildNumber: json['build-number'] as int?,
+      buildNumber: (json['build-number'] as num?)?.toInt(),
       imageFr: json['image-fr'] as String?,
       imageEn: json['image-en'] as String?,
       imageDe: json['image-de'] as String?,
