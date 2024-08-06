@@ -28,6 +28,7 @@ class LeaguesRepository {
         path: 'leagues',
         params: {
           "id": leagueId,
+          "current": "true",
         },
         builder: (data) {
           return (data['response'] as List).map((json) => ApiFootballLeague.fromJson(json)).toList().first;
