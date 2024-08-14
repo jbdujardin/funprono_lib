@@ -7,15 +7,13 @@ part of 'fp_bet.dart';
 // **************************************************************************
 
 _$FpBetImpl _$$FpBetImplFromJson(Map<String, dynamic> json) => _$FpBetImpl(
+      leagueId: (json['leagueId'] as num?)?.toInt(),
       userId: json['userId'] as String?,
       fixtureId: json['fixtureId'] as String?,
       homeBet: (json['homeBet'] as num?)?.toInt(),
       awayBet: (json['awayBet'] as num?)?.toInt(),
-      fixtureSeason: (json['fixtureSeason'] as num?)?.toInt(),
       fixtureRound: json['fixtureRound'] as String?,
-      fixture: json['fixture'] == null
-          ? null
-          : FpFixture.fromJson(json['fixture'] as Map<String, dynamic>),
+      fixtureTimestamp: (json['fixtureTimestamp'] as num?)?.toInt(),
       dbId: json[r'$id'] as String?,
       createdAt: json[r'$createdAt'] == null
           ? null
@@ -32,13 +30,13 @@ _$FpBetImpl _$$FpBetImplFromJson(Map<String, dynamic> json) => _$FpBetImpl(
 
 Map<String, dynamic> _$$FpBetImplToJson(_$FpBetImpl instance) =>
     <String, dynamic>{
+      'leagueId': instance.leagueId,
       'userId': instance.userId,
       'fixtureId': instance.fixtureId,
       'homeBet': instance.homeBet,
       'awayBet': instance.awayBet,
-      'fixtureSeason': instance.fixtureSeason,
       'fixtureRound': instance.fixtureRound,
-      'fixture': instance.fixture,
+      'fixtureTimestamp': instance.fixtureTimestamp,
       r'$id': instance.dbId,
       r'$createdAt': instance.createdAt?.toIso8601String(),
       r'$updatedAt': instance.updatedAt?.toIso8601String(),

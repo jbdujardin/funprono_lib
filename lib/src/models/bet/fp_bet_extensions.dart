@@ -22,23 +22,22 @@ extension BetExtensions on FpBet? {
     return false;
   }
 
-  int pointsForFixture({FpFixture? fixture}) {
+  int pointsForFixture({
+    required FpFixture fixture,
+  }) {
     if (this?.homeBet != null && this?.awayBet != null) {
-      final FpFixture? fixtureForCalcul = this?.fixture ?? fixture;
-      if (fixtureForCalcul != null) {
-        if (isHomeWin && fixtureForCalcul.isHomeWin) {
-          return (this?.homeBet == fixtureForCalcul.homeGoals && this?.awayBet == fixtureForCalcul.awayGoals)
-              ? (fixtureForCalcul.homePoints ?? 0) * 2
-              : fixtureForCalcul.homePoints ?? 0;
-        } else if (isDraw && fixtureForCalcul.isDraw) {
-          return (this?.homeBet == fixtureForCalcul.homeGoals && this?.awayBet == fixtureForCalcul.awayGoals)
-              ? (fixtureForCalcul.drawPoints ?? 0) * 2
-              : fixtureForCalcul.drawPoints ?? 0;
-        } else if (isAwayWin && fixtureForCalcul.isAwayWin) {
-          return (this?.homeBet == fixtureForCalcul.homeGoals && this?.awayBet == fixtureForCalcul.awayGoals)
-              ? (fixtureForCalcul.awayPoints ?? 0) * 2
-              : fixtureForCalcul.awayPoints ?? 0;
-        }
+      if (isHomeWin && fixture.isHomeWin) {
+        return (this?.homeBet == (fixture.scoreFulltimeHome ?? fixture.homeGoals) && this?.awayBet == (fixture.scoreFulltimeAway ?? fixture.awayGoals))
+            ? (fixture.homePoints ?? 0) * 2
+            : fixture.homePoints ?? 0;
+      } else if (isDraw && fixture.isDraw) {
+        return (this?.homeBet == (fixture.scoreFulltimeHome ?? fixture.homeGoals) && this?.awayBet == (fixture.scoreFulltimeAway ?? fixture.awayGoals))
+            ? (fixture.drawPoints ?? 0) * 2
+            : fixture.drawPoints ?? 0;
+      } else if (isAwayWin && fixture.isAwayWin) {
+        return (this?.homeBet == (fixture.scoreFulltimeHome ?? fixture.homeGoals) && this?.awayBet == (fixture.scoreFulltimeAway ?? fixture.awayGoals))
+            ? (fixture.awayPoints ?? 0) * 2
+            : fixture.awayPoints ?? 0;
       }
     }
     return 0;

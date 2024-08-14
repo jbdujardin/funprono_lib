@@ -20,13 +20,13 @@ FpBet _$FpBetFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FpBet {
+  int? get leagueId => throw _privateConstructorUsedError;
   String? get userId => throw _privateConstructorUsedError;
   String? get fixtureId => throw _privateConstructorUsedError;
   int? get homeBet => throw _privateConstructorUsedError;
   int? get awayBet => throw _privateConstructorUsedError;
-  int? get fixtureSeason => throw _privateConstructorUsedError;
   String? get fixtureRound => throw _privateConstructorUsedError;
-  FpFixture? get fixture => throw _privateConstructorUsedError;
+  int? get fixtureTimestamp => throw _privateConstructorUsedError;
   @JsonKey(name: '\$id')
   String? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: '\$createdAt')
@@ -55,21 +55,19 @@ abstract class $FpBetCopyWith<$Res> {
       _$FpBetCopyWithImpl<$Res, FpBet>;
   @useResult
   $Res call(
-      {String? userId,
+      {int? leagueId,
+      String? userId,
       String? fixtureId,
       int? homeBet,
       int? awayBet,
-      int? fixtureSeason,
       String? fixtureRound,
-      FpFixture? fixture,
+      int? fixtureTimestamp,
       @JsonKey(name: '\$id') String? dbId,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
       @JsonKey(name: '\$permissions') List<String>? permissions,
       @JsonKey(name: '\$collectionId') String? collectionId,
       @JsonKey(name: '\$databaseId') String? databaseId});
-
-  $FpFixtureCopyWith<$Res>? get fixture;
 }
 
 /// @nodoc
@@ -87,13 +85,13 @@ class _$FpBetCopyWithImpl<$Res, $Val extends FpBet>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? leagueId = freezed,
     Object? userId = freezed,
     Object? fixtureId = freezed,
     Object? homeBet = freezed,
     Object? awayBet = freezed,
-    Object? fixtureSeason = freezed,
     Object? fixtureRound = freezed,
-    Object? fixture = freezed,
+    Object? fixtureTimestamp = freezed,
     Object? dbId = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
@@ -102,6 +100,10 @@ class _$FpBetCopyWithImpl<$Res, $Val extends FpBet>
     Object? databaseId = freezed,
   }) {
     return _then(_value.copyWith(
+      leagueId: freezed == leagueId
+          ? _value.leagueId
+          : leagueId // ignore: cast_nullable_to_non_nullable
+              as int?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -118,18 +120,14 @@ class _$FpBetCopyWithImpl<$Res, $Val extends FpBet>
           ? _value.awayBet
           : awayBet // ignore: cast_nullable_to_non_nullable
               as int?,
-      fixtureSeason: freezed == fixtureSeason
-          ? _value.fixtureSeason
-          : fixtureSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
       fixtureRound: freezed == fixtureRound
           ? _value.fixtureRound
           : fixtureRound // ignore: cast_nullable_to_non_nullable
               as String?,
-      fixture: freezed == fixture
-          ? _value.fixture
-          : fixture // ignore: cast_nullable_to_non_nullable
-              as FpFixture?,
+      fixtureTimestamp: freezed == fixtureTimestamp
+          ? _value.fixtureTimestamp
+          : fixtureTimestamp // ignore: cast_nullable_to_non_nullable
+              as int?,
       dbId: freezed == dbId
           ? _value.dbId
           : dbId // ignore: cast_nullable_to_non_nullable
@@ -156,20 +154,6 @@ class _$FpBetCopyWithImpl<$Res, $Val extends FpBet>
               as String?,
     ) as $Val);
   }
-
-  /// Create a copy of FpBet
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $FpFixtureCopyWith<$Res>? get fixture {
-    if (_value.fixture == null) {
-      return null;
-    }
-
-    return $FpFixtureCopyWith<$Res>(_value.fixture!, (value) {
-      return _then(_value.copyWith(fixture: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -180,22 +164,19 @@ abstract class _$$FpBetImplCopyWith<$Res> implements $FpBetCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? userId,
+      {int? leagueId,
+      String? userId,
       String? fixtureId,
       int? homeBet,
       int? awayBet,
-      int? fixtureSeason,
       String? fixtureRound,
-      FpFixture? fixture,
+      int? fixtureTimestamp,
       @JsonKey(name: '\$id') String? dbId,
       @JsonKey(name: '\$createdAt') DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
       @JsonKey(name: '\$permissions') List<String>? permissions,
       @JsonKey(name: '\$collectionId') String? collectionId,
       @JsonKey(name: '\$databaseId') String? databaseId});
-
-  @override
-  $FpFixtureCopyWith<$Res>? get fixture;
 }
 
 /// @nodoc
@@ -211,13 +192,13 @@ class __$$FpBetImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? leagueId = freezed,
     Object? userId = freezed,
     Object? fixtureId = freezed,
     Object? homeBet = freezed,
     Object? awayBet = freezed,
-    Object? fixtureSeason = freezed,
     Object? fixtureRound = freezed,
-    Object? fixture = freezed,
+    Object? fixtureTimestamp = freezed,
     Object? dbId = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
@@ -226,6 +207,10 @@ class __$$FpBetImplCopyWithImpl<$Res>
     Object? databaseId = freezed,
   }) {
     return _then(_$FpBetImpl(
+      leagueId: freezed == leagueId
+          ? _value.leagueId
+          : leagueId // ignore: cast_nullable_to_non_nullable
+              as int?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -242,18 +227,14 @@ class __$$FpBetImplCopyWithImpl<$Res>
           ? _value.awayBet
           : awayBet // ignore: cast_nullable_to_non_nullable
               as int?,
-      fixtureSeason: freezed == fixtureSeason
-          ? _value.fixtureSeason
-          : fixtureSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
       fixtureRound: freezed == fixtureRound
           ? _value.fixtureRound
           : fixtureRound // ignore: cast_nullable_to_non_nullable
               as String?,
-      fixture: freezed == fixture
-          ? _value.fixture
-          : fixture // ignore: cast_nullable_to_non_nullable
-              as FpFixture?,
+      fixtureTimestamp: freezed == fixtureTimestamp
+          ? _value.fixtureTimestamp
+          : fixtureTimestamp // ignore: cast_nullable_to_non_nullable
+              as int?,
       dbId: freezed == dbId
           ? _value.dbId
           : dbId // ignore: cast_nullable_to_non_nullable
@@ -286,13 +267,13 @@ class __$$FpBetImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FpBetImpl implements _FpBet {
   _$FpBetImpl(
-      {this.userId,
+      {this.leagueId,
+      this.userId,
       this.fixtureId,
       this.homeBet,
       this.awayBet,
-      this.fixtureSeason,
       this.fixtureRound,
-      this.fixture,
+      this.fixtureTimestamp,
       @JsonKey(name: '\$id') this.dbId,
       @JsonKey(name: '\$createdAt') this.createdAt,
       @JsonKey(name: '\$updatedAt') this.updatedAt,
@@ -305,6 +286,8 @@ class _$FpBetImpl implements _FpBet {
       _$$FpBetImplFromJson(json);
 
   @override
+  final int? leagueId;
+  @override
   final String? userId;
   @override
   final String? fixtureId;
@@ -313,11 +296,9 @@ class _$FpBetImpl implements _FpBet {
   @override
   final int? awayBet;
   @override
-  final int? fixtureSeason;
-  @override
   final String? fixtureRound;
   @override
-  final FpFixture? fixture;
+  final int? fixtureTimestamp;
   @override
   @JsonKey(name: '\$id')
   final String? dbId;
@@ -347,7 +328,7 @@ class _$FpBetImpl implements _FpBet {
 
   @override
   String toString() {
-    return 'FpBet(userId: $userId, fixtureId: $fixtureId, homeBet: $homeBet, awayBet: $awayBet, fixtureSeason: $fixtureSeason, fixtureRound: $fixtureRound, fixture: $fixture, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+    return 'FpBet(leagueId: $leagueId, userId: $userId, fixtureId: $fixtureId, homeBet: $homeBet, awayBet: $awayBet, fixtureRound: $fixtureRound, fixtureTimestamp: $fixtureTimestamp, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
   }
 
   @override
@@ -355,16 +336,17 @@ class _$FpBetImpl implements _FpBet {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FpBetImpl &&
+            (identical(other.leagueId, leagueId) ||
+                other.leagueId == leagueId) &&
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.fixtureId, fixtureId) ||
                 other.fixtureId == fixtureId) &&
             (identical(other.homeBet, homeBet) || other.homeBet == homeBet) &&
             (identical(other.awayBet, awayBet) || other.awayBet == awayBet) &&
-            (identical(other.fixtureSeason, fixtureSeason) ||
-                other.fixtureSeason == fixtureSeason) &&
             (identical(other.fixtureRound, fixtureRound) ||
                 other.fixtureRound == fixtureRound) &&
-            (identical(other.fixture, fixture) || other.fixture == fixture) &&
+            (identical(other.fixtureTimestamp, fixtureTimestamp) ||
+                other.fixtureTimestamp == fixtureTimestamp) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
@@ -382,13 +364,13 @@ class _$FpBetImpl implements _FpBet {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      leagueId,
       userId,
       fixtureId,
       homeBet,
       awayBet,
-      fixtureSeason,
       fixtureRound,
-      fixture,
+      fixtureTimestamp,
       dbId,
       createdAt,
       updatedAt,
@@ -414,13 +396,13 @@ class _$FpBetImpl implements _FpBet {
 
 abstract class _FpBet implements FpBet {
   factory _FpBet(
-      {final String? userId,
+      {final int? leagueId,
+      final String? userId,
       final String? fixtureId,
       final int? homeBet,
       final int? awayBet,
-      final int? fixtureSeason,
       final String? fixtureRound,
-      final FpFixture? fixture,
+      final int? fixtureTimestamp,
       @JsonKey(name: '\$id') final String? dbId,
       @JsonKey(name: '\$createdAt') final DateTime? createdAt,
       @JsonKey(name: '\$updatedAt') final DateTime? updatedAt,
@@ -431,6 +413,8 @@ abstract class _FpBet implements FpBet {
   factory _FpBet.fromJson(Map<String, dynamic> json) = _$FpBetImpl.fromJson;
 
   @override
+  int? get leagueId;
+  @override
   String? get userId;
   @override
   String? get fixtureId;
@@ -439,11 +423,9 @@ abstract class _FpBet implements FpBet {
   @override
   int? get awayBet;
   @override
-  int? get fixtureSeason;
-  @override
   String? get fixtureRound;
   @override
-  FpFixture? get fixture;
+  int? get fixtureTimestamp;
   @override
   @JsonKey(name: '\$id')
   String? get dbId;
