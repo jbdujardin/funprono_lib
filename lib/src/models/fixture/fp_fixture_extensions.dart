@@ -11,16 +11,20 @@ enum FixtureType {
 }
 
 extension FixtureExtensions on FpFixture {
-  bool get isHomeWin {
-    return (scoreFulltimeHome ?? homeGoals ?? 0) > (scoreFulltimeAway ?? awayGoals ?? 0);
+  int? get homeScore => scoreFulltimeHome ?? homeGoals;
+
+  int? get awayScore => scoreFulltimeAway ?? awayGoals;
+
+  bool? get isHomeWin {
+    return (homeScore != null && awayScore != null) ? (homeScore! > awayScore!) : null;
   }
 
-  bool get isDraw {
-    return (scoreFulltimeHome ?? homeGoals ?? 0) == (scoreFulltimeAway ?? awayGoals ?? 0);
+  bool? get isDraw {
+    return (homeScore != null && awayScore != null) ? (homeScore! == awayScore!) : null;
   }
 
-  bool get isAwayWin {
-    return (scoreFulltimeHome ?? homeGoals ?? 0) < (scoreFulltimeAway ?? awayGoals ?? 0);
+  bool? get isAwayWin {
+    return (homeScore != null && awayScore != null) ? (homeScore! < awayScore!) : null;
   }
 
   bool get canBet {

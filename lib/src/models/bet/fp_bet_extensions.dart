@@ -1,45 +1,34 @@
 import 'package:funprono_lib/funprono_models.dart';
 
 extension BetExtensions on FpBet? {
-  bool get isHomeWin {
-    if (this?.homeBet != null && this?.awayBet != null) {
-      return this!.homeBet! > this!.awayBet!;
-    }
-    return false;
-  }
+  bool? get isHomeWin => (this?.homeBet != null && this?.awayBet != null) ? (this!.homeBet! > this!.awayBet!) : null;
 
-  bool get isDraw {
-    if (this?.homeBet != null && this?.awayBet != null) {
-      return this!.homeBet! == this!.awayBet!;
-    }
-    return false;
-  }
+  bool? get isDraw => (this?.homeBet != null && this?.awayBet != null) ? (this!.homeBet! == this!.awayBet!) : null;
 
-  bool get isAwayWin {
-    if (this?.homeBet != null && this?.awayBet != null) {
-      return this!.homeBet! < this!.awayBet!;
-    }
-    return false;
-  }
+  bool? get isAwayWin => (this?.homeBet != null && this?.awayBet != null) ? (this!.homeBet! < this!.awayBet!) : null;
 
-  int pointsForFixture({
+  int? pointsForFixture({
     required FpFixture fixture,
   }) {
-    if (this?.homeBet != null && this?.awayBet != null) {
-      if (isHomeWin && fixture.isHomeWin) {
-        return (this?.homeBet == (fixture.scoreFulltimeHome ?? fixture.homeGoals) && this?.awayBet == (fixture.scoreFulltimeAway ?? fixture.awayGoals))
-            ? (fixture.homePoints ?? 0) * 2
-            : fixture.homePoints ?? 0;
-      } else if (isDraw && fixture.isDraw) {
-        return (this?.homeBet == (fixture.scoreFulltimeHome ?? fixture.homeGoals) && this?.awayBet == (fixture.scoreFulltimeAway ?? fixture.awayGoals))
-            ? (fixture.drawPoints ?? 0) * 2
-            : fixture.drawPoints ?? 0;
-      } else if (isAwayWin && fixture.isAwayWin) {
-        return (this?.homeBet == (fixture.scoreFulltimeHome ?? fixture.homeGoals) && this?.awayBet == (fixture.scoreFulltimeAway ?? fixture.awayGoals))
-            ? (fixture.awayPoints ?? 0) * 2
-            : fixture.awayPoints ?? 0;
+    if (this?.isHomeWin != null &&
+        this?.isDraw != null &&
+        this?.isAwayWin != null &&
+        fixture.isHomeWin != null &&
+        fixture.isDraw != null &&
+        fixture.isAwayWin != null &&
+        fixture.homePoints != null &&
+        fixture.drawPoints != null &&
+        fixture.awayPoints != null) {
+      if (isHomeWin! && fixture.isHomeWin!) {
+        return (this!.homeBet! == fixture.homeScore! && this!.awayBet! == fixture.awayScore!) ? (fixture.homePoints! * 2) : fixture.homePoints!;
+      } else if (isDraw! && fixture.isDraw!) {
+        return (this!.homeBet! == fixture.homeScore! && this!.awayBet! == fixture.awayScore!) ? (fixture.drawPoints! * 2) : fixture.drawPoints!;
+      } else if (isAwayWin! && fixture.isAwayWin!) {
+        return (this!.homeBet! == fixture.homeScore! && this!.awayBet! == fixture.awayScore!) ? (fixture.awayPoints! * 2) : fixture.awayPoints!;
+      } else {
+        return 0;
       }
     }
-    return 0;
+    return null;
   }
 }
