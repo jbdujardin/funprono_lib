@@ -8,6 +8,4 @@ export 'src/models/bet/fp_bet_extensions.dart';
 export 'src/models/fixture/fp_fixture.dart';
 export 'src/models/fixture/fp_fixture_extensions.dart';
 export 'src/models/league/fp_league.dart';
-export 'src/models/invitation/fp_invitation.dart';
 export 'src/models/standing/fp_standing.dart';
-export 'src/models/news/fp_new.dart';

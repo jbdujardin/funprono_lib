@@ -23,13 +23,7 @@ class FixturesRepository {
       params: parameters,
       builder: (data) {
         final List<ApiFootballFixture> allFixtures = (data['response'] as List).map((json) => ApiFootballFixture.fromJson(json)).toList();
-        return allFixtures
-            .whereNot(
-              (fixture) => ((fixture.league?.round ?? "").contains("Qualifying") ||
-                  (fixture.league?.round ?? "").contains("Preliminary") ||
-                  (fixture.league?.round ?? "").contains("Play-offs")),
-            )
-            .toList();
+        return allFixtures;
       },
     );
   }
@@ -47,22 +41,7 @@ class FixturesRepository {
         },
         builder: (data) {
           final List<String> allRounds = List<String>.from(data['response']);
-          final allRoundsFiltered = allRounds.whereNot((round) => round.contains('Qualifying') || round.contains('Preliminary') || round.contains('Play-offs')).toList();
-          if (leagueType == LeagueType.league) {
-            return allRoundsFiltered;
-          } else {
-            final List<String> roundsList = [];
-            for (var round in allRoundsFiltered) {
-              if (round.startsWith("Group")) {
-                if (!roundsList.contains(round.substring(round.length - 1))) {
-                  roundsList.add(round.substring(round.length - 1));
-                }
-              } else {
-                roundsList.add(round);
-              }
-            }
-            return roundsList;
-          }
+          return allRounds;
         },
       );
 

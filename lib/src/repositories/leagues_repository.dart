@@ -6,14 +6,12 @@ class LeaguesRepository {
 
   Future<List<ApiFootballLeague>> getLeagues({
     String? season,
-    bool? current,
   }) {
-    final Map<String, String> parameters = {};
+    final Map<String, String> parameters = {
+      "current": "true",
+    };
     if (season != null) {
       parameters["season"] = season;
-    }
-    if (current != null) {
-      parameters["current"] = "true";
     }
     return _api.getData(
       path: 'leagues',
