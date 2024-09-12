@@ -10,7 +10,8 @@ extension BetExtensions on FpBet? {
   int? pointsForFixture({
     required FpFixture fixture,
   }) {
-    if (this?.isHomeWin != null &&
+    if (fixture.type == FixtureType.finished &&
+        this?.isHomeWin != null &&
         this?.isDraw != null &&
         this?.isAwayWin != null &&
         fixture.isHomeWin != null &&
