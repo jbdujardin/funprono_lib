@@ -9,8 +9,9 @@ extension BetExtensions on FpBet? {
 
   int? pointsForFixture({
     required FpFixture fixture,
+    required bool fixtureNeedToBeFinished,
   }) {
-    if (fixture.type == FixtureType.finished &&
+    if (((fixture.type == FixtureType.finished && fixtureNeedToBeFinished) || !fixtureNeedToBeFinished) &&
         this?.isHomeWin != null &&
         this?.isDraw != null &&
         this?.isAwayWin != null &&
@@ -35,8 +36,9 @@ extension BetExtensions on FpBet? {
 
   bool? isPerfect({
     required FpFixture fixture,
+    required bool fixtureNeedToBeFinished,
   }) {
-    if (fixture.type == FixtureType.finished &&
+    if (((fixture.type == FixtureType.finished && fixtureNeedToBeFinished) || !fixtureNeedToBeFinished) &&
         this?.isHomeWin != null &&
         this?.isDraw != null &&
         this?.isAwayWin != null &&
