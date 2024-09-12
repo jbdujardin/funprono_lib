@@ -32,4 +32,30 @@ extension BetExtensions on FpBet? {
     }
     return null;
   }
+
+  bool? isPerfect({
+    required FpFixture fixture,
+  }) {
+    if (fixture.type == FixtureType.finished &&
+        this?.isHomeWin != null &&
+        this?.isDraw != null &&
+        this?.isAwayWin != null &&
+        fixture.isHomeWin != null &&
+        fixture.isDraw != null &&
+        fixture.isAwayWin != null &&
+        fixture.homePoints != null &&
+        fixture.drawPoints != null &&
+        fixture.awayPoints != null) {
+      if (isHomeWin! && fixture.isHomeWin!) {
+        return this!.homeBet! == fixture.homeScore! && this!.awayBet! == fixture.awayScore!;
+      } else if (isDraw! && fixture.isDraw!) {
+        return this!.homeBet! == fixture.homeScore! && this!.awayBet! == fixture.awayScore!;
+      } else if (isAwayWin! && fixture.isAwayWin!) {
+        return this!.homeBet! == fixture.homeScore! && this!.awayBet! == fixture.awayScore!;
+      } else {
+        return false;
+      }
+    }
+    return null;
+  }
 }
