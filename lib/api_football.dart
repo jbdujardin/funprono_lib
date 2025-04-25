@@ -1,7 +1,7 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library api_football;
+library;
 
 export 'src/api/api_football_api.dart';
 export 'src/repositories/leagues_repository.dart';

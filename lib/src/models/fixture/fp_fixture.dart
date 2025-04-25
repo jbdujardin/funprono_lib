@@ -91,8 +91,6 @@ extension FixtureStatusExtensions on FixtureStatus {
         return 'WO';
       case FixtureStatus.inProgress:
         return 'LIVE';
-      default:
-        return '';
     }
   }
 }
