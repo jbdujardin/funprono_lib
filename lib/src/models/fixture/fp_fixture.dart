@@ -104,6 +104,7 @@ class FpFixture with _$FpFixture {
     int? timestamp,
     String? round,
     int? elapsed,
+    int? extra,
     int? homeId,
     String? homeName,
     String? homeLogo,

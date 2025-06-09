@@ -27,6 +27,7 @@ mixin _$FpFixture {
   int? get timestamp => throw _privateConstructorUsedError;
   String? get round => throw _privateConstructorUsedError;
   int? get elapsed => throw _privateConstructorUsedError;
+  int? get extra => throw _privateConstructorUsedError;
   int? get homeId => throw _privateConstructorUsedError;
   String? get homeName => throw _privateConstructorUsedError;
   String? get homeLogo => throw _privateConstructorUsedError;
@@ -89,6 +90,7 @@ abstract class $FpFixtureCopyWith<$Res> {
       int? timestamp,
       String? round,
       int? elapsed,
+      int? extra,
       int? homeId,
       String? homeName,
       String? homeLogo,
@@ -144,6 +146,7 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
     Object? timestamp = freezed,
     Object? round = freezed,
     Object? elapsed = freezed,
+    Object? extra = freezed,
     Object? homeId = freezed,
     Object? homeName = freezed,
     Object? homeLogo = freezed,
@@ -201,6 +204,10 @@ class _$FpFixtureCopyWithImpl<$Res, $Val extends FpFixture>
       elapsed: freezed == elapsed
           ? _value.elapsed
           : elapsed // ignore: cast_nullable_to_non_nullable
+              as int?,
+      extra: freezed == extra
+          ? _value.extra
+          : extra // ignore: cast_nullable_to_non_nullable
               as int?,
       homeId: freezed == homeId
           ? _value.homeId
@@ -349,6 +356,7 @@ abstract class _$$FpFixtureImplCopyWith<$Res>
       int? timestamp,
       String? round,
       int? elapsed,
+      int? extra,
       int? homeId,
       String? homeName,
       String? homeLogo,
@@ -402,6 +410,7 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
     Object? timestamp = freezed,
     Object? round = freezed,
     Object? elapsed = freezed,
+    Object? extra = freezed,
     Object? homeId = freezed,
     Object? homeName = freezed,
     Object? homeLogo = freezed,
@@ -459,6 +468,10 @@ class __$$FpFixtureImplCopyWithImpl<$Res>
       elapsed: freezed == elapsed
           ? _value.elapsed
           : elapsed // ignore: cast_nullable_to_non_nullable
+              as int?,
+      extra: freezed == extra
+          ? _value.extra
+          : extra // ignore: cast_nullable_to_non_nullable
               as int?,
       homeId: freezed == homeId
           ? _value.homeId
@@ -602,6 +615,7 @@ class _$FpFixtureImpl implements _FpFixture {
       this.timestamp,
       this.round,
       this.elapsed,
+      this.extra,
       this.homeId,
       this.homeName,
       this.homeLogo,
@@ -652,6 +666,8 @@ class _$FpFixtureImpl implements _FpFixture {
   final String? round;
   @override
   final int? elapsed;
+  @override
+  final int? extra;
   @override
   final int? homeId;
   @override
@@ -734,7 +750,7 @@ class _$FpFixtureImpl implements _FpFixture {
 
   @override
   String toString() {
-    return 'FpFixture(leagueId: $leagueId, status: $status, date: $date, timestamp: $timestamp, round: $round, elapsed: $elapsed, homeId: $homeId, homeName: $homeName, homeLogo: $homeLogo, homeGoals: $homeGoals, homePoints: $homePoints, awayId: $awayId, awayName: $awayName, awayLogo: $awayLogo, awayGoals: $awayGoals, awayPoints: $awayPoints, drawPoints: $drawPoints, referee: $referee, venueId: $venueId, venueName: $venueName, homeWinner: $homeWinner, awayWinner: $awayWinner, scoreHalftimeHome: $scoreHalftimeHome, scoreHalftimeAway: $scoreHalftimeAway, scoreFulltimeHome: $scoreFulltimeHome, scoreFulltimeAway: $scoreFulltimeAway, scoreExtratimeHome: $scoreExtratimeHome, scoreExtratimeAway: $scoreExtratimeAway, scorePenaltyHome: $scorePenaltyHome, scorePenaltyAway: $scorePenaltyAway, json: $json, jsonUpdatedAt: $jsonUpdatedAt, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+    return 'FpFixture(leagueId: $leagueId, status: $status, date: $date, timestamp: $timestamp, round: $round, elapsed: $elapsed, extra: $extra, homeId: $homeId, homeName: $homeName, homeLogo: $homeLogo, homeGoals: $homeGoals, homePoints: $homePoints, awayId: $awayId, awayName: $awayName, awayLogo: $awayLogo, awayGoals: $awayGoals, awayPoints: $awayPoints, drawPoints: $drawPoints, referee: $referee, venueId: $venueId, venueName: $venueName, homeWinner: $homeWinner, awayWinner: $awayWinner, scoreHalftimeHome: $scoreHalftimeHome, scoreHalftimeAway: $scoreHalftimeAway, scoreFulltimeHome: $scoreFulltimeHome, scoreFulltimeAway: $scoreFulltimeAway, scoreExtratimeHome: $scoreExtratimeHome, scoreExtratimeAway: $scoreExtratimeAway, scorePenaltyHome: $scorePenaltyHome, scorePenaltyAway: $scorePenaltyAway, json: $json, jsonUpdatedAt: $jsonUpdatedAt, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
   }
 
   @override
@@ -750,6 +766,7 @@ class _$FpFixtureImpl implements _FpFixture {
                 other.timestamp == timestamp) &&
             (identical(other.round, round) || other.round == round) &&
             (identical(other.elapsed, elapsed) || other.elapsed == elapsed) &&
+            (identical(other.extra, extra) || other.extra == extra) &&
             (identical(other.homeId, homeId) || other.homeId == homeId) &&
             (identical(other.homeName, homeName) ||
                 other.homeName == homeName) &&
@@ -820,6 +837,7 @@ class _$FpFixtureImpl implements _FpFixture {
         timestamp,
         round,
         elapsed,
+        extra,
         homeId,
         homeName,
         homeLogo,
@@ -878,6 +896,7 @@ abstract class _FpFixture implements FpFixture {
           final int? timestamp,
           final String? round,
           final int? elapsed,
+          final int? extra,
           final int? homeId,
           final String? homeName,
           final String? homeLogo,
@@ -928,6 +947,8 @@ abstract class _FpFixture implements FpFixture {
   String? get round;
   @override
   int? get elapsed;
+  @override
+  int? get extra;
   @override
   int? get homeId;
   @override
