@@ -12,7 +12,7 @@ environment:
 
 dependencies:
   dart_appwrite: ^16.0.0
-  collection: ^1.19.1
+  collection: any
   freezed_annotation: ^2.4.4
   http: ^1.3.0
   json_annotation: ^4.9.0
