@@ -6,7 +6,7 @@ part 'fp_bet.freezed.dart';
 part 'fp_bet.g.dart';
 
 @freezed
-class FpBet with _$FpBet {
+abstract class FpBet with _$FpBet {
   factory FpBet({
     int? leagueId,
     String? userId,

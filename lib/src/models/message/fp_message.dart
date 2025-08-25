@@ -6,7 +6,7 @@ part 'fp_message.freezed.dart';
 part 'fp_message.g.dart';
 
 @freezed
-class FpMessage with _$FpMessage {
+abstract class FpMessage with _$FpMessage {
   factory FpMessage({
     String? teamId,
     String? authorId,

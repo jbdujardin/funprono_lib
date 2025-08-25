@@ -6,41 +6,42 @@ part of 'fp_standing.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FpStandingImpl _$$FpStandingImplFromJson(Map<String, dynamic> json) =>
-    _$FpStandingImpl(
-      rank: (json['rank'] as num?)?.toInt(),
-      teamId: (json['teamId'] as num?)?.toInt(),
-      teamName: json['teamName'] as String?,
-      teamLogo: json['teamLogo'] as String?,
-      points: (json['points'] as num?)?.toInt(),
-      goalsDiff: (json['goalsDiff'] as num?)?.toInt(),
-      description: json['description'] as String?,
-      group: json['group'] as String?,
-      allPlayed: (json['allPlayed'] as num?)?.toInt(),
-      allWin: (json['allWin'] as num?)?.toInt(),
-      allDraw: (json['allDraw'] as num?)?.toInt(),
-      allLose: (json['allLose'] as num?)?.toInt(),
-      allGoalsFor: (json['allGoalsFor'] as num?)?.toInt(),
-      allGoalsAgainst: (json['allGoalsAgainst'] as num?)?.toInt(),
-      form: json['form'] as String?,
-      update: json['update'] == null
-          ? null
-          : DateTime.parse(json['update'] as String),
-      dbId: json[r'$id'] as String?,
-      createdAt: json[r'$createdAt'] == null
+_FpStanding _$FpStandingFromJson(Map<String, dynamic> json) => _FpStanding(
+  rank: (json['rank'] as num?)?.toInt(),
+  teamId: (json['teamId'] as num?)?.toInt(),
+  teamName: json['teamName'] as String?,
+  teamLogo: json['teamLogo'] as String?,
+  points: (json['points'] as num?)?.toInt(),
+  goalsDiff: (json['goalsDiff'] as num?)?.toInt(),
+  description: json['description'] as String?,
+  group: json['group'] as String?,
+  allPlayed: (json['allPlayed'] as num?)?.toInt(),
+  allWin: (json['allWin'] as num?)?.toInt(),
+  allDraw: (json['allDraw'] as num?)?.toInt(),
+  allLose: (json['allLose'] as num?)?.toInt(),
+  allGoalsFor: (json['allGoalsFor'] as num?)?.toInt(),
+  allGoalsAgainst: (json['allGoalsAgainst'] as num?)?.toInt(),
+  form: json['form'] as String?,
+  update:
+      json['update'] == null ? null : DateTime.parse(json['update'] as String),
+  dbId: json[r'$id'] as String?,
+  createdAt:
+      json[r'$createdAt'] == null
           ? null
           : DateTime.parse(json[r'$createdAt'] as String),
-      updatedAt: json[r'$updatedAt'] == null
+  updatedAt:
+      json[r'$updatedAt'] == null
           ? null
           : DateTime.parse(json[r'$updatedAt'] as String),
-      permissions: (json[r'$permissions'] as List<dynamic>?)
+  permissions:
+      (json[r'$permissions'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      collectionId: json[r'$collectionId'] as String?,
-      databaseId: json[r'$databaseId'] as String?,
-    );
+  collectionId: json[r'$collectionId'] as String?,
+  databaseId: json[r'$databaseId'] as String?,
+);
 
-Map<String, dynamic> _$$FpStandingImplToJson(_$FpStandingImpl instance) =>
+Map<String, dynamic> _$FpStandingToJson(_FpStanding instance) =>
     <String, dynamic>{
       'rank': instance.rank,
       'teamId': instance.teamId,

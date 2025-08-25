@@ -6,60 +6,61 @@ part of 'fp_fixture.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FpFixtureImpl _$$FpFixtureImplFromJson(Map<String, dynamic> json) =>
-    _$FpFixtureImpl(
-      leagueId: (json['leagueId'] as num?)?.toInt(),
-      status: $enumDecodeNullable(_$FixtureStatusEnumMap, json['status']),
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
-      timestamp: (json['timestamp'] as num?)?.toInt(),
-      round: json['round'] as String?,
-      elapsed: (json['elapsed'] as num?)?.toInt(),
-      extra: (json['extra'] as num?)?.toInt(),
-      homeId: (json['homeId'] as num?)?.toInt(),
-      homeName: json['homeName'] as String?,
-      homeLogo: json['homeLogo'] as String?,
-      homeGoals: (json['homeGoals'] as num?)?.toInt(),
-      homePoints: (json['homePoints'] as num?)?.toInt(),
-      awayId: (json['awayId'] as num?)?.toInt(),
-      awayName: json['awayName'] as String?,
-      awayLogo: json['awayLogo'] as String?,
-      awayGoals: (json['awayGoals'] as num?)?.toInt(),
-      awayPoints: (json['awayPoints'] as num?)?.toInt(),
-      drawPoints: (json['drawPoints'] as num?)?.toInt(),
-      referee: json['referee'] as String?,
-      venueId: (json['venueId'] as num?)?.toInt(),
-      venueName: json['venueName'] as String?,
-      homeWinner: json['homeWinner'] as bool?,
-      awayWinner: json['awayWinner'] as bool?,
-      scoreHalftimeHome: (json['scoreHalftimeHome'] as num?)?.toInt(),
-      scoreHalftimeAway: (json['scoreHalftimeAway'] as num?)?.toInt(),
-      scoreFulltimeHome: (json['scoreFulltimeHome'] as num?)?.toInt(),
-      scoreFulltimeAway: (json['scoreFulltimeAway'] as num?)?.toInt(),
-      scoreExtratimeHome: (json['scoreExtratimeHome'] as num?)?.toInt(),
-      scoreExtratimeAway: (json['scoreExtratimeAway'] as num?)?.toInt(),
-      scorePenaltyHome: (json['scorePenaltyHome'] as num?)?.toInt(),
-      scorePenaltyAway: (json['scorePenaltyAway'] as num?)?.toInt(),
-      json:
-          const ApiFootballFixtureConverter().fromJson(json['json'] as String?),
-      jsonUpdatedAt: json['jsonUpdatedAt'] == null
+_FpFixture _$FpFixtureFromJson(Map<String, dynamic> json) => _FpFixture(
+  leagueId: (json['leagueId'] as num?)?.toInt(),
+  status: $enumDecodeNullable(_$FixtureStatusEnumMap, json['status']),
+  date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+  timestamp: (json['timestamp'] as num?)?.toInt(),
+  round: json['round'] as String?,
+  elapsed: (json['elapsed'] as num?)?.toInt(),
+  extra: (json['extra'] as num?)?.toInt(),
+  homeId: (json['homeId'] as num?)?.toInt(),
+  homeName: json['homeName'] as String?,
+  homeLogo: json['homeLogo'] as String?,
+  homeGoals: (json['homeGoals'] as num?)?.toInt(),
+  homePoints: (json['homePoints'] as num?)?.toInt(),
+  awayId: (json['awayId'] as num?)?.toInt(),
+  awayName: json['awayName'] as String?,
+  awayLogo: json['awayLogo'] as String?,
+  awayGoals: (json['awayGoals'] as num?)?.toInt(),
+  awayPoints: (json['awayPoints'] as num?)?.toInt(),
+  drawPoints: (json['drawPoints'] as num?)?.toInt(),
+  referee: json['referee'] as String?,
+  venueId: (json['venueId'] as num?)?.toInt(),
+  venueName: json['venueName'] as String?,
+  homeWinner: json['homeWinner'] as bool?,
+  awayWinner: json['awayWinner'] as bool?,
+  scoreHalftimeHome: (json['scoreHalftimeHome'] as num?)?.toInt(),
+  scoreHalftimeAway: (json['scoreHalftimeAway'] as num?)?.toInt(),
+  scoreFulltimeHome: (json['scoreFulltimeHome'] as num?)?.toInt(),
+  scoreFulltimeAway: (json['scoreFulltimeAway'] as num?)?.toInt(),
+  scoreExtratimeHome: (json['scoreExtratimeHome'] as num?)?.toInt(),
+  scoreExtratimeAway: (json['scoreExtratimeAway'] as num?)?.toInt(),
+  scorePenaltyHome: (json['scorePenaltyHome'] as num?)?.toInt(),
+  scorePenaltyAway: (json['scorePenaltyAway'] as num?)?.toInt(),
+  json: const ApiFootballFixtureConverter().fromJson(json['json'] as String?),
+  jsonUpdatedAt:
+      json['jsonUpdatedAt'] == null
           ? null
           : DateTime.parse(json['jsonUpdatedAt'] as String),
-      id: json[r'$id'] as String?,
-      createdAt: json[r'$createdAt'] == null
+  id: json[r'$id'] as String?,
+  createdAt:
+      json[r'$createdAt'] == null
           ? null
           : DateTime.parse(json[r'$createdAt'] as String),
-      updatedAt: json[r'$updatedAt'] == null
+  updatedAt:
+      json[r'$updatedAt'] == null
           ? null
           : DateTime.parse(json[r'$updatedAt'] as String),
-      permissions: (json[r'$permissions'] as List<dynamic>?)
+  permissions:
+      (json[r'$permissions'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      collectionId: json[r'$collectionId'] as String?,
-      databaseId: json[r'$databaseId'] as String?,
-    );
+  collectionId: json[r'$collectionId'] as String?,
+  databaseId: json[r'$databaseId'] as String?,
+);
 
-Map<String, dynamic> _$$FpFixtureImplToJson(_$FpFixtureImpl instance) =>
+Map<String, dynamic> _$FpFixtureToJson(_FpFixture instance) =>
     <String, dynamic>{
       'leagueId': instance.leagueId,
       'status': _$FixtureStatusEnumMap[instance.status],

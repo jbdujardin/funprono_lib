@@ -13,7 +13,7 @@ enum LeagueType {
 }
 
 @freezed
-class FpLeague with _$FpLeague {
+abstract class FpLeague with _$FpLeague {
   factory FpLeague({
     String? name,
     LeagueType? type,

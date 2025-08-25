@@ -6,28 +6,29 @@ part of 'fp_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FpMessageImpl _$$FpMessageImplFromJson(Map<String, dynamic> json) =>
-    _$FpMessageImpl(
-      teamId: json['teamId'] as String?,
-      authorId: json['authorId'] as String?,
-      text: json['text'] as String?,
-      readBy:
-          (json['readBy'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      id: json[r'$id'] as String?,
-      createdAt: json[r'$createdAt'] == null
+_FpMessage _$FpMessageFromJson(Map<String, dynamic> json) => _FpMessage(
+  teamId: json['teamId'] as String?,
+  authorId: json['authorId'] as String?,
+  text: json['text'] as String?,
+  readBy: (json['readBy'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  id: json[r'$id'] as String?,
+  createdAt:
+      json[r'$createdAt'] == null
           ? null
           : DateTime.parse(json[r'$createdAt'] as String),
-      updatedAt: json[r'$updatedAt'] == null
+  updatedAt:
+      json[r'$updatedAt'] == null
           ? null
           : DateTime.parse(json[r'$updatedAt'] as String),
-      permissions: (json[r'$permissions'] as List<dynamic>?)
+  permissions:
+      (json[r'$permissions'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      databaseId: json[r'$databaseId'] as String?,
-      collectionId: json[r'$collectionId'] as String?,
-    );
+  databaseId: json[r'$databaseId'] as String?,
+  collectionId: json[r'$collectionId'] as String?,
+);
 
-Map<String, dynamic> _$$FpMessageImplToJson(_$FpMessageImpl instance) =>
+Map<String, dynamic> _$FpMessageToJson(_FpMessage instance) =>
     <String, dynamic>{
       'teamId': instance.teamId,
       'authorId': instance.authorId,

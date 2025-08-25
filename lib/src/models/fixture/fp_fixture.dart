@@ -96,7 +96,7 @@ extension FixtureStatusExtensions on FixtureStatus {
 }
 
 @freezed
-class FpFixture with _$FpFixture {
+abstract class FpFixture with _$FpFixture {
   factory FpFixture({
     int? leagueId,
     @JsonEnum() FixtureStatus? status,

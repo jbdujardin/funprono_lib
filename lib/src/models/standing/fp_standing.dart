@@ -6,7 +6,7 @@ part 'fp_standing.freezed.dart';
 part 'fp_standing.g.dart';
 
 @freezed
-class FpStanding with _$FpStanding {
+abstract class FpStanding with _$FpStanding {
   factory FpStanding({
     int? rank,
     int? teamId,
