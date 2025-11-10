@@ -13,6 +13,7 @@ abstract class FpMessage with _$FpMessage {
     String? text,
     List<String>? readBy,
     @JsonKey(name: '\$id') String? id,
+    @JsonKey(name: '\$sequence') int? sequence,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,
     @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
     @JsonKey(name: '\$permissions') List<String>? permissions,

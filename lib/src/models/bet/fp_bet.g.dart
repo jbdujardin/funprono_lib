@@ -14,19 +14,17 @@ _FpBet _$FpBetFromJson(Map<String, dynamic> json) => _FpBet(
   awayBet: (json['awayBet'] as num?)?.toInt(),
   fixtureRound: json['fixtureRound'] as String?,
   fixtureTimestamp: (json['fixtureTimestamp'] as num?)?.toInt(),
-  dbId: json[r'$id'] as String?,
-  createdAt:
-      json[r'$createdAt'] == null
-          ? null
-          : DateTime.parse(json[r'$createdAt'] as String),
-  updatedAt:
-      json[r'$updatedAt'] == null
-          ? null
-          : DateTime.parse(json[r'$updatedAt'] as String),
-  permissions:
-      (json[r'$permissions'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+  id: json[r'$id'] as String?,
+  sequence: (json[r'$sequence'] as num?)?.toInt(),
+  createdAt: json[r'$createdAt'] == null
+      ? null
+      : DateTime.parse(json[r'$createdAt'] as String),
+  updatedAt: json[r'$updatedAt'] == null
+      ? null
+      : DateTime.parse(json[r'$updatedAt'] as String),
+  permissions: (json[r'$permissions'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
   collectionId: json[r'$collectionId'] as String?,
   databaseId: json[r'$databaseId'] as String?,
 );
@@ -39,7 +37,8 @@ Map<String, dynamic> _$FpBetToJson(_FpBet instance) => <String, dynamic>{
   'awayBet': instance.awayBet,
   'fixtureRound': instance.fixtureRound,
   'fixtureTimestamp': instance.fixtureTimestamp,
-  r'$id': instance.dbId,
+  r'$id': instance.id,
+  r'$sequence': instance.sequence,
   r'$createdAt': instance.createdAt?.toIso8601String(),
   r'$updatedAt': instance.updatedAt?.toIso8601String(),
   r'$permissions': instance.permissions,

@@ -13,41 +13,34 @@ _FpLeague _$FpLeagueFromJson(Map<String, dynamic> json) => _FpLeague(
   countryCode: json['countryCode'] as String?,
   countryName: json['countryName'] as String?,
   countryFlag: json['countryFlag'] as String?,
-  seasonStart:
-      json['seasonStart'] == null
-          ? null
-          : DateTime.parse(json['seasonStart'] as String),
-  seasonEnd:
-      json['seasonEnd'] == null
-          ? null
-          : DateTime.parse(json['seasonEnd'] as String),
+  seasonStart: json['seasonStart'] == null
+      ? null
+      : DateTime.parse(json['seasonStart'] as String),
+  seasonEnd: json['seasonEnd'] == null
+      ? null
+      : DateTime.parse(json['seasonEnd'] as String),
   rounds: (json['rounds'] as List<dynamic>?)?.map((e) => e as String).toList(),
-  roundsUpdatedAt:
-      json['roundsUpdatedAt'] == null
-          ? null
-          : DateTime.parse(json['roundsUpdatedAt'] as String),
-  pointsUpdatedAt:
-      json['pointsUpdatedAt'] == null
-          ? null
-          : DateTime.parse(json['pointsUpdatedAt'] as String),
-  fixturesUpdatedAt:
-      json['fixturesUpdatedAt'] == null
-          ? null
-          : DateTime.parse(json['fixturesUpdatedAt'] as String),
+  roundsUpdatedAt: json['roundsUpdatedAt'] == null
+      ? null
+      : DateTime.parse(json['roundsUpdatedAt'] as String),
+  pointsUpdatedAt: json['pointsUpdatedAt'] == null
+      ? null
+      : DateTime.parse(json['pointsUpdatedAt'] as String),
+  fixturesUpdatedAt: json['fixturesUpdatedAt'] == null
+      ? null
+      : DateTime.parse(json['fixturesUpdatedAt'] as String),
   currentSeason: json['currentSeason'] as String?,
   id: json[r'$id'] as String?,
-  createdAt:
-      json[r'$createdAt'] == null
-          ? null
-          : DateTime.parse(json[r'$createdAt'] as String),
-  updatedAt:
-      json[r'$updatedAt'] == null
-          ? null
-          : DateTime.parse(json[r'$updatedAt'] as String),
-  permissions:
-      (json[r'$permissions'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+  sequence: (json[r'$sequence'] as num?)?.toInt(),
+  createdAt: json[r'$createdAt'] == null
+      ? null
+      : DateTime.parse(json[r'$createdAt'] as String),
+  updatedAt: json[r'$updatedAt'] == null
+      ? null
+      : DateTime.parse(json[r'$updatedAt'] as String),
+  permissions: (json[r'$permissions'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
   databaseId: json[r'$databaseId'] as String?,
   collectionId: json[r'$collectionId'] as String?,
 );
@@ -67,6 +60,7 @@ Map<String, dynamic> _$FpLeagueToJson(_FpLeague instance) => <String, dynamic>{
   'fixturesUpdatedAt': instance.fixturesUpdatedAt?.toIso8601String(),
   'currentSeason': instance.currentSeason,
   r'$id': instance.id,
+  r'$sequence': instance.sequence,
   r'$createdAt': instance.createdAt?.toIso8601String(),
   r'$updatedAt': instance.updatedAt?.toIso8601String(),
   r'$permissions': instance.permissions,

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FpStanding {
 
- int? get rank; int? get teamId; String? get teamName; String? get teamLogo; int? get points; int? get goalsDiff; String? get description; String? get group; int? get allPlayed; int? get allWin; int? get allDraw; int? get allLose; int? get allGoalsFor; int? get allGoalsAgainst; String? get form; DateTime? get update;@JsonKey(name: '\$id') String? get dbId;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$collectionId') String? get collectionId;@JsonKey(name: '\$databaseId') String? get databaseId;
+ int? get rank; int? get teamId; String? get teamName; String? get teamLogo; int? get points; int? get goalsDiff; String? get description; String? get group; int? get allPlayed; int? get allWin; int? get allDraw; int? get allLose; int? get allGoalsFor; int? get allGoalsAgainst; String? get form; DateTime? get update;@JsonKey(name: '\$id') String? get dbId;@JsonKey(name: '\$sequence') int? get sequence;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$collectionId') String? get collectionId;@JsonKey(name: '\$databaseId') String? get databaseId;
 /// Create a copy of FpStanding
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $FpStandingCopyWith<FpStanding> get copyWith => _$FpStandingCopyWithImpl<FpStand
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FpStanding&&(identical(other.rank, rank) || other.rank == rank)&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.teamName, teamName) || other.teamName == teamName)&&(identical(other.teamLogo, teamLogo) || other.teamLogo == teamLogo)&&(identical(other.points, points) || other.points == points)&&(identical(other.goalsDiff, goalsDiff) || other.goalsDiff == goalsDiff)&&(identical(other.description, description) || other.description == description)&&(identical(other.group, group) || other.group == group)&&(identical(other.allPlayed, allPlayed) || other.allPlayed == allPlayed)&&(identical(other.allWin, allWin) || other.allWin == allWin)&&(identical(other.allDraw, allDraw) || other.allDraw == allDraw)&&(identical(other.allLose, allLose) || other.allLose == allLose)&&(identical(other.allGoalsFor, allGoalsFor) || other.allGoalsFor == allGoalsFor)&&(identical(other.allGoalsAgainst, allGoalsAgainst) || other.allGoalsAgainst == allGoalsAgainst)&&(identical(other.form, form) || other.form == form)&&(identical(other.update, update) || other.update == update)&&(identical(other.dbId, dbId) || other.dbId == dbId)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.permissions, permissions)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FpStanding&&(identical(other.rank, rank) || other.rank == rank)&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.teamName, teamName) || other.teamName == teamName)&&(identical(other.teamLogo, teamLogo) || other.teamLogo == teamLogo)&&(identical(other.points, points) || other.points == points)&&(identical(other.goalsDiff, goalsDiff) || other.goalsDiff == goalsDiff)&&(identical(other.description, description) || other.description == description)&&(identical(other.group, group) || other.group == group)&&(identical(other.allPlayed, allPlayed) || other.allPlayed == allPlayed)&&(identical(other.allWin, allWin) || other.allWin == allWin)&&(identical(other.allDraw, allDraw) || other.allDraw == allDraw)&&(identical(other.allLose, allLose) || other.allLose == allLose)&&(identical(other.allGoalsFor, allGoalsFor) || other.allGoalsFor == allGoalsFor)&&(identical(other.allGoalsAgainst, allGoalsAgainst) || other.allGoalsAgainst == allGoalsAgainst)&&(identical(other.form, form) || other.form == form)&&(identical(other.update, update) || other.update == update)&&(identical(other.dbId, dbId) || other.dbId == dbId)&&(identical(other.sequence, sequence) || other.sequence == sequence)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.permissions, permissions)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,rank,teamId,teamName,teamLogo,points,goalsDiff,description,group,allPlayed,allWin,allDraw,allLose,allGoalsFor,allGoalsAgainst,form,update,dbId,createdAt,updatedAt,const DeepCollectionEquality().hash(permissions),collectionId,databaseId]);
+int get hashCode => Object.hashAll([runtimeType,rank,teamId,teamName,teamLogo,points,goalsDiff,description,group,allPlayed,allWin,allDraw,allLose,allGoalsFor,allGoalsAgainst,form,update,dbId,sequence,createdAt,updatedAt,const DeepCollectionEquality().hash(permissions),collectionId,databaseId]);
 
 @override
 String toString() {
-  return 'FpStanding(rank: $rank, teamId: $teamId, teamName: $teamName, teamLogo: $teamLogo, points: $points, goalsDiff: $goalsDiff, description: $description, group: $group, allPlayed: $allPlayed, allWin: $allWin, allDraw: $allDraw, allLose: $allLose, allGoalsFor: $allGoalsFor, allGoalsAgainst: $allGoalsAgainst, form: $form, update: $update, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+  return 'FpStanding(rank: $rank, teamId: $teamId, teamName: $teamName, teamLogo: $teamLogo, points: $points, goalsDiff: $goalsDiff, description: $description, group: $group, allPlayed: $allPlayed, allWin: $allWin, allDraw: $allDraw, allLose: $allLose, allGoalsFor: $allGoalsFor, allGoalsAgainst: $allGoalsAgainst, form: $form, update: $update, dbId: $dbId, sequence: $sequence, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $FpStandingCopyWith<$Res>  {
   factory $FpStandingCopyWith(FpStanding value, $Res Function(FpStanding) _then) = _$FpStandingCopyWithImpl;
 @useResult
 $Res call({
- int? rank, int? teamId, String? teamName, String? teamLogo, int? points, int? goalsDiff, String? description, String? group, int? allPlayed, int? allWin, int? allDraw, int? allLose, int? allGoalsFor, int? allGoalsAgainst, String? form, DateTime? update,@JsonKey(name: '\$id') String? dbId,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$collectionId') String? collectionId,@JsonKey(name: '\$databaseId') String? databaseId
+ int? rank, int? teamId, String? teamName, String? teamLogo, int? points, int? goalsDiff, String? description, String? group, int? allPlayed, int? allWin, int? allDraw, int? allLose, int? allGoalsFor, int? allGoalsAgainst, String? form, DateTime? update,@JsonKey(name: '\$id') String? dbId,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$collectionId') String? collectionId,@JsonKey(name: '\$databaseId') String? databaseId
 });
 
 
@@ -65,7 +65,7 @@ class _$FpStandingCopyWithImpl<$Res>
 
 /// Create a copy of FpStanding
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? rank = freezed,Object? teamId = freezed,Object? teamName = freezed,Object? teamLogo = freezed,Object? points = freezed,Object? goalsDiff = freezed,Object? description = freezed,Object? group = freezed,Object? allPlayed = freezed,Object? allWin = freezed,Object? allDraw = freezed,Object? allLose = freezed,Object? allGoalsFor = freezed,Object? allGoalsAgainst = freezed,Object? form = freezed,Object? update = freezed,Object? dbId = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? collectionId = freezed,Object? databaseId = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? rank = freezed,Object? teamId = freezed,Object? teamName = freezed,Object? teamLogo = freezed,Object? points = freezed,Object? goalsDiff = freezed,Object? description = freezed,Object? group = freezed,Object? allPlayed = freezed,Object? allWin = freezed,Object? allDraw = freezed,Object? allLose = freezed,Object? allGoalsFor = freezed,Object? allGoalsAgainst = freezed,Object? form = freezed,Object? update = freezed,Object? dbId = freezed,Object? sequence = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? collectionId = freezed,Object? databaseId = freezed,}) {
   return _then(_self.copyWith(
 rank: freezed == rank ? _self.rank : rank // ignore: cast_nullable_to_non_nullable
 as int?,teamId: freezed == teamId ? _self.teamId : teamId // ignore: cast_nullable_to_non_nullable
@@ -84,7 +84,8 @@ as int?,allGoalsAgainst: freezed == allGoalsAgainst ? _self.allGoalsAgainst : al
 as int?,form: freezed == form ? _self.form : form // ignore: cast_nullable_to_non_nullable
 as String?,update: freezed == update ? _self.update : update // ignore: cast_nullable_to_non_nullable
 as DateTime?,dbId: freezed == dbId ? _self.dbId : dbId // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,sequence: freezed == sequence ? _self.sequence : sequence // ignore: cast_nullable_to_non_nullable
+as int?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,permissions: freezed == permissions ? _self.permissions : permissions // ignore: cast_nullable_to_non_nullable
 as List<String>?,collectionId: freezed == collectionId ? _self.collectionId : collectionId // ignore: cast_nullable_to_non_nullable
@@ -174,10 +175,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? rank,  int? teamId,  String? teamName,  String? teamLogo,  int? points,  int? goalsDiff,  String? description,  String? group,  int? allPlayed,  int? allWin,  int? allDraw,  int? allLose,  int? allGoalsFor,  int? allGoalsAgainst,  String? form,  DateTime? update, @JsonKey(name: '\$id')  String? dbId, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$collectionId')  String? collectionId, @JsonKey(name: '\$databaseId')  String? databaseId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? rank,  int? teamId,  String? teamName,  String? teamLogo,  int? points,  int? goalsDiff,  String? description,  String? group,  int? allPlayed,  int? allWin,  int? allDraw,  int? allLose,  int? allGoalsFor,  int? allGoalsAgainst,  String? form,  DateTime? update, @JsonKey(name: '\$id')  String? dbId, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$collectionId')  String? collectionId, @JsonKey(name: '\$databaseId')  String? databaseId)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FpStanding() when $default != null:
-return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.points,_that.goalsDiff,_that.description,_that.group,_that.allPlayed,_that.allWin,_that.allDraw,_that.allLose,_that.allGoalsFor,_that.allGoalsAgainst,_that.form,_that.update,_that.dbId,_that.createdAt,_that.updatedAt,_that.permissions,_that.collectionId,_that.databaseId);case _:
+return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.points,_that.goalsDiff,_that.description,_that.group,_that.allPlayed,_that.allWin,_that.allDraw,_that.allLose,_that.allGoalsFor,_that.allGoalsAgainst,_that.form,_that.update,_that.dbId,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.collectionId,_that.databaseId);case _:
   return orElse();
 
 }
@@ -195,10 +196,10 @@ return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.poin
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? rank,  int? teamId,  String? teamName,  String? teamLogo,  int? points,  int? goalsDiff,  String? description,  String? group,  int? allPlayed,  int? allWin,  int? allDraw,  int? allLose,  int? allGoalsFor,  int? allGoalsAgainst,  String? form,  DateTime? update, @JsonKey(name: '\$id')  String? dbId, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$collectionId')  String? collectionId, @JsonKey(name: '\$databaseId')  String? databaseId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? rank,  int? teamId,  String? teamName,  String? teamLogo,  int? points,  int? goalsDiff,  String? description,  String? group,  int? allPlayed,  int? allWin,  int? allDraw,  int? allLose,  int? allGoalsFor,  int? allGoalsAgainst,  String? form,  DateTime? update, @JsonKey(name: '\$id')  String? dbId, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$collectionId')  String? collectionId, @JsonKey(name: '\$databaseId')  String? databaseId)  $default,) {final _that = this;
 switch (_that) {
 case _FpStanding():
-return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.points,_that.goalsDiff,_that.description,_that.group,_that.allPlayed,_that.allWin,_that.allDraw,_that.allLose,_that.allGoalsFor,_that.allGoalsAgainst,_that.form,_that.update,_that.dbId,_that.createdAt,_that.updatedAt,_that.permissions,_that.collectionId,_that.databaseId);case _:
+return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.points,_that.goalsDiff,_that.description,_that.group,_that.allPlayed,_that.allWin,_that.allDraw,_that.allLose,_that.allGoalsFor,_that.allGoalsAgainst,_that.form,_that.update,_that.dbId,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.collectionId,_that.databaseId);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -215,10 +216,10 @@ return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.poin
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? rank,  int? teamId,  String? teamName,  String? teamLogo,  int? points,  int? goalsDiff,  String? description,  String? group,  int? allPlayed,  int? allWin,  int? allDraw,  int? allLose,  int? allGoalsFor,  int? allGoalsAgainst,  String? form,  DateTime? update, @JsonKey(name: '\$id')  String? dbId, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$collectionId')  String? collectionId, @JsonKey(name: '\$databaseId')  String? databaseId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? rank,  int? teamId,  String? teamName,  String? teamLogo,  int? points,  int? goalsDiff,  String? description,  String? group,  int? allPlayed,  int? allWin,  int? allDraw,  int? allLose,  int? allGoalsFor,  int? allGoalsAgainst,  String? form,  DateTime? update, @JsonKey(name: '\$id')  String? dbId, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$collectionId')  String? collectionId, @JsonKey(name: '\$databaseId')  String? databaseId)?  $default,) {final _that = this;
 switch (_that) {
 case _FpStanding() when $default != null:
-return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.points,_that.goalsDiff,_that.description,_that.group,_that.allPlayed,_that.allWin,_that.allDraw,_that.allLose,_that.allGoalsFor,_that.allGoalsAgainst,_that.form,_that.update,_that.dbId,_that.createdAt,_that.updatedAt,_that.permissions,_that.collectionId,_that.databaseId);case _:
+return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.points,_that.goalsDiff,_that.description,_that.group,_that.allPlayed,_that.allWin,_that.allDraw,_that.allLose,_that.allGoalsFor,_that.allGoalsAgainst,_that.form,_that.update,_that.dbId,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.collectionId,_that.databaseId);case _:
   return null;
 
 }
@@ -230,7 +231,7 @@ return $default(_that.rank,_that.teamId,_that.teamName,_that.teamLogo,_that.poin
 @JsonSerializable()
 
 class _FpStanding implements FpStanding {
-   _FpStanding({this.rank, this.teamId, this.teamName, this.teamLogo, this.points, this.goalsDiff, this.description, this.group, this.allPlayed, this.allWin, this.allDraw, this.allLose, this.allGoalsFor, this.allGoalsAgainst, this.form, this.update, @JsonKey(name: '\$id') this.dbId, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$collectionId') this.collectionId, @JsonKey(name: '\$databaseId') this.databaseId}): _permissions = permissions;
+   _FpStanding({this.rank, this.teamId, this.teamName, this.teamLogo, this.points, this.goalsDiff, this.description, this.group, this.allPlayed, this.allWin, this.allDraw, this.allLose, this.allGoalsFor, this.allGoalsAgainst, this.form, this.update, @JsonKey(name: '\$id') this.dbId, @JsonKey(name: '\$sequence') this.sequence, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$collectionId') this.collectionId, @JsonKey(name: '\$databaseId') this.databaseId}): _permissions = permissions;
   factory _FpStanding.fromJson(Map<String, dynamic> json) => _$FpStandingFromJson(json);
 
 @override final  int? rank;
@@ -250,6 +251,7 @@ class _FpStanding implements FpStanding {
 @override final  String? form;
 @override final  DateTime? update;
 @override@JsonKey(name: '\$id') final  String? dbId;
+@override@JsonKey(name: '\$sequence') final  int? sequence;
 @override@JsonKey(name: '\$createdAt') final  DateTime? createdAt;
 @override@JsonKey(name: '\$updatedAt') final  DateTime? updatedAt;
  final  List<String>? _permissions;
@@ -277,16 +279,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FpStanding&&(identical(other.rank, rank) || other.rank == rank)&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.teamName, teamName) || other.teamName == teamName)&&(identical(other.teamLogo, teamLogo) || other.teamLogo == teamLogo)&&(identical(other.points, points) || other.points == points)&&(identical(other.goalsDiff, goalsDiff) || other.goalsDiff == goalsDiff)&&(identical(other.description, description) || other.description == description)&&(identical(other.group, group) || other.group == group)&&(identical(other.allPlayed, allPlayed) || other.allPlayed == allPlayed)&&(identical(other.allWin, allWin) || other.allWin == allWin)&&(identical(other.allDraw, allDraw) || other.allDraw == allDraw)&&(identical(other.allLose, allLose) || other.allLose == allLose)&&(identical(other.allGoalsFor, allGoalsFor) || other.allGoalsFor == allGoalsFor)&&(identical(other.allGoalsAgainst, allGoalsAgainst) || other.allGoalsAgainst == allGoalsAgainst)&&(identical(other.form, form) || other.form == form)&&(identical(other.update, update) || other.update == update)&&(identical(other.dbId, dbId) || other.dbId == dbId)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._permissions, _permissions)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FpStanding&&(identical(other.rank, rank) || other.rank == rank)&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.teamName, teamName) || other.teamName == teamName)&&(identical(other.teamLogo, teamLogo) || other.teamLogo == teamLogo)&&(identical(other.points, points) || other.points == points)&&(identical(other.goalsDiff, goalsDiff) || other.goalsDiff == goalsDiff)&&(identical(other.description, description) || other.description == description)&&(identical(other.group, group) || other.group == group)&&(identical(other.allPlayed, allPlayed) || other.allPlayed == allPlayed)&&(identical(other.allWin, allWin) || other.allWin == allWin)&&(identical(other.allDraw, allDraw) || other.allDraw == allDraw)&&(identical(other.allLose, allLose) || other.allLose == allLose)&&(identical(other.allGoalsFor, allGoalsFor) || other.allGoalsFor == allGoalsFor)&&(identical(other.allGoalsAgainst, allGoalsAgainst) || other.allGoalsAgainst == allGoalsAgainst)&&(identical(other.form, form) || other.form == form)&&(identical(other.update, update) || other.update == update)&&(identical(other.dbId, dbId) || other.dbId == dbId)&&(identical(other.sequence, sequence) || other.sequence == sequence)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._permissions, _permissions)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,rank,teamId,teamName,teamLogo,points,goalsDiff,description,group,allPlayed,allWin,allDraw,allLose,allGoalsFor,allGoalsAgainst,form,update,dbId,createdAt,updatedAt,const DeepCollectionEquality().hash(_permissions),collectionId,databaseId]);
+int get hashCode => Object.hashAll([runtimeType,rank,teamId,teamName,teamLogo,points,goalsDiff,description,group,allPlayed,allWin,allDraw,allLose,allGoalsFor,allGoalsAgainst,form,update,dbId,sequence,createdAt,updatedAt,const DeepCollectionEquality().hash(_permissions),collectionId,databaseId]);
 
 @override
 String toString() {
-  return 'FpStanding(rank: $rank, teamId: $teamId, teamName: $teamName, teamLogo: $teamLogo, points: $points, goalsDiff: $goalsDiff, description: $description, group: $group, allPlayed: $allPlayed, allWin: $allWin, allDraw: $allDraw, allLose: $allLose, allGoalsFor: $allGoalsFor, allGoalsAgainst: $allGoalsAgainst, form: $form, update: $update, dbId: $dbId, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
+  return 'FpStanding(rank: $rank, teamId: $teamId, teamName: $teamName, teamLogo: $teamLogo, points: $points, goalsDiff: $goalsDiff, description: $description, group: $group, allPlayed: $allPlayed, allWin: $allWin, allDraw: $allDraw, allLose: $allLose, allGoalsFor: $allGoalsFor, allGoalsAgainst: $allGoalsAgainst, form: $form, update: $update, dbId: $dbId, sequence: $sequence, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, collectionId: $collectionId, databaseId: $databaseId)';
 }
 
 
@@ -297,7 +299,7 @@ abstract mixin class _$FpStandingCopyWith<$Res> implements $FpStandingCopyWith<$
   factory _$FpStandingCopyWith(_FpStanding value, $Res Function(_FpStanding) _then) = __$FpStandingCopyWithImpl;
 @override @useResult
 $Res call({
- int? rank, int? teamId, String? teamName, String? teamLogo, int? points, int? goalsDiff, String? description, String? group, int? allPlayed, int? allWin, int? allDraw, int? allLose, int? allGoalsFor, int? allGoalsAgainst, String? form, DateTime? update,@JsonKey(name: '\$id') String? dbId,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$collectionId') String? collectionId,@JsonKey(name: '\$databaseId') String? databaseId
+ int? rank, int? teamId, String? teamName, String? teamLogo, int? points, int? goalsDiff, String? description, String? group, int? allPlayed, int? allWin, int? allDraw, int? allLose, int? allGoalsFor, int? allGoalsAgainst, String? form, DateTime? update,@JsonKey(name: '\$id') String? dbId,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$collectionId') String? collectionId,@JsonKey(name: '\$databaseId') String? databaseId
 });
 
 
@@ -314,7 +316,7 @@ class __$FpStandingCopyWithImpl<$Res>
 
 /// Create a copy of FpStanding
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? rank = freezed,Object? teamId = freezed,Object? teamName = freezed,Object? teamLogo = freezed,Object? points = freezed,Object? goalsDiff = freezed,Object? description = freezed,Object? group = freezed,Object? allPlayed = freezed,Object? allWin = freezed,Object? allDraw = freezed,Object? allLose = freezed,Object? allGoalsFor = freezed,Object? allGoalsAgainst = freezed,Object? form = freezed,Object? update = freezed,Object? dbId = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? collectionId = freezed,Object? databaseId = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? rank = freezed,Object? teamId = freezed,Object? teamName = freezed,Object? teamLogo = freezed,Object? points = freezed,Object? goalsDiff = freezed,Object? description = freezed,Object? group = freezed,Object? allPlayed = freezed,Object? allWin = freezed,Object? allDraw = freezed,Object? allLose = freezed,Object? allGoalsFor = freezed,Object? allGoalsAgainst = freezed,Object? form = freezed,Object? update = freezed,Object? dbId = freezed,Object? sequence = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? collectionId = freezed,Object? databaseId = freezed,}) {
   return _then(_FpStanding(
 rank: freezed == rank ? _self.rank : rank // ignore: cast_nullable_to_non_nullable
 as int?,teamId: freezed == teamId ? _self.teamId : teamId // ignore: cast_nullable_to_non_nullable
@@ -333,7 +335,8 @@ as int?,allGoalsAgainst: freezed == allGoalsAgainst ? _self.allGoalsAgainst : al
 as int?,form: freezed == form ? _self.form : form // ignore: cast_nullable_to_non_nullable
 as String?,update: freezed == update ? _self.update : update // ignore: cast_nullable_to_non_nullable
 as DateTime?,dbId: freezed == dbId ? _self.dbId : dbId // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,sequence: freezed == sequence ? _self.sequence : sequence // ignore: cast_nullable_to_non_nullable
+as int?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,permissions: freezed == permissions ? _self._permissions : permissions // ignore: cast_nullable_to_non_nullable
 as List<String>?,collectionId: freezed == collectionId ? _self.collectionId : collectionId // ignore: cast_nullable_to_non_nullable

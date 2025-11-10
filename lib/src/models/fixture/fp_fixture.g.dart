@@ -39,23 +39,20 @@ _FpFixture _$FpFixtureFromJson(Map<String, dynamic> json) => _FpFixture(
   scorePenaltyHome: (json['scorePenaltyHome'] as num?)?.toInt(),
   scorePenaltyAway: (json['scorePenaltyAway'] as num?)?.toInt(),
   json: const ApiFootballFixtureConverter().fromJson(json['json'] as String?),
-  jsonUpdatedAt:
-      json['jsonUpdatedAt'] == null
-          ? null
-          : DateTime.parse(json['jsonUpdatedAt'] as String),
+  jsonUpdatedAt: json['jsonUpdatedAt'] == null
+      ? null
+      : DateTime.parse(json['jsonUpdatedAt'] as String),
   id: json[r'$id'] as String?,
-  createdAt:
-      json[r'$createdAt'] == null
-          ? null
-          : DateTime.parse(json[r'$createdAt'] as String),
-  updatedAt:
-      json[r'$updatedAt'] == null
-          ? null
-          : DateTime.parse(json[r'$updatedAt'] as String),
-  permissions:
-      (json[r'$permissions'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+  sequence: (json[r'$sequence'] as num?)?.toInt(),
+  createdAt: json[r'$createdAt'] == null
+      ? null
+      : DateTime.parse(json[r'$createdAt'] as String),
+  updatedAt: json[r'$updatedAt'] == null
+      ? null
+      : DateTime.parse(json[r'$updatedAt'] as String),
+  permissions: (json[r'$permissions'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
   collectionId: json[r'$collectionId'] as String?,
   databaseId: json[r'$databaseId'] as String?,
 );
@@ -96,6 +93,7 @@ Map<String, dynamic> _$FpFixtureToJson(_FpFixture instance) =>
       'json': const ApiFootballFixtureConverter().toJson(instance.json),
       'jsonUpdatedAt': instance.jsonUpdatedAt?.toIso8601String(),
       r'$id': instance.id,
+      r'$sequence': instance.sequence,
       r'$createdAt': instance.createdAt?.toIso8601String(),
       r'$updatedAt': instance.updatedAt?.toIso8601String(),
       r'$permissions': instance.permissions,

@@ -25,6 +25,7 @@ abstract class FpStanding with _$FpStanding {
     String? form,
     DateTime? update,
     @JsonKey(name: '\$id') String? dbId,
+    @JsonKey(name: '\$sequence') int? sequence,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,
     @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
     @JsonKey(name: '\$permissions') List<String>? permissions,

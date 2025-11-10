@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FpLeague {
 
- String? get name; LeagueType? get type; String? get logo; String? get countryCode; String? get countryName; String? get countryFlag; DateTime? get seasonStart; DateTime? get seasonEnd; List<String>? get rounds; DateTime? get roundsUpdatedAt; DateTime? get pointsUpdatedAt; DateTime? get fixturesUpdatedAt; String? get currentSeason;@JsonKey(name: '\$id') String? get id;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$databaseId') String? get databaseId;@JsonKey(name: '\$collectionId') String? get collectionId;
+ String? get name; LeagueType? get type; String? get logo; String? get countryCode; String? get countryName; String? get countryFlag; DateTime? get seasonStart; DateTime? get seasonEnd; List<String>? get rounds; DateTime? get roundsUpdatedAt; DateTime? get pointsUpdatedAt; DateTime? get fixturesUpdatedAt; String? get currentSeason;@JsonKey(name: '\$id') String? get id;@JsonKey(name: '\$sequence') int? get sequence;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$databaseId') String? get databaseId;@JsonKey(name: '\$collectionId') String? get collectionId;
 /// Create a copy of FpLeague
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $FpLeagueCopyWith<FpLeague> get copyWith => _$FpLeagueCopyWithImpl<FpLeague>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FpLeague&&(identical(other.name, name) || other.name == name)&&(identical(other.type, type) || other.type == type)&&(identical(other.logo, logo) || other.logo == logo)&&(identical(other.countryCode, countryCode) || other.countryCode == countryCode)&&(identical(other.countryName, countryName) || other.countryName == countryName)&&(identical(other.countryFlag, countryFlag) || other.countryFlag == countryFlag)&&(identical(other.seasonStart, seasonStart) || other.seasonStart == seasonStart)&&(identical(other.seasonEnd, seasonEnd) || other.seasonEnd == seasonEnd)&&const DeepCollectionEquality().equals(other.rounds, rounds)&&(identical(other.roundsUpdatedAt, roundsUpdatedAt) || other.roundsUpdatedAt == roundsUpdatedAt)&&(identical(other.pointsUpdatedAt, pointsUpdatedAt) || other.pointsUpdatedAt == pointsUpdatedAt)&&(identical(other.fixturesUpdatedAt, fixturesUpdatedAt) || other.fixturesUpdatedAt == fixturesUpdatedAt)&&(identical(other.currentSeason, currentSeason) || other.currentSeason == currentSeason)&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.permissions, permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FpLeague&&(identical(other.name, name) || other.name == name)&&(identical(other.type, type) || other.type == type)&&(identical(other.logo, logo) || other.logo == logo)&&(identical(other.countryCode, countryCode) || other.countryCode == countryCode)&&(identical(other.countryName, countryName) || other.countryName == countryName)&&(identical(other.countryFlag, countryFlag) || other.countryFlag == countryFlag)&&(identical(other.seasonStart, seasonStart) || other.seasonStart == seasonStart)&&(identical(other.seasonEnd, seasonEnd) || other.seasonEnd == seasonEnd)&&const DeepCollectionEquality().equals(other.rounds, rounds)&&(identical(other.roundsUpdatedAt, roundsUpdatedAt) || other.roundsUpdatedAt == roundsUpdatedAt)&&(identical(other.pointsUpdatedAt, pointsUpdatedAt) || other.pointsUpdatedAt == pointsUpdatedAt)&&(identical(other.fixturesUpdatedAt, fixturesUpdatedAt) || other.fixturesUpdatedAt == fixturesUpdatedAt)&&(identical(other.currentSeason, currentSeason) || other.currentSeason == currentSeason)&&(identical(other.id, id) || other.id == id)&&(identical(other.sequence, sequence) || other.sequence == sequence)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.permissions, permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,name,type,logo,countryCode,countryName,countryFlag,seasonStart,seasonEnd,const DeepCollectionEquality().hash(rounds),roundsUpdatedAt,pointsUpdatedAt,fixturesUpdatedAt,currentSeason,id,createdAt,updatedAt,const DeepCollectionEquality().hash(permissions),databaseId,collectionId]);
+int get hashCode => Object.hashAll([runtimeType,name,type,logo,countryCode,countryName,countryFlag,seasonStart,seasonEnd,const DeepCollectionEquality().hash(rounds),roundsUpdatedAt,pointsUpdatedAt,fixturesUpdatedAt,currentSeason,id,sequence,createdAt,updatedAt,const DeepCollectionEquality().hash(permissions),databaseId,collectionId]);
 
 @override
 String toString() {
-  return 'FpLeague(name: $name, type: $type, logo: $logo, countryCode: $countryCode, countryName: $countryName, countryFlag: $countryFlag, seasonStart: $seasonStart, seasonEnd: $seasonEnd, rounds: $rounds, roundsUpdatedAt: $roundsUpdatedAt, pointsUpdatedAt: $pointsUpdatedAt, fixturesUpdatedAt: $fixturesUpdatedAt, currentSeason: $currentSeason, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
+  return 'FpLeague(name: $name, type: $type, logo: $logo, countryCode: $countryCode, countryName: $countryName, countryFlag: $countryFlag, seasonStart: $seasonStart, seasonEnd: $seasonEnd, rounds: $rounds, roundsUpdatedAt: $roundsUpdatedAt, pointsUpdatedAt: $pointsUpdatedAt, fixturesUpdatedAt: $fixturesUpdatedAt, currentSeason: $currentSeason, id: $id, sequence: $sequence, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $FpLeagueCopyWith<$Res>  {
   factory $FpLeagueCopyWith(FpLeague value, $Res Function(FpLeague) _then) = _$FpLeagueCopyWithImpl;
 @useResult
 $Res call({
- String? name, LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
+ String? name, LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
 });
 
 
@@ -65,7 +65,7 @@ class _$FpLeagueCopyWithImpl<$Res>
 
 /// Create a copy of FpLeague
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? type = freezed,Object? logo = freezed,Object? countryCode = freezed,Object? countryName = freezed,Object? countryFlag = freezed,Object? seasonStart = freezed,Object? seasonEnd = freezed,Object? rounds = freezed,Object? roundsUpdatedAt = freezed,Object? pointsUpdatedAt = freezed,Object? fixturesUpdatedAt = freezed,Object? currentSeason = freezed,Object? id = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? type = freezed,Object? logo = freezed,Object? countryCode = freezed,Object? countryName = freezed,Object? countryFlag = freezed,Object? seasonStart = freezed,Object? seasonEnd = freezed,Object? rounds = freezed,Object? roundsUpdatedAt = freezed,Object? pointsUpdatedAt = freezed,Object? fixturesUpdatedAt = freezed,Object? currentSeason = freezed,Object? id = freezed,Object? sequence = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
   return _then(_self.copyWith(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
@@ -81,7 +81,8 @@ as DateTime?,pointsUpdatedAt: freezed == pointsUpdatedAt ? _self.pointsUpdatedAt
 as DateTime?,fixturesUpdatedAt: freezed == fixturesUpdatedAt ? _self.fixturesUpdatedAt : fixturesUpdatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,currentSeason: freezed == currentSeason ? _self.currentSeason : currentSeason // ignore: cast_nullable_to_non_nullable
 as String?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,sequence: freezed == sequence ? _self.sequence : sequence // ignore: cast_nullable_to_non_nullable
+as int?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,permissions: freezed == permissions ? _self.permissions : permissions // ignore: cast_nullable_to_non_nullable
 as List<String>?,databaseId: freezed == databaseId ? _self.databaseId : databaseId // ignore: cast_nullable_to_non_nullable
@@ -171,10 +172,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FpLeague() when $default != null:
-return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
+return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
   return orElse();
 
 }
@@ -192,10 +193,10 @@ return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.country
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)  $default,) {final _that = this;
 switch (_that) {
 case _FpLeague():
-return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
+return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -212,10 +213,10 @@ return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.country
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,) {final _that = this;
 switch (_that) {
 case _FpLeague() when $default != null:
-return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
+return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
   return null;
 
 }
@@ -227,7 +228,7 @@ return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.country
 @JsonSerializable()
 
 class _FpLeague implements FpLeague {
-   _FpLeague({this.name, this.type, this.logo, this.countryCode, this.countryName, this.countryFlag, this.seasonStart, this.seasonEnd, final  List<String>? rounds, this.roundsUpdatedAt, this.pointsUpdatedAt, this.fixturesUpdatedAt, this.currentSeason, @JsonKey(name: '\$id') this.id, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$databaseId') this.databaseId, @JsonKey(name: '\$collectionId') this.collectionId}): _rounds = rounds,_permissions = permissions;
+   _FpLeague({this.name, this.type, this.logo, this.countryCode, this.countryName, this.countryFlag, this.seasonStart, this.seasonEnd, final  List<String>? rounds, this.roundsUpdatedAt, this.pointsUpdatedAt, this.fixturesUpdatedAt, this.currentSeason, @JsonKey(name: '\$id') this.id, @JsonKey(name: '\$sequence') this.sequence, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$databaseId') this.databaseId, @JsonKey(name: '\$collectionId') this.collectionId}): _rounds = rounds,_permissions = permissions;
   factory _FpLeague.fromJson(Map<String, dynamic> json) => _$FpLeagueFromJson(json);
 
 @override final  String? name;
@@ -252,6 +253,7 @@ class _FpLeague implements FpLeague {
 @override final  DateTime? fixturesUpdatedAt;
 @override final  String? currentSeason;
 @override@JsonKey(name: '\$id') final  String? id;
+@override@JsonKey(name: '\$sequence') final  int? sequence;
 @override@JsonKey(name: '\$createdAt') final  DateTime? createdAt;
 @override@JsonKey(name: '\$updatedAt') final  DateTime? updatedAt;
  final  List<String>? _permissions;
@@ -279,16 +281,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FpLeague&&(identical(other.name, name) || other.name == name)&&(identical(other.type, type) || other.type == type)&&(identical(other.logo, logo) || other.logo == logo)&&(identical(other.countryCode, countryCode) || other.countryCode == countryCode)&&(identical(other.countryName, countryName) || other.countryName == countryName)&&(identical(other.countryFlag, countryFlag) || other.countryFlag == countryFlag)&&(identical(other.seasonStart, seasonStart) || other.seasonStart == seasonStart)&&(identical(other.seasonEnd, seasonEnd) || other.seasonEnd == seasonEnd)&&const DeepCollectionEquality().equals(other._rounds, _rounds)&&(identical(other.roundsUpdatedAt, roundsUpdatedAt) || other.roundsUpdatedAt == roundsUpdatedAt)&&(identical(other.pointsUpdatedAt, pointsUpdatedAt) || other.pointsUpdatedAt == pointsUpdatedAt)&&(identical(other.fixturesUpdatedAt, fixturesUpdatedAt) || other.fixturesUpdatedAt == fixturesUpdatedAt)&&(identical(other.currentSeason, currentSeason) || other.currentSeason == currentSeason)&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._permissions, _permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FpLeague&&(identical(other.name, name) || other.name == name)&&(identical(other.type, type) || other.type == type)&&(identical(other.logo, logo) || other.logo == logo)&&(identical(other.countryCode, countryCode) || other.countryCode == countryCode)&&(identical(other.countryName, countryName) || other.countryName == countryName)&&(identical(other.countryFlag, countryFlag) || other.countryFlag == countryFlag)&&(identical(other.seasonStart, seasonStart) || other.seasonStart == seasonStart)&&(identical(other.seasonEnd, seasonEnd) || other.seasonEnd == seasonEnd)&&const DeepCollectionEquality().equals(other._rounds, _rounds)&&(identical(other.roundsUpdatedAt, roundsUpdatedAt) || other.roundsUpdatedAt == roundsUpdatedAt)&&(identical(other.pointsUpdatedAt, pointsUpdatedAt) || other.pointsUpdatedAt == pointsUpdatedAt)&&(identical(other.fixturesUpdatedAt, fixturesUpdatedAt) || other.fixturesUpdatedAt == fixturesUpdatedAt)&&(identical(other.currentSeason, currentSeason) || other.currentSeason == currentSeason)&&(identical(other.id, id) || other.id == id)&&(identical(other.sequence, sequence) || other.sequence == sequence)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._permissions, _permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,name,type,logo,countryCode,countryName,countryFlag,seasonStart,seasonEnd,const DeepCollectionEquality().hash(_rounds),roundsUpdatedAt,pointsUpdatedAt,fixturesUpdatedAt,currentSeason,id,createdAt,updatedAt,const DeepCollectionEquality().hash(_permissions),databaseId,collectionId]);
+int get hashCode => Object.hashAll([runtimeType,name,type,logo,countryCode,countryName,countryFlag,seasonStart,seasonEnd,const DeepCollectionEquality().hash(_rounds),roundsUpdatedAt,pointsUpdatedAt,fixturesUpdatedAt,currentSeason,id,sequence,createdAt,updatedAt,const DeepCollectionEquality().hash(_permissions),databaseId,collectionId]);
 
 @override
 String toString() {
-  return 'FpLeague(name: $name, type: $type, logo: $logo, countryCode: $countryCode, countryName: $countryName, countryFlag: $countryFlag, seasonStart: $seasonStart, seasonEnd: $seasonEnd, rounds: $rounds, roundsUpdatedAt: $roundsUpdatedAt, pointsUpdatedAt: $pointsUpdatedAt, fixturesUpdatedAt: $fixturesUpdatedAt, currentSeason: $currentSeason, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
+  return 'FpLeague(name: $name, type: $type, logo: $logo, countryCode: $countryCode, countryName: $countryName, countryFlag: $countryFlag, seasonStart: $seasonStart, seasonEnd: $seasonEnd, rounds: $rounds, roundsUpdatedAt: $roundsUpdatedAt, pointsUpdatedAt: $pointsUpdatedAt, fixturesUpdatedAt: $fixturesUpdatedAt, currentSeason: $currentSeason, id: $id, sequence: $sequence, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
 }
 
 
@@ -299,7 +301,7 @@ abstract mixin class _$FpLeagueCopyWith<$Res> implements $FpLeagueCopyWith<$Res>
   factory _$FpLeagueCopyWith(_FpLeague value, $Res Function(_FpLeague) _then) = __$FpLeagueCopyWithImpl;
 @override @useResult
 $Res call({
- String? name, LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
+ String? name, LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
 });
 
 
@@ -316,7 +318,7 @@ class __$FpLeagueCopyWithImpl<$Res>
 
 /// Create a copy of FpLeague
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? type = freezed,Object? logo = freezed,Object? countryCode = freezed,Object? countryName = freezed,Object? countryFlag = freezed,Object? seasonStart = freezed,Object? seasonEnd = freezed,Object? rounds = freezed,Object? roundsUpdatedAt = freezed,Object? pointsUpdatedAt = freezed,Object? fixturesUpdatedAt = freezed,Object? currentSeason = freezed,Object? id = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? type = freezed,Object? logo = freezed,Object? countryCode = freezed,Object? countryName = freezed,Object? countryFlag = freezed,Object? seasonStart = freezed,Object? seasonEnd = freezed,Object? rounds = freezed,Object? roundsUpdatedAt = freezed,Object? pointsUpdatedAt = freezed,Object? fixturesUpdatedAt = freezed,Object? currentSeason = freezed,Object? id = freezed,Object? sequence = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
   return _then(_FpLeague(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
@@ -332,7 +334,8 @@ as DateTime?,pointsUpdatedAt: freezed == pointsUpdatedAt ? _self.pointsUpdatedAt
 as DateTime?,fixturesUpdatedAt: freezed == fixturesUpdatedAt ? _self.fixturesUpdatedAt : fixturesUpdatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,currentSeason: freezed == currentSeason ? _self.currentSeason : currentSeason // ignore: cast_nullable_to_non_nullable
 as String?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,sequence: freezed == sequence ? _self.sequence : sequence // ignore: cast_nullable_to_non_nullable
+as int?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,permissions: freezed == permissions ? _self._permissions : permissions // ignore: cast_nullable_to_non_nullable
 as List<String>?,databaseId: freezed == databaseId ? _self.databaseId : databaseId // ignore: cast_nullable_to_non_nullable

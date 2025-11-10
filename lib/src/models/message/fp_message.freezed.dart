@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FpMessage {
 
- String? get teamId; String? get authorId; String? get text; List<String>? get readBy;@JsonKey(name: '\$id') String? get id;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$databaseId') String? get databaseId;@JsonKey(name: '\$collectionId') String? get collectionId;
+ String? get teamId; String? get authorId; String? get text; List<String>? get readBy;@JsonKey(name: '\$id') String? get id;@JsonKey(name: '\$sequence') int? get sequence;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$databaseId') String? get databaseId;@JsonKey(name: '\$collectionId') String? get collectionId;
 /// Create a copy of FpMessage
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $FpMessageCopyWith<FpMessage> get copyWith => _$FpMessageCopyWithImpl<FpMessage>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FpMessage&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.authorId, authorId) || other.authorId == authorId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.readBy, readBy)&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.permissions, permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FpMessage&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.authorId, authorId) || other.authorId == authorId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other.readBy, readBy)&&(identical(other.id, id) || other.id == id)&&(identical(other.sequence, sequence) || other.sequence == sequence)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.permissions, permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,teamId,authorId,text,const DeepCollectionEquality().hash(readBy),id,createdAt,updatedAt,const DeepCollectionEquality().hash(permissions),databaseId,collectionId);
+int get hashCode => Object.hash(runtimeType,teamId,authorId,text,const DeepCollectionEquality().hash(readBy),id,sequence,createdAt,updatedAt,const DeepCollectionEquality().hash(permissions),databaseId,collectionId);
 
 @override
 String toString() {
-  return 'FpMessage(teamId: $teamId, authorId: $authorId, text: $text, readBy: $readBy, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
+  return 'FpMessage(teamId: $teamId, authorId: $authorId, text: $text, readBy: $readBy, id: $id, sequence: $sequence, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $FpMessageCopyWith<$Res>  {
   factory $FpMessageCopyWith(FpMessage value, $Res Function(FpMessage) _then) = _$FpMessageCopyWithImpl;
 @useResult
 $Res call({
- String? teamId, String? authorId, String? text, List<String>? readBy,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
+ String? teamId, String? authorId, String? text, List<String>? readBy,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
 });
 
 
@@ -65,14 +65,15 @@ class _$FpMessageCopyWithImpl<$Res>
 
 /// Create a copy of FpMessage
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? teamId = freezed,Object? authorId = freezed,Object? text = freezed,Object? readBy = freezed,Object? id = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? teamId = freezed,Object? authorId = freezed,Object? text = freezed,Object? readBy = freezed,Object? id = freezed,Object? sequence = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
   return _then(_self.copyWith(
 teamId: freezed == teamId ? _self.teamId : teamId // ignore: cast_nullable_to_non_nullable
 as String?,authorId: freezed == authorId ? _self.authorId : authorId // ignore: cast_nullable_to_non_nullable
 as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,readBy: freezed == readBy ? _self.readBy : readBy // ignore: cast_nullable_to_non_nullable
 as List<String>?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,sequence: freezed == sequence ? _self.sequence : sequence // ignore: cast_nullable_to_non_nullable
+as int?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,permissions: freezed == permissions ? _self.permissions : permissions // ignore: cast_nullable_to_non_nullable
 as List<String>?,databaseId: freezed == databaseId ? _self.databaseId : databaseId // ignore: cast_nullable_to_non_nullable
@@ -162,10 +163,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? teamId,  String? authorId,  String? text,  List<String>? readBy, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? teamId,  String? authorId,  String? text,  List<String>? readBy, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FpMessage() when $default != null:
-return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
+return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
   return orElse();
 
 }
@@ -183,10 +184,10 @@ return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? teamId,  String? authorId,  String? text,  List<String>? readBy, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? teamId,  String? authorId,  String? text,  List<String>? readBy, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)  $default,) {final _that = this;
 switch (_that) {
 case _FpMessage():
-return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
+return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -203,10 +204,10 @@ return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? teamId,  String? authorId,  String? text,  List<String>? readBy, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? teamId,  String? authorId,  String? text,  List<String>? readBy, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,) {final _that = this;
 switch (_that) {
 case _FpMessage() when $default != null:
-return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
+return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
   return null;
 
 }
@@ -218,7 +219,7 @@ return $default(_that.teamId,_that.authorId,_that.text,_that.readBy,_that.id,_th
 @JsonSerializable()
 
 class _FpMessage implements FpMessage {
-   _FpMessage({this.teamId, this.authorId, this.text, final  List<String>? readBy, @JsonKey(name: '\$id') this.id, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$databaseId') this.databaseId, @JsonKey(name: '\$collectionId') this.collectionId}): _readBy = readBy,_permissions = permissions;
+   _FpMessage({this.teamId, this.authorId, this.text, final  List<String>? readBy, @JsonKey(name: '\$id') this.id, @JsonKey(name: '\$sequence') this.sequence, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$databaseId') this.databaseId, @JsonKey(name: '\$collectionId') this.collectionId}): _readBy = readBy,_permissions = permissions;
   factory _FpMessage.fromJson(Map<String, dynamic> json) => _$FpMessageFromJson(json);
 
 @override final  String? teamId;
@@ -234,6 +235,7 @@ class _FpMessage implements FpMessage {
 }
 
 @override@JsonKey(name: '\$id') final  String? id;
+@override@JsonKey(name: '\$sequence') final  int? sequence;
 @override@JsonKey(name: '\$createdAt') final  DateTime? createdAt;
 @override@JsonKey(name: '\$updatedAt') final  DateTime? updatedAt;
  final  List<String>? _permissions;
@@ -261,16 +263,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FpMessage&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.authorId, authorId) || other.authorId == authorId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._readBy, _readBy)&&(identical(other.id, id) || other.id == id)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._permissions, _permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FpMessage&&(identical(other.teamId, teamId) || other.teamId == teamId)&&(identical(other.authorId, authorId) || other.authorId == authorId)&&(identical(other.text, text) || other.text == text)&&const DeepCollectionEquality().equals(other._readBy, _readBy)&&(identical(other.id, id) || other.id == id)&&(identical(other.sequence, sequence) || other.sequence == sequence)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._permissions, _permissions)&&(identical(other.databaseId, databaseId) || other.databaseId == databaseId)&&(identical(other.collectionId, collectionId) || other.collectionId == collectionId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,teamId,authorId,text,const DeepCollectionEquality().hash(_readBy),id,createdAt,updatedAt,const DeepCollectionEquality().hash(_permissions),databaseId,collectionId);
+int get hashCode => Object.hash(runtimeType,teamId,authorId,text,const DeepCollectionEquality().hash(_readBy),id,sequence,createdAt,updatedAt,const DeepCollectionEquality().hash(_permissions),databaseId,collectionId);
 
 @override
 String toString() {
-  return 'FpMessage(teamId: $teamId, authorId: $authorId, text: $text, readBy: $readBy, id: $id, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
+  return 'FpMessage(teamId: $teamId, authorId: $authorId, text: $text, readBy: $readBy, id: $id, sequence: $sequence, createdAt: $createdAt, updatedAt: $updatedAt, permissions: $permissions, databaseId: $databaseId, collectionId: $collectionId)';
 }
 
 
@@ -281,7 +283,7 @@ abstract mixin class _$FpMessageCopyWith<$Res> implements $FpMessageCopyWith<$Re
   factory _$FpMessageCopyWith(_FpMessage value, $Res Function(_FpMessage) _then) = __$FpMessageCopyWithImpl;
 @override @useResult
 $Res call({
- String? teamId, String? authorId, String? text, List<String>? readBy,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
+ String? teamId, String? authorId, String? text, List<String>? readBy,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
 });
 
 
@@ -298,14 +300,15 @@ class __$FpMessageCopyWithImpl<$Res>
 
 /// Create a copy of FpMessage
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? teamId = freezed,Object? authorId = freezed,Object? text = freezed,Object? readBy = freezed,Object? id = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? teamId = freezed,Object? authorId = freezed,Object? text = freezed,Object? readBy = freezed,Object? id = freezed,Object? sequence = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? permissions = freezed,Object? databaseId = freezed,Object? collectionId = freezed,}) {
   return _then(_FpMessage(
 teamId: freezed == teamId ? _self.teamId : teamId // ignore: cast_nullable_to_non_nullable
 as String?,authorId: freezed == authorId ? _self.authorId : authorId // ignore: cast_nullable_to_non_nullable
 as String?,text: freezed == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
 as String?,readBy: freezed == readBy ? _self._readBy : readBy // ignore: cast_nullable_to_non_nullable
 as List<String>?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,sequence: freezed == sequence ? _self.sequence : sequence // ignore: cast_nullable_to_non_nullable
+as int?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,permissions: freezed == permissions ? _self._permissions : permissions // ignore: cast_nullable_to_non_nullable
 as List<String>?,databaseId: freezed == databaseId ? _self.databaseId : databaseId // ignore: cast_nullable_to_non_nullable

@@ -22,21 +22,20 @@ _FpStanding _$FpStandingFromJson(Map<String, dynamic> json) => _FpStanding(
   allGoalsFor: (json['allGoalsFor'] as num?)?.toInt(),
   allGoalsAgainst: (json['allGoalsAgainst'] as num?)?.toInt(),
   form: json['form'] as String?,
-  update:
-      json['update'] == null ? null : DateTime.parse(json['update'] as String),
+  update: json['update'] == null
+      ? null
+      : DateTime.parse(json['update'] as String),
   dbId: json[r'$id'] as String?,
-  createdAt:
-      json[r'$createdAt'] == null
-          ? null
-          : DateTime.parse(json[r'$createdAt'] as String),
-  updatedAt:
-      json[r'$updatedAt'] == null
-          ? null
-          : DateTime.parse(json[r'$updatedAt'] as String),
-  permissions:
-      (json[r'$permissions'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+  sequence: (json[r'$sequence'] as num?)?.toInt(),
+  createdAt: json[r'$createdAt'] == null
+      ? null
+      : DateTime.parse(json[r'$createdAt'] as String),
+  updatedAt: json[r'$updatedAt'] == null
+      ? null
+      : DateTime.parse(json[r'$updatedAt'] as String),
+  permissions: (json[r'$permissions'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
   collectionId: json[r'$collectionId'] as String?,
   databaseId: json[r'$databaseId'] as String?,
 );
@@ -60,6 +59,7 @@ Map<String, dynamic> _$FpStandingToJson(_FpStanding instance) =>
       'form': instance.form,
       'update': instance.update?.toIso8601String(),
       r'$id': instance.dbId,
+      r'$sequence': instance.sequence,
       r'$createdAt': instance.createdAt?.toIso8601String(),
       r'$updatedAt': instance.updatedAt?.toIso8601String(),
       r'$permissions': instance.permissions,

@@ -7,7 +7,7 @@ part 'fp_bet.g.dart';
 
 @freezed
 abstract class FpBet with _$FpBet {
-  factory FpBet({
+  const factory FpBet({
     int? leagueId,
     String? userId,
     String? fixtureId,
@@ -15,7 +15,8 @@ abstract class FpBet with _$FpBet {
     int? awayBet,
     String? fixtureRound,
     int? fixtureTimestamp,
-    @JsonKey(name: '\$id') String? dbId,
+    @JsonKey(name: "\$id") String? id,
+    @JsonKey(name: '\$sequence') int? sequence,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,
     @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
     @JsonKey(name: '\$permissions') List<String>? permissions,

@@ -12,18 +12,16 @@ _FpMessage _$FpMessageFromJson(Map<String, dynamic> json) => _FpMessage(
   text: json['text'] as String?,
   readBy: (json['readBy'] as List<dynamic>?)?.map((e) => e as String).toList(),
   id: json[r'$id'] as String?,
-  createdAt:
-      json[r'$createdAt'] == null
-          ? null
-          : DateTime.parse(json[r'$createdAt'] as String),
-  updatedAt:
-      json[r'$updatedAt'] == null
-          ? null
-          : DateTime.parse(json[r'$updatedAt'] as String),
-  permissions:
-      (json[r'$permissions'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+  sequence: (json[r'$sequence'] as num?)?.toInt(),
+  createdAt: json[r'$createdAt'] == null
+      ? null
+      : DateTime.parse(json[r'$createdAt'] as String),
+  updatedAt: json[r'$updatedAt'] == null
+      ? null
+      : DateTime.parse(json[r'$updatedAt'] as String),
+  permissions: (json[r'$permissions'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
   databaseId: json[r'$databaseId'] as String?,
   collectionId: json[r'$collectionId'] as String?,
 );
@@ -35,6 +33,7 @@ Map<String, dynamic> _$FpMessageToJson(_FpMessage instance) =>
       'text': instance.text,
       'readBy': instance.readBy,
       r'$id': instance.id,
+      r'$sequence': instance.sequence,
       r'$createdAt': instance.createdAt?.toIso8601String(),
       r'$updatedAt': instance.updatedAt?.toIso8601String(),
       r'$permissions': instance.permissions,

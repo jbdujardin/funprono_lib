@@ -29,6 +29,7 @@ abstract class FpLeague with _$FpLeague {
     DateTime? fixturesUpdatedAt,
     String? currentSeason,
     @JsonKey(name: '\$id') String? id,
+    @JsonKey(name: '\$sequence') int? sequence,
     @JsonKey(name: '\$createdAt') DateTime? createdAt,
     @JsonKey(name: '\$updatedAt') DateTime? updatedAt,
     @JsonKey(name: '\$permissions') List<String>? permissions,
