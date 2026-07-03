@@ -11,7 +11,7 @@ _FpLeague _$FpLeagueFromJson(Map<String, dynamic> json) => _FpLeague(
   type: $enumDecodeNullable(
     _$LeagueTypeEnumMap,
     json['type'],
-    unknownValue: LeagueType.unknown,
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
   ),
   logo: json['logo'] as String?,
   countryCode: json['countryCode'] as String?,
@@ -75,5 +75,4 @@ Map<String, dynamic> _$FpLeagueToJson(_FpLeague instance) => <String, dynamic>{
 const _$LeagueTypeEnumMap = {
   LeagueType.league: 'League',
   LeagueType.cup: 'Cup',
-  LeagueType.unknown: 'unknown',
 };

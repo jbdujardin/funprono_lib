@@ -10,14 +10,13 @@ enum LeagueType {
   league,
   @JsonValue('Cup')
   cup,
-  unknown,
 }
 
 @freezed
 abstract class FpLeague with _$FpLeague {
   factory FpLeague({
     String? name,
-    @JsonKey(unknownEnumValue: LeagueType.unknown) LeagueType? type,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) LeagueType? type,
     String? logo,
     String? countryCode,
     String? countryName,

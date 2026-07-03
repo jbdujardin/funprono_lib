@@ -11,7 +11,7 @@ _FpFixture _$FpFixtureFromJson(Map<String, dynamic> json) => _FpFixture(
   status: $enumDecodeNullable(
     _$FixtureStatusEnumMap,
     json['status'],
-    unknownValue: FixtureStatus.notStarted,
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
   ),
   date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
   timestamp: (json['timestamp'] as num?)?.toInt(),
