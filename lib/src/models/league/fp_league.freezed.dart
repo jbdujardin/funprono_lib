@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FpLeague {
 
- String? get name; LeagueType? get type; String? get logo; String? get countryCode; String? get countryName; String? get countryFlag; DateTime? get seasonStart; DateTime? get seasonEnd; List<String>? get rounds; DateTime? get roundsUpdatedAt; DateTime? get pointsUpdatedAt; DateTime? get fixturesUpdatedAt; String? get currentSeason;@JsonKey(name: '\$id') String? get id;@JsonKey(name: '\$sequence') int? get sequence;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$databaseId') String? get databaseId;@JsonKey(name: '\$collectionId') String? get collectionId;
+ String? get name;@JsonKey(unknownEnumValue: LeagueType.unknown) LeagueType? get type; String? get logo; String? get countryCode; String? get countryName; String? get countryFlag; DateTime? get seasonStart; DateTime? get seasonEnd; List<String>? get rounds; DateTime? get roundsUpdatedAt; DateTime? get pointsUpdatedAt; DateTime? get fixturesUpdatedAt; String? get currentSeason;@JsonKey(name: '\$id') String? get id;@JsonKey(name: '\$sequence') int? get sequence;@JsonKey(name: '\$createdAt') DateTime? get createdAt;@JsonKey(name: '\$updatedAt') DateTime? get updatedAt;@JsonKey(name: '\$permissions') List<String>? get permissions;@JsonKey(name: '\$databaseId') String? get databaseId;@JsonKey(name: '\$collectionId') String? get collectionId;
 /// Create a copy of FpLeague
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $FpLeagueCopyWith<$Res>  {
   factory $FpLeagueCopyWith(FpLeague value, $Res Function(FpLeague) _then) = _$FpLeagueCopyWithImpl;
 @useResult
 $Res call({
- String? name, LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
+ String? name,@JsonKey(unknownEnumValue: LeagueType.unknown) LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
 });
 
 
@@ -172,7 +172,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name, @JsonKey(unknownEnumValue: LeagueType.unknown)  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FpLeague() when $default != null:
 return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
@@ -193,7 +193,7 @@ return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.country
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name, @JsonKey(unknownEnumValue: LeagueType.unknown)  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)  $default,) {final _that = this;
 switch (_that) {
 case _FpLeague():
 return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
@@ -213,7 +213,7 @@ return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.country
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name, @JsonKey(unknownEnumValue: LeagueType.unknown)  LeagueType? type,  String? logo,  String? countryCode,  String? countryName,  String? countryFlag,  DateTime? seasonStart,  DateTime? seasonEnd,  List<String>? rounds,  DateTime? roundsUpdatedAt,  DateTime? pointsUpdatedAt,  DateTime? fixturesUpdatedAt,  String? currentSeason, @JsonKey(name: '\$id')  String? id, @JsonKey(name: '\$sequence')  int? sequence, @JsonKey(name: '\$createdAt')  DateTime? createdAt, @JsonKey(name: '\$updatedAt')  DateTime? updatedAt, @JsonKey(name: '\$permissions')  List<String>? permissions, @JsonKey(name: '\$databaseId')  String? databaseId, @JsonKey(name: '\$collectionId')  String? collectionId)?  $default,) {final _that = this;
 switch (_that) {
 case _FpLeague() when $default != null:
 return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.countryName,_that.countryFlag,_that.seasonStart,_that.seasonEnd,_that.rounds,_that.roundsUpdatedAt,_that.pointsUpdatedAt,_that.fixturesUpdatedAt,_that.currentSeason,_that.id,_that.sequence,_that.createdAt,_that.updatedAt,_that.permissions,_that.databaseId,_that.collectionId);case _:
@@ -228,11 +228,11 @@ return $default(_that.name,_that.type,_that.logo,_that.countryCode,_that.country
 @JsonSerializable()
 
 class _FpLeague implements FpLeague {
-   _FpLeague({this.name, this.type, this.logo, this.countryCode, this.countryName, this.countryFlag, this.seasonStart, this.seasonEnd, final  List<String>? rounds, this.roundsUpdatedAt, this.pointsUpdatedAt, this.fixturesUpdatedAt, this.currentSeason, @JsonKey(name: '\$id') this.id, @JsonKey(name: '\$sequence') this.sequence, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$databaseId') this.databaseId, @JsonKey(name: '\$collectionId') this.collectionId}): _rounds = rounds,_permissions = permissions;
+   _FpLeague({this.name, @JsonKey(unknownEnumValue: LeagueType.unknown) this.type, this.logo, this.countryCode, this.countryName, this.countryFlag, this.seasonStart, this.seasonEnd, final  List<String>? rounds, this.roundsUpdatedAt, this.pointsUpdatedAt, this.fixturesUpdatedAt, this.currentSeason, @JsonKey(name: '\$id') this.id, @JsonKey(name: '\$sequence') this.sequence, @JsonKey(name: '\$createdAt') this.createdAt, @JsonKey(name: '\$updatedAt') this.updatedAt, @JsonKey(name: '\$permissions') final  List<String>? permissions, @JsonKey(name: '\$databaseId') this.databaseId, @JsonKey(name: '\$collectionId') this.collectionId}): _rounds = rounds,_permissions = permissions;
   factory _FpLeague.fromJson(Map<String, dynamic> json) => _$FpLeagueFromJson(json);
 
 @override final  String? name;
-@override final  LeagueType? type;
+@override@JsonKey(unknownEnumValue: LeagueType.unknown) final  LeagueType? type;
 @override final  String? logo;
 @override final  String? countryCode;
 @override final  String? countryName;
@@ -301,7 +301,7 @@ abstract mixin class _$FpLeagueCopyWith<$Res> implements $FpLeagueCopyWith<$Res>
   factory _$FpLeagueCopyWith(_FpLeague value, $Res Function(_FpLeague) _then) = __$FpLeagueCopyWithImpl;
 @override @useResult
 $Res call({
- String? name, LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
+ String? name,@JsonKey(unknownEnumValue: LeagueType.unknown) LeagueType? type, String? logo, String? countryCode, String? countryName, String? countryFlag, DateTime? seasonStart, DateTime? seasonEnd, List<String>? rounds, DateTime? roundsUpdatedAt, DateTime? pointsUpdatedAt, DateTime? fixturesUpdatedAt, String? currentSeason,@JsonKey(name: '\$id') String? id,@JsonKey(name: '\$sequence') int? sequence,@JsonKey(name: '\$createdAt') DateTime? createdAt,@JsonKey(name: '\$updatedAt') DateTime? updatedAt,@JsonKey(name: '\$permissions') List<String>? permissions,@JsonKey(name: '\$databaseId') String? databaseId,@JsonKey(name: '\$collectionId') String? collectionId
 });
 
 

@@ -1,3 +1,11 @@
+## 7.0.2
+
+- **FIX**: Harden JSON decoding & cleanup (EIR-6).
+  - Enum decoding no longer throws on unknown API values: `FixtureStatus` falls back to `notStarted` and `LeagueType` gains an `unknown` fallback member (`@JsonKey(unknownEnumValue:)`).
+  - Remove unused `dart_appwrite` dependency.
+  - API errors now throw a typed `ApiFootballException` (exported) instead of a raw `String`/`dynamic`; non-JSON error bodies also throw `ApiFootballException` rather than a `FormatException`.
+  - Guard dynamic access in `PredictionsRepository` (`results`/`response`) to avoid runtime crashes on empty/malformed payloads.
+
 ## 4.0.8
 
 - **FEAT**: Change http version.
