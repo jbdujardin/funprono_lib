@@ -1,3 +1,14 @@
+## 7.2.0
+
+- **FEAT**: Pagination curseur partagée (EIR-9).
+  - Nouveau barrel `package:funprono_lib/pagination.dart` : `paginateAll`,
+    boucle curseur générique indépendante du SDK AppWrite (utilisable avec
+    `appwrite` côté front comme `dart_appwrite` côté fonctions), plus
+    `paginationPageSize` (500) et le typedef `PageFetcher`.
+  - Remplace les `Query.limit(1000000000…)` : l'appelant fournit une closure
+    qui charge une page (`Query.limit` + `Query.cursorAfter`) et `paginateAll`
+    enchaîne les pages jusqu'à épuisement.
+
 ## 7.1.0
 
 - **FIX**: Harden JSON decoding & cleanup (EIR-6).
