@@ -1,6 +1,18 @@
-/// Support for doing something awesome.
+/// Client et modèles de l'API tierce **API-Football** utilisés par FunProno.
 ///
-/// More dartdocs go here.
+/// Ce barrel expose :
+/// - Le client HTTP bas niveau [ApiFootballApi] et son erreur typée
+///   [ApiFootballException] (levée sur réponse HTTP/JSON invalide).
+/// - Les *repositories* de haut niveau qui encapsulent les appels API :
+///   `LeaguesRepository`, `FixturesRepository`, `OddsRepository`,
+///   `PredictionsRepository`, `StandingsRepository`.
+/// - Les entités brutes désérialisées de l'API (`ApiFootballFixture`,
+///   `ApiFootballLeague`, `ApiFootballPrediction`, `ApiFootballStanding`,
+///   `ApiFootballLineup`, `ApiFootballPlayer`, `ApiFootballOdd`,
+///   `ApiFootballEvent`, `ApiFootballStatistic`, …).
+///
+/// Pour les modèles de domaine FunProno (paris, matchs, ligues, messages),
+/// importer plutôt `package:funprono_lib/funprono_models.dart`.
 library;
 
 export 'src/api/api_football_api.dart';
