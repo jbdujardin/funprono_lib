@@ -11,9 +11,12 @@ class PredictionsRepository {
           "fixture": fixtureId,
         },
         builder: (data) {
-          return data['results'] > 0
-              ? ApiFootballPrediction.fromJson(data['response'][0])
-              : null;
+          final results = data['results'];
+          final response = data['response'];
+          if (results is num && results > 0 && response is List && response.isNotEmpty) {
+            return ApiFootballPrediction.fromJson(response.first);
+          }
+          return null;
         },
       );
 }

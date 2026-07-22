@@ -8,7 +8,11 @@ part of 'fp_fixture.dart';
 
 _FpFixture _$FpFixtureFromJson(Map<String, dynamic> json) => _FpFixture(
   leagueId: (json['leagueId'] as num?)?.toInt(),
-  status: $enumDecodeNullable(_$FixtureStatusEnumMap, json['status']),
+  status: $enumDecodeNullable(
+    _$FixtureStatusEnumMap,
+    json['status'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
   date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
   timestamp: (json['timestamp'] as num?)?.toInt(),
   round: json['round'] as String?,

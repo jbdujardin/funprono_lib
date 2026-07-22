@@ -16,7 +16,7 @@ enum LeagueType {
 abstract class FpLeague with _$FpLeague {
   factory FpLeague({
     String? name,
-    LeagueType? type,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) LeagueType? type,
     String? logo,
     String? countryCode,
     String? countryName,

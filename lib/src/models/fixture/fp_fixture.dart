@@ -99,7 +99,7 @@ extension FixtureStatusExtensions on FixtureStatus {
 abstract class FpFixture with _$FpFixture {
   factory FpFixture({
     int? leagueId,
-    @JsonEnum() FixtureStatus? status,
+    @JsonKey(unknownEnumValue: JsonKey.nullForUndefinedEnumValue) FixtureStatus? status,
     DateTime? date,
     int? timestamp,
     String? round,

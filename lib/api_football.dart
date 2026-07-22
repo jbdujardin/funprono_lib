@@ -4,6 +4,7 @@
 library;
 
 export 'src/api/api_football_api.dart';
+export 'src/api/api_football_exception.dart';
 export 'src/repositories/leagues_repository.dart';
 export 'src/repositories/fixtures_repository.dart';
 export 'src/repositories/odds_repository.dart';

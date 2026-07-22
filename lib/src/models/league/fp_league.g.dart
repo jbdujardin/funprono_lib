@@ -8,7 +8,11 @@ part of 'fp_league.dart';
 
 _FpLeague _$FpLeagueFromJson(Map<String, dynamic> json) => _FpLeague(
   name: json['name'] as String?,
-  type: $enumDecodeNullable(_$LeagueTypeEnumMap, json['type']),
+  type: $enumDecodeNullable(
+    _$LeagueTypeEnumMap,
+    json['type'],
+    unknownValue: JsonKey.nullForUndefinedEnumValue,
+  ),
   logo: json['logo'] as String?,
   countryCode: json['countryCode'] as String?,
   countryName: json['countryName'] as String?,
