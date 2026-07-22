@@ -1,5 +1,5 @@
 name: funprono_lib
-description: A package for Back and front for FunProno application.
+description: Modèles de domaine FunProno et client API-Football, partagés entre le front Flutter et les fonctions AppWrite Dart.
 version: 7.1.0
 homepage: https://app.funprono.com
 documentation: https://github.com/jbdujardin/funprono_lib

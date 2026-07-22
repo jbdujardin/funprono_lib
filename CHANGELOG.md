@@ -6,6 +6,14 @@
   - API errors now throw a typed `ApiFootballException` (exported) instead of a raw `String`/`dynamic`; non-JSON error bodies also throw `ApiFootballException` rather than a `FormatException`.
   - Guard dynamic access in `PredictionsRepository` (`results`/`response`) to avoid runtime crashes on empty/malformed payloads.
 
+## 5.0.0 – 7.0.2
+
+- Montées de version successives (modèles FunProno & entités API-Football).
+  Les notes détaillées de ces versions n'ont pas été tenues à l'époque ; les
+  changements correspondants sont consolidés et documentés à partir de la
+  **7.1.0** ci-dessus. Repartir de l'historique git (`git log`) pour le détail
+  fin de ces versions intermédiaires.
+
 ## 4.0.8
 
 - **FEAT**: Change http version.
