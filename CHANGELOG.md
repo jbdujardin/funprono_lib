@@ -1,3 +1,15 @@
+## 7.3.0
+
+- **FEAT**: Infra partagée des fonctions cloud (EIR-9, B4).
+  - Nouveau barrel `package:funprono_lib/functions_infra.dart` : hoiste
+    `checkEnvVariables` / `checkPayload` (dupliqués dans les `utils.dart` des
+    19 fonctions du back) et ajoute `reportFunctionError`, enveloppe d'erreur
+    unique (log `context.error` + relance avec la stack trace d'origine).
+  - `checkPayload` gagne un paramètre `allowNull` pour couvrir à l'identique
+    la variante permissive de `create_update_bet`.
+  - Toujours aucune dépendance à `dart_appwrite` : le `context` du runtime est
+    reçu en `dynamic`, la lib reste consommable par le front.
+
 ## 7.2.0
 
 - **FEAT**: Pagination curseur partagée (EIR-9).
